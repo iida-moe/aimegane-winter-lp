@@ -2552,6 +2552,10 @@
     .enkin-sec > .bridge::before { margin-left: auto !important; margin-right: auto !important; }
     /* 行末の「、」「。」の分だけ右へ（見た目の中央にそろえる） */
     .enkin-sec .hp { margin-right: -.5em; }
+    /* 11/25 見出しは1行に（Iさん）：途中の「、」はずらさない・行末の「。」だけずらす */
+    .enkin-sec .lens-section-title { font-size: min(24px, 6.6vw) !important; white-space: nowrap; letter-spacing: .02em !important; }
+    .enkin-sec .lens-section-title br { display: none !important; }
+    .enkin-sec .lens-section-title > .hp { margin-right: 0; }
   }
   .lens-section-title > .hp { color: #111 !important; }
   .mf-lead-short { font-size: 14px !important; color: #555 !important; margin-top: 8px !important; }
