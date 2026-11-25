@@ -2558,7 +2558,11 @@
     .enkin-sec .lens-section-title > .hp { margin-right: 0; }
   }
   .lens-section-title > .hp { color: #111 !important; }
-  .enkin-sec > .bridge { color: #333 !important; } /* 11/25 問いかけは赤をやめる（Iさん） */
+  .enkin-sec > .bridge { color: #333 !important; }
+  /* 見出しの幅だけの箱を真ん中に置き、中の※は左ぞろえ（見出しの左はしにそろう） */
+  .enkin-head { display: table; margin: 0 auto; text-align: left; }
+  @media (min-width: 641px) { .enkin-head { display: block; margin: 0; } }
+  .enkin-head .lens-section-title, .enkin-head .mf-lead-short { text-align: left !important; } /* 11/25 問いかけは赤をやめる（Iさん） */
   /* 11/25 小さな金の∨2つ（遠近両用→あなたの目に、のつなぎ） */
   .flow-arrow { display: flex; flex-direction: column; align-items: center; gap: 0; padding: 8px 0 16px; background: #fff; }
   .flow-arrow span { width: 18px; height: 18px; border-right: 3px solid #D4AF37; border-bottom: 3px solid #D4AF37; transform: rotate(45deg); margin-top: -6px; }
@@ -3168,9 +3172,11 @@
     <!-- 11/25 雪の丘からつるしたオーナメント（右はし） -->
     <span class="orn o1" aria-hidden="true"></span><span class="orn o2" aria-hidden="true"></span><span class="orn o3" aria-hidden="true"></span>
     <p class="bridge bridge-left">最近、手元の文字が<br class="only-mobile">見えにくくなっていませんか？</p>
+    <div class="enkin-head"><!-- 11/25 ※を見出しの左はしにそろえる -->
     <h2 class="section-title lens-section-title">遠近両用も<span class="hp">、</span><br class="only-mobile"><span class="mf-zero">追加料金0円<span class="hp">。</span></span></h2>
     <!-- 11/25 文章量が多い→説明3行をやめて条件だけ（遠近・中近・近々は下のタブで見せる）。前の文：標準レンズなら、遠近両用・中近両用・近々両用も追加料金なしでお作りできます。 -->
     <p class="mf-lead mf-lead-short">※標準レンズの場合</p>
+    </div>
 
     <!-- 11/20 BF LPの「あなたに合うレンズを見つけよう」を移植（タブで切りかえ→レンズの図＋こんな方におすすめ）。図はBFの images/illust/lens-*.svg をコピー -->
     <div class="lf-box">
