@@ -2247,6 +2247,59 @@
     .x8-panel .wh-main { padding: 0 8px !important; }
     .x8-panel .wh-side { padding: 20px 16px 22px !important; }
   }
+  /* ===== 11/25 補聴器カード（.hc）：2本目10%OFFのカードと同じ形 ===== */
+  .x8-panel .xp-grid-old { margin-top: 56px !important; }
+  @media (max-width: 640px) { .x8-panel .xp-grid-old { margin-top: 44px !important; } }
+  .hc { max-width: 1000px; margin: 0 auto; background: #fff; border: 2px solid #C8102E; border-radius: 12px; overflow: hidden; text-align: center; }
+  .hc p { margin: 0; }
+  .hc-main { padding: 26px 18px 24px; }
+  .hc-t { font-size: 18px; font-weight: 900; color: #111; }
+  .hc-v { display: flex; justify-content: center; align-items: flex-end; color: #C8102E; margin-top: 2px !important; }
+  .hc-v b { font-family: 'Bebas Neue', 'Anton', sans-serif; font-weight: 400; font-size: 132px; line-height: .86; -webkit-text-stroke: .035em currentColor; paint-order: stroke fill; }
+  .hc-u { display: flex; flex-direction: column; align-items: flex-start; margin-left: 8px; }
+  .hc-rib { display: inline-block; white-space: nowrap; background: #009944; color: #fff; font-size: 17px; font-weight: 900; letter-spacing: .08em; padding: 4px 22px; transform: rotate(-6deg); margin: 0 0 8px -4px; clip-path: polygon(0 0, 100% 0, calc(100% - 9px) 50%, 100% 100%, 0 100%, 9px 50%); }
+  .hc-wk { font-size: 40px; font-weight: 900; line-height: 1; color: #C8102E; }
+  .hc-note { margin-top: 4px !important; font-size: 15px; color: #333; }
+  .hc-who { display: inline-flex; align-items: center; gap: 12px; margin-top: 22px !important; font-size: 18px; font-weight: 900; color: #111; }
+  .hc-who::before, .hc-who::after { content: ''; width: 3px; height: 1.4em; background: #EDDC44; border-radius: 2px; transform: rotate(-25deg); }
+  .hc-who::after { transform: rotate(25deg); }
+  .hc-d { margin-top: 2px !important; font-size: 15px; color: #333; }
+  .hc-n { margin-top: 6px !important; font-size: 14px; color: #555; }
+  .hc-q { max-width: 420px; margin: 12px auto 0 !important; text-align: left; }
+  .hc-btn { max-width: 420px; margin: 20px auto 0 !important; }
+  .hc-prod { display: flex; align-items: center; gap: 14px; padding: 16px 18px; border-top: 1px dashed #D4AF37; background: #FBFBF8; text-align: left; }
+  .hc-photo { flex: 0 0 110px; width: 110px; height: auto; }
+  .hc-logo { display: block; width: 64px; height: auto; margin-bottom: 4px; }
+  .hc-name { font-size: 15px; font-weight: 900; color: #111; }
+  .hc-feat { font-size: 14px; color: #333; line-height: 1.5; }
+  .hc-price { margin-top: 4px !important; font-size: 14px; font-weight: 700; color: #111; }
+  .hc-price small { font-size: 14px; font-weight: 400; color: #555; }
+  @media (max-width: 370px) { .hc-v b { font-size: 112px; } .hc-wk { font-size: 34px; } }
+  .hc .nw { display: inline-block; }
+  .hc-prod { background: #fff !important; } /* ロゴの白い背景がなじむように白 */
+  .hc-price-n { font-size: 14px; color: #555; margin-top: 2px !important; }
+  /* スマホの商品：写真の右に文字（価格は2行に） */
+  @media (max-width: 800px) {
+    .hc-sep { display: none; }
+    .hc-price .nw { display: block; }
+    .hc-prod { flex-direction: column; text-align: center; gap: 8px; padding: 18px 16px 20px; }
+    .hc-photo { flex: none; width: 150px; }
+    .hc-logo { margin: 0 auto 4px; }
+  }
+  /* PCは横長：左＝2週間無料貸出・技能者・ボタン｜右＝商品 */
+  @media (min-width: 801px) {
+    .hc { display: grid; grid-template-columns: 1.3fr 1fr; }
+    .hc-main { padding: 36px 32px; }
+    .hc-t { font-size: 22px; }
+    .hc-v b { font-size: 160px; }
+    .hc-wk { font-size: 48px; }
+    .hc-rib { font-size: 20px; }
+    .hc-prod { flex-direction: column; justify-content: center; text-align: center; border-top: 0; border-left: 1px dashed #D4AF37; padding: 32px 28px; }
+    .hc-photo { flex: none; width: 70%; max-width: 240px; }
+    .hc-logo { margin: 0 auto 6px; width: 84px; }
+    .hc-name { font-size: 18px; }
+    .hc-feat, .hc-price, .hc-price small { font-size: 15px; }
+  }
   /* ===== 補聴器 ここまで ===== */
 
   /* ===== 11/25 スマホ：感謝の文を読みやすく（見出しと本文の強弱をつける・行間を広げる・斜線は短く細く） ===== */
@@ -2999,45 +3052,29 @@
       <div class="wh">
         <p class="x8-panel-en">HEARING AID</p>
         <h2 class="x8-panel-h wh-head">聞こえのことも、<br class="sp-only">お気軽にご相談を。</h2>
-        <div class="wh-card">
-          <div class="wh-main">
-            <div class="wh-img">
-              <img class="wh-logo" src="イメージ画像/winter_starkey-logo_830_476.webp" alt="Starkey（スターキー）" width="830" height="476" loading="lazy">
-              <img class="wh-prod" src="イメージ画像/price-hochouki.png" alt="スターキー Gシリーズ 補聴器" loading="lazy">
-            </div>
-            <p class="wh-jp">スターキー</p>
-            <p class="wh-br">Gシリーズ クラス10 RIC</p>
-            <p class="wh-feat">耳かけ型｜AIがまわりの音に<span class="nw">合わせて自動調整</span></p>
-            <div class="wh-prices">
-              <p><span class="wh-pl">片耳</span><span class="wh-pv">&yen;78,500</span></p>
-              <p><span class="wh-pl">両耳</span><span class="wh-pv">&yen;149,500</span></p>
-            </div>
-            <p class="wh-note">※充電器付きの価格です</p>
+        <!-- 11/25 わかりにくい→2本目10%OFFのカードと同じ形に：大きな「2週間 無料貸出」→技能者→ボタン→商品は下に小さく（価格は黒）。前の形 _保存\index.before-1125-hearcard.html -->
+        <div class="hc">
+          <div class="hc-main">
+            <p class="hc-t">補聴器も、まずは試してから</p>
+            <p class="hc-v"><b>2</b><span class="hc-u"><span class="hc-rib">無料貸出</span><span class="hc-wk">週間</span></span></p>
+            <p class="hc-note">家で、普段の音で試せます</p>
+            <p class="hc-who">認定補聴器技能者が在籍</p>
+            <p class="hc-d">選び方から調整までおまかせ</p>
+            <p class="hc-n"><span class="nw">※不在の日もあるため、</span><span class="nw">ご予約がおすすめです</span></p>
+            <details class="wh-q hc-q">
+              <summary><span class="wh-q-i" aria-hidden="true">?</span><span>認定補聴器技能者<span class="nw">とは？</span></span></summary>
+              <p>公益財団法人テクノエイド協会が認定する、補聴器の専門資格です。聴こえを測り、お一人おひとりに合わせた補聴器選びから調整までサポートします。</p>
+            </details>
+            <a class="wh-btn hc-btn" href="https://www.aimegane.com/hochouki/soudankai/" target="_blank" rel="noopener" data-cta-location="hearing">補聴器の無料相談はこちら</a>
           </div>
-          <div class="wh-side">
-            <p class="wh-why">アイメガネの補聴器サポート</p>
-            <ul class="wh-pts">
-              <li>
-                <span class="wh-ico" aria-hidden="true"><svg viewBox="0 0 24 24"><circle cx="10" cy="8" r="4"/><path d="M3 21c0-4.4 3.1-7 7-7 1.6 0 3 .4 4.2 1.1"/><circle cx="18" cy="17.5" r="4.6" fill="#C8102E" stroke="none"/><path d="M15.9 17.6l1.5 1.5 2.8-3" stroke="#fff" stroke-width="1.8"/></svg></span>
-                <div>
-                  <p class="wh-t">認定補聴器技能者が在籍</p>
-                  <p class="wh-d">選び方から調整までおまかせ</p>
-                  <p class="wh-n">※不在の日もあるため、ご予約がおすすめです</p>
-                  <details class="wh-q">
-                    <summary><span class="wh-q-i" aria-hidden="true">?</span><span>認定補聴器技能者<span class="nw">とは？</span></span></summary>
-                    <p>公益財団法人テクノエイド協会が認定する、補聴器の専門資格です。聴こえを測り、お一人おひとりに合わせた補聴器選びから調整までサポートします。</p>
-                  </details>
-                </div>
-              </li>
-              <li>
-                <span class="wh-ico" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M3 11l9-7 9 7"/><path d="M5 10v10h14V10"/><path d="M10 20v-6h4v6"/></svg></span>
-                <div>
-                  <p class="wh-t"><b>2</b>週間の無料貸出</p>
-                  <p class="wh-d">家で、普段の音で試せます</p>
-                </div>
-              </li>
-            </ul>
-            <a class="wh-btn" href="https://www.aimegane.com/hochouki/soudankai/" target="_blank" rel="noopener" data-cta-location="hearing">補聴器の無料相談はこちら</a>
+          <div class="hc-prod">
+            <img class="hc-photo" src="イメージ画像/price-hochouki.png" alt="スターキー Gシリーズ 補聴器" loading="lazy">
+            <div class="hc-info">
+              <img class="hc-logo" src="イメージ画像/winter_starkey-logo_830_476.webp" alt="Starkey（スターキー）" width="830" height="476" loading="lazy">
+              <p class="hc-name">Gシリーズ クラス10 RIC</p>
+              <p class="hc-feat"><span class="nw">耳かけ型｜</span><span class="nw">AIがまわりの音に</span><span class="nw">合わせて自動調整</span></p>
+              <p class="hc-price"><span class="nw">片耳 &yen;78,500</span><span class="hc-sep"> ／ </span><span class="nw">両耳 &yen;149,500</span></p><p class="hc-price-n">※充電器付きの価格です</p>
+            </div>
           </div>
         </div>
       </div>
