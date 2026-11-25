@@ -2558,6 +2558,29 @@
     .enkin-sec .lens-section-title > .hp { margin-right: 0; }
   }
   .lens-section-title > .hp { color: #111 !important; }
+  /* 11/25 「どれが合うんだろう…？」人物＋吹き出し */
+  .mf-q { border: 0 !important; padding: 32px 0 8px !important; text-align: center; }
+  .mfq-who { display: flex; align-items: center; justify-content: center; gap: 14px; margin-bottom: 14px; }
+  .mfq-person { flex: 0 0 120px; width: 120px; height: 120px; border-radius: 50%; background: #F3F3F3; border: 2px dashed #C9C9C9; display: grid; place-items: center; font-size: 13px; color: #888; line-height: 1.4; }
+  .mfq-bubble { position: relative; margin: 0; padding: 12px 16px; background: #fff; border: 2px solid #111; border-radius: 14px; font-size: 17px; font-weight: 900; color: #111; white-space: nowrap; }
+  .mfq-bubble::before, .mfq-bubble::after { content: ''; position: absolute; top: 50%; border: solid transparent; }
+  .mfq-bubble::before { left: -14px; margin-top: -8px; border-width: 8px 14px 8px 0; border-right-color: #111; }
+  .mfq-bubble::after { left: -10px; margin-top: -6px; border-width: 6px 11px 6px 0; border-right-color: #fff; }
+  .mf-q .mf-support-main { font-size: 22px !important; font-weight: 900; color: #C8102E !important; margin: 0 0 6px !important; }
+  .mf-q .mf-support-sub { font-size: 16px !important; line-height: 1.7 !important; }
+  .mf-q .nw { display: inline-block; }
+  .mf-note { font-size: 14px !important; color: #555 !important; }
+  @media (max-width: 640px) {
+    .mfq-person { flex-basis: 100px; width: 100px; height: 100px; }
+    .mfq-bubble { font-size: 16px; padding: 10px 12px; }
+    .mfq-who { gap: 12px; }
+  }
+  @media (min-width: 801px) {
+    .mfq-person { flex-basis: 150px; width: 150px; height: 150px; }
+    .mfq-bubble { font-size: 20px; }
+    .mf-q .mf-support-main { font-size: 28px !important; }
+    .mf-q .mf-support-sub { font-size: 18px !important; }
+  }
   .mf-lead-short { font-size: 14px !important; color: #555 !important; margin-top: 8px !important; }
   .xp-divider { margin-top: -1px; position: relative; overflow: hidden; background: #007D37 !important; height: 80px !important; }
   .xp-divider::before { position: absolute; left: -5%; right: -5%; bottom: -2px; height: 100% !important; background: #fff !important; clip-path: none !important; border-radius: 50% 50% 0 0 / 100% 100% 0 0; box-shadow: none !important; }
@@ -3161,11 +3184,16 @@
       </div>
     </div>
 
-    <div class="mf-support">
-      <p class="mf-support-main">どれが合うか<br class="only-mobile">わからなくても大丈夫。</p>
-      <p class="mf-support-sub">専門スタッフがお悩みを伺いながら、<br class="only-mobile">一緒に選びます。</p>
+    <!-- 11/25 人物（少し困っている）＋吹き出し→答え→次のセクション（アコモレフ・技能士）への前ふり。人物はGeminiで作成予定（今は仮の枠） -->
+    <div class="mf-support mf-q">
+      <div class="mfq-who">
+        <div class="mfq-person"><span>人物イラスト<br>（仮）</span></div>
+        <p class="mfq-bubble">どれが合うんだろう…？</p>
+      </div>
+      <p class="mf-support-main">わからなくても大丈夫。</p>
+      <p class="mf-support-sub">まずは目の状態を測ってから、<br class="only-mobile">資格を持つスタッフが<span class="nw">一緒に選びます。</span></p>
     </div>
-    <p class="mf-note">※標準レンズの場合です。<br class="only-mobile">調光・偏光などのレンズは別料金です。</p>
+    <p class="mf-note">※調光・偏光などのレンズは別料金です。</p>
 
     <!-- 旧：調光・偏光・HEV（ザセールのまま）。使わないので非表示 -->
     <div class="lens-list lens-list-old" style="display:none;">
