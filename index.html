@@ -2230,6 +2230,18 @@
     .wh-why { font-size: 18px; }
     .wh-btn { font-size: 17px; letter-spacing: .02em; }
   }
+  /* 11/25 カードの中にカードに見える→外枠をなくしてパネルに直接のせる。サポートだけうすいグレーの角丸 */
+  .x8-panel .wh-card { border: 0 !important; border-radius: 0 !important; overflow: visible !important; background: transparent !important; gap: 32px; }
+  .x8-panel .wh-main { padding: 0 !important; }
+  .x8-panel .wh { max-width: 1000px; margin-left: auto; margin-right: auto; }
+  .wh-pv { font-family: 'Bebas Neue', 'Anton', sans-serif !important; font-size: 46px !important; -webkit-text-stroke: .03em currentColor; paint-order: stroke fill; letter-spacing: .01em; }
+  @media (max-width: 800px) { .wh-pv { font-size: 40px !important; } }
+  .x8-panel .wh-side { border: 0 !important; border-radius: 10px; padding: 28px 28px 28px !important; }
+  @media (max-width: 800px) {
+    .x8-panel .wh-card { gap: 24px; }
+    .x8-panel .wh-main { padding: 0 8px !important; }
+    .x8-panel .wh-side { padding: 20px 16px 22px !important; }
+  }
   /* ===== 補聴器 ここまで ===== */
 
   /* ===== 11/25 スマホ：感謝の文を読みやすく（見出しと本文の強弱をつける・行間を広げる・斜線は短く細く） ===== */
