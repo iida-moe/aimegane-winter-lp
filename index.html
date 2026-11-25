@@ -2558,6 +2558,17 @@
     .enkin-sec .lens-section-title > .hp { margin-right: 0; }
   }
   .lens-section-title > .hp { color: #111 !important; }
+  /* 11/25 小さな金の∨2つ（遠近両用→あなたの目に、のつなぎ） */
+  .flow-arrow { display: flex; flex-direction: column; align-items: center; gap: 0; padding: 8px 0 16px; background: #fff; }
+  .flow-arrow span { width: 18px; height: 18px; border-right: 3px solid #D4AF37; border-bottom: 3px solid #D4AF37; transform: rotate(45deg); margin-top: -6px; }
+  .flow-arrow span:last-child { opacity: .5; }
+  @media (max-width: 640px) {
+    .fit-sec { padding-top: 24px !important; }
+    .fit-sec > .bridge, .fit-sec > .section-title, .fit-sec > .lens-standard-note { text-align: center !important; }
+    .fit-sec > .bridge::before { margin-left: auto !important; margin-right: auto !important; }
+    .fit-sec .hp { margin-right: -.5em; }
+  }
+  .fit-sec .hp-k { color: #111 !important; }
   /* 11/25 「どれが合うんだろう…？」人物＋吹き出し */
   .mf-q { border: 0 !important; padding: 32px 0 8px !important; text-align: center; }
   .mfq-who { display: flex; align-items: center; justify-content: center; gap: 14px; margin-bottom: 14px; }
@@ -3260,12 +3271,13 @@
     </div>
   </section>
 
-  <div class="section-divider section-divider-cream"><div class="section-divider-triangle-white"></div></div>
+  <!-- 11/25 白→白なのに大きな緑の三角は急→小さな金の∨2つ（前：section-divider-cream＋triangle-white） -->
+  <div class="flow-arrow" aria-hidden="true"><span></span><span></span></div>
 
   <!-- ③ かけ心地(調節機能解析装置・眼鏡作製技能士) -->
-  <section class="section section-cream">
-    <p class="bridge bridge-left">お得でも、合わないメガネでは意味がありません。</p>
-    <h2 class="section-title fit-title-lg">あなたの目に、<br class="only-mobile"><span>ちょうどいい一本を。</span></h2>
+  <section class="section section-cream fit-sec">
+    <p class="bridge bridge-left">お得でも、<br class="only-mobile">合わないメガネでは意味がありません。</p>
+    <h2 class="section-title fit-title-lg">あなたの目に<span class="hp hp-k">、</span><br class="only-mobile"><span>ちょうどいい一本を<span class="hp">。</span></span></h2>
     <p class="lens-standard-note">無料の測定と、資格を持つプロの技術で。あなたに合う一本を、とことん追求。</p>
     <div class="fit-band-list">
       <div class="fit-band">
