@@ -2428,6 +2428,15 @@
   .wx-flake.f1 { right: 14px; top: 14px; width: 34px; }
   .wx-flake.f2 { left: 14px; top: 46%; width: 24px; opacity: .3; }
   .wx-flake.f3 { right: 22px; top: 52%; width: 20px; opacity: .3; }
+  /* 11/25 丸＋（Iさん）：2本目カード→LINE・処方箋の間（縦）／LINEと処方箋の間（横）。白い丸＋赤ふち＋赤い＋ */
+  .wx-plus { display: block; width: 40px; height: 40px; border-radius: 50%; background: #fff; border: 2.5px solid #C8102E; position: relative; z-index: 2; box-sizing: border-box; }
+  .wx-plus::before, .wx-plus::after { content: ''; position: absolute; left: 50%; top: 50%; background: #C8102E; border-radius: 2px; transform: translate(-50%, -50%); }
+  .wx-plus::before { width: 20px; height: 3px; }
+  .wx-plus::after { width: 3px; height: 20px; }
+  .wx-plus-v { margin: -14px auto -14px; }
+  .wx-sub { position: relative; }
+  .wx-plus-h { position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%); width: 34px; height: 34px; }
+  .wx-plus-h::before { width: 16px; } .wx-plus-h::after { height: 16px; }
   /* 11/25 結晶はカードの中ではなく緑の背景側へ：パネルのうしろに置き、パネルの外（緑）にだけ見せる */
   .xp-section { isolation: isolate; }
   .x8-panel .xperk { position: relative; }
@@ -2891,6 +2900,7 @@
             <img src="イメージ画像/winter_family_900_456.png" alt="メガネをかけた3人家族のイラスト" width="900" height="456" loading="lazy">
           </div>
         </div>
+        <span class="wx-plus wx-plus-v" aria-hidden="true"></span><!-- 11/25 丸＋（Iさん） -->
         <div class="wx-sub">
           <div class="wx-sub-card">
             <img class="wx-sub-ic" src="イメージ画像/icons8-line.svg" alt="" width="64" height="64">
@@ -2899,6 +2909,7 @@
               <p class="wx-sub-v"><b>1,100</b>円OFF</p>
             </div>
           </div>
+          <span class="wx-plus wx-plus-h" aria-hidden="true"></span>
           <div class="wx-sub-card">
             <svg class="wx-sub-ic xperk-ic-rx" viewBox="0 0 48 48" aria-hidden="true"><rect x="9" y="5" width="30" height="38" rx="3"/><path d="M15 14h18M15 21h18M15 28h11"/><circle cx="34" cy="36" r="8" class="xperk-ic-dot"/><path d="M30.5 36l2.5 2.5 4.5-5" class="xperk-ic-chk"/></svg>
             <div>
