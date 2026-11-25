@@ -2410,6 +2410,20 @@
   .wx-flake.f1 { right: 14px; top: 14px; width: 34px; }
   .wx-flake.f2 { left: 14px; top: 46%; width: 24px; opacity: .3; }
   .wx-flake.f3 { right: 22px; top: 52%; width: 20px; opacity: .3; }
+  /* 11/25 結晶はカードの中ではなく緑の背景側へ：パネルのうしろに置き、パネルの外（緑）にだけ見せる */
+  .xp-section { isolation: isolate; }
+  .x8-panel .xperk { position: relative; }
+  .wx-gflake { position: absolute; z-index: -1; pointer-events: none; }
+  .wx-gflake.g1 { left: -110px; top: 40px; width: 64px; opacity: .9; }
+  .wx-gflake.g2 { right: -120px; top: 260px; width: 80px; opacity: .35; }
+  .wx-gflake.g3 { right: -96px; top: 620px; width: 52px; opacity: .85; }
+  .wx-gflake.g4 { left: -120px; top: 760px; width: 72px; opacity: .3; }
+  @media (max-width: 800px) {
+    .wx-gflake.g1 { left: -44px; top: 30px; width: 52px; }
+    .wx-gflake.g2 { right: -46px; top: 300px; width: 60px; }
+    .wx-gflake.g3 { right: -40px; top: 760px; width: 46px; }
+    .wx-gflake.g4 { left: -46px; top: 560px; width: 56px; }
+  }
   .wx-two-off { font-size: 48px !important; }
   .wx-sub-v b { font-size: 2.6em !important; letter-spacing: .01em; }
   @media (min-width: 801px) { .wx-two-v b { font-size: 164px !important; } .wx-two-off { font-size: 60px !important; } }
@@ -2839,12 +2853,13 @@
     </ul>
     <!-- 11/23 値段を見た後に「この価格から、さらに！」 -->
     <div class="xperk">
+      <img class="wx-gflake g1" src="イメージ画像/snow-gold.svg" alt=""><img class="wx-gflake g2" src="イメージ画像/snow.svg" alt=""><img class="wx-gflake g3" src="イメージ画像/snow-gold.svg" alt=""><img class="wx-gflake g4" src="イメージ画像/snow.svg" alt=""><!-- 11/25 緑の背景側の結晶（パネルのうしろ） -->
       <p class="x8-panel-en">MORE DISCOUNT</p>
       <h2 class="x8-panel-h xperk-h2">上記の価格から、<br class="only-mobile"><span>さらにおトク！</span></h2>
       <!-- 11/25 BF LPと同じ形に：2本目10%OFFを1枚のカード（大きな数字＋家族）→ LINE・処方箋は下に小さいカード2つ。前の3列(.xp3)は _保存\index.before-1125-2hon.html -->
       <div class="wx">
         <div class="wx-two">
-          <img class="wx-flake f1" src="イメージ画像/snow-gold.svg" alt=""><img class="wx-flake f2" src="イメージ画像/snow-gold.svg" alt=""><img class="wx-flake f3" src="イメージ画像/snow-gold.svg" alt="">
+
           <div class="wx-two-main">
             <p class="wx-two-t"><span>メガネ・サングラス <span class="wx-nw">同時購入で</span></span></p>
             <!-- 11/25 Iさんの見本2：大きな10の右上に傾いた緑リボン「2本目」・その下に%OFF -->
