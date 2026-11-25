@@ -2559,6 +2559,8 @@
   }
   .lens-section-title > .hp { color: #111 !important; }
   .enkin-sec > .bridge { color: #333 !important; }
+  .lf-zero { margin: 18px 0 0; text-align: center; font-size: 16px; font-weight: 700; color: #111; }
+  .lf-zero em { font-style: normal; font-weight: 900; font-size: 1.15em; color: #C8102E; background: linear-gradient(transparent 62%, #EDDC44 62%); padding: 0 3px; }
   /* 11/25 「メガネのレンズ」をレンズの図に近づけ、図の中央にそろえる（レンズは画像の横5〜51.5%・上19.4%） */
   .lf-cap { margin: 0 0 calc(-10.9% + 10px) 5% !important; width: 46.5%; text-align: center; position: relative; z-index: 1; }
   /* 見出しの幅だけの箱を真ん中に置き、中の※は左ぞろえ（見出しの左はしにそろう） */
@@ -3171,8 +3173,6 @@
 
   <!-- ②-2 11/20 遠近両用を推す（標準レンズなら遠近・中近・近々も追加料金0円＝いつものサービス）。調光・偏光・HEVの旧版は下の lens-list-old（非表示） -->
   <section class="section section-white enkin-sec">
-    <!-- 11/25 雪の丘からつるしたオーナメント（右はし） -->
-    <span class="orn o1" aria-hidden="true"></span><span class="orn o2" aria-hidden="true"></span><span class="orn o3" aria-hidden="true"></span>
     <p class="bridge bridge-left">最近、手元の文字が<br class="only-mobile">見えにくくなっていませんか？</p>
     <div class="enkin-head"><!-- 11/25 ※を見出しの左はしにそろえる -->
     <h2 class="section-title lens-section-title">遠近両用も<span class="hp">、</span><br class="only-mobile"><span class="mf-zero">追加料金0円<span class="hp">。</span></span></h2>
@@ -3199,7 +3199,7 @@
           <p class="lf-for" id="lfFor">遠くも手元も、これ1本で</p>
           <p class="lf-rec-t">こんな方におすすめ</p>
           <ul class="lf-chk" id="lfChk"></ul>
-          <span class="mf-badge">追加料金0円</span>
+          <p class="lf-zero">このレンズも、<em>追加料金0円</em></p><!-- 11/25 赤い帯はボタンに見える→マーカーの文字に（前：span.mf-badge） -->
         </div>
       </div>
     </div>
