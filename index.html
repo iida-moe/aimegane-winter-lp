@@ -2274,6 +2274,30 @@
     .xp3-bottom .xp3-illust, .xp3-bottom .xp3-who { display: none !important; }
     .xp3-bottom .xp3-both { margin-bottom: 14px !important; }
   }
+  .xp3-nw { display: inline-block; }
+  /* 11/25 スマホ：リボンの上に余白 */
+  @media (max-width: 640px) { .xp3-col:first-child { padding-top: 10px !important; } }
+  /* 11/25 PCの左の列もスマホと同じ形（2本目リボン＋大きな10＋%/OFF縦積み）・※は14px。家族は下の段のまま */
+  @media (min-width: 641px) {
+    .xp3-col:first-child > .xp3-ic, .xp3-col:first-child > .xp3-k, .xp3-col:first-child > .xp3-v { display: none !important; }
+    .xp3-col:first-child { justify-content: center; }
+    .xp2n { display: flex; align-items: flex-end; justify-content: center; gap: 14px; }
+    .xp2n-k { margin: 0 0 14px; font-size: 16px; font-weight: 700; color: #111; line-height: 1.5; text-align: left; }
+    .xp2n-k2 { font-size: 20px; font-weight: 900; }
+    .xp2n-v { position: relative; margin: 0; display: flex; align-items: center; color: #C8102E; line-height: 1; padding-top: 30px; }
+    .xp2n-v b { font-family: 'Anton', sans-serif; font-weight: 400; font-size: 84px; }
+    .xp2n-u { display: flex; flex-direction: column; align-items: center; margin-left: 4px; font-family: 'Montserrat', 'Noto Sans JP', sans-serif; font-weight: 900; line-height: 1; }
+    .xp2n-u span:first-child { font-size: 34px; }
+    .xp2n-u span:last-child { font-size: 22px; margin-top: 4px; color: #111; }
+    .xp2n-rib { position: absolute; top: 0; left: 50%; transform: translateX(-50%); white-space: nowrap; background: #009944; color: #fff; font-size: 14px; font-weight: 900; letter-spacing: .1em; padding: 4px 20px; clip-path: polygon(0 0, 100% 0, calc(100% - 8px) 50%, 100% 100%, 0 100%, 8px 50%); }
+    .xp3-col:first-child .xp3-note { font-size: 14px !important; margin-top: 10px !important; text-align: center; }
+    .xp3-cols { align-items: center !important; }
+  }
+  @media (min-width: 641px) and (max-width: 1000px) {
+    .xp2n { flex-direction: column; align-items: center; gap: 0; }
+    .xp2n-k { text-align: center; margin-bottom: 4px; }
+    .xp2n-v b { font-size: 64px; }
+  }
   /* 11/25 PCもスマホとトンマナをそろえる（斜線の太さ・本文の太さと行間・最後のセールは黄色） */
   @media (min-width: 641px) {
     .thanks-h::before, .thanks-h::after { width: 3px !important; height: 1.2em !important; align-self: center !important; background: rgba(255,255,255,.9) !important; border-radius: 2px; }
@@ -2712,7 +2736,7 @@
               <p class="xp2n-k">メガネ・サングラス<br><span class="xp2n-k2">同時購入で</span></p>
               <p class="xp2n-v"><span class="xp2n-rib">2本目</span><b>10</b><span class="xp2n-u"><span>%</span><span>OFF</span></span></p>
             </div>
-            <p class="xp3-note">※価格の低い方が10%OFFになります。</p>
+            <p class="xp3-note"><span class="xp3-nw">※価格の低い方が</span><span class="xp3-nw">10%OFFになります。</span></p>
             <div class="xp2n-fam">
               <img src="イメージ画像/winter_family_900_456.png" alt="メガネをかけた3人家族のイラスト" width="900" height="456" loading="lazy">
               <p class="xp2n-who"><span>ご家族・</span><span>ご友人の分でも、</span><br><span>ご自分の</span><span>2本でもOK</span></p>
