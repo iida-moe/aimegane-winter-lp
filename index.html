@@ -2394,6 +2394,15 @@
   .wx-pct { font-size: 1.3em; line-height: .9; }
   @media (min-width: 801px) { .wx-two-v b { font-size: 150px !important; } .wx-two-off { font-size: 54px !important; } }
   @media (max-width: 370px) { .wx-two-v b { font-size: 100px !important; } .wx-two-off { font-size: 38px !important; } }
+  /* 11/25 FV画像の数字はBebas Neue（Iさんのイラレで確認）→ 10%OFF・1,100もBebas Neueに */
+  .wx-two-v b, .wx-two-off, .wx-sub-v b { font-family: 'Bebas Neue', 'Anton', sans-serif !important; font-weight: 400 !important; }
+  /* Googleフォントの Bebas Neue は Regular だけ → 同じ色のふちで Bold くらいの太さに */
+  .wx-two-v b, .wx-two-off, .wx-sub-v b { -webkit-text-stroke: .035em currentColor; paint-order: stroke fill; }
+  .wx-two-v b { font-size: 132px !important; letter-spacing: .02em; }
+  .wx-two-off { font-size: 48px !important; }
+  .wx-sub-v b { font-size: 2.6em !important; letter-spacing: .01em; }
+  @media (min-width: 801px) { .wx-two-v b { font-size: 164px !important; } .wx-two-off { font-size: 60px !important; } }
+  @media (max-width: 370px) { .wx-two-v b { font-size: 112px !important; } .wx-two-off { font-size: 42px !important; } .wx-sub-v b { font-size: 2.3em !important; } }
   /* ===== 特典 BFの形 ここまで ===== */
   /* 11/25 PCもスマホとトンマナをそろえる（斜線の太さ・本文の太さと行間・最後のセールは黄色） */
   @media (min-width: 641px) {
