@@ -2214,6 +2214,14 @@
   }
   /* ===== 補聴器 ここまで ===== */
 
+  /* ===== 11/25 スマホ：感謝の文を読みやすく（見出しと本文の強弱をつける・行間を広げる・斜線は短く細く） ===== */
+  @media (max-width: 640px) {
+    .thanks-h { font-size: 24px !important; font-weight: 900; line-height: 1.5; letter-spacing: .04em !important; margin-bottom: 18px !important; }
+    .thanks-h::before, .thanks-h::after { align-self: center !important; height: 2.2em !important; width: 1.5px !important; background: rgba(255,255,255,.75) !important; }
+    .thanks-p { font-size: 16px !important; font-weight: 500 !important; line-height: 2 !important; letter-spacing: .06em; }
+    .thanks-em { font-size: 1.15em !important; font-weight: 700; color: #EDDC44; margin: 0 .15em; }
+  }
+
   /* ===== 11/25 スマホFV＝Iさんのイラレ画像（750×930）。HTML版のパーツは非表示で残す ===== */
   .sfv.is-img { background: #009944 !important; } /* 帯の下はしに赤い線が出ないよう緑に（画像の部分は画像でかくれる） */
   .sfv.is-img .sfv-stage { background: #B81B22; }
@@ -2390,7 +2398,7 @@
    <div class="sale-frame-inner">
     <!-- 11/20 Iさんのイラレ案に合わせる（B案の文） -->
     <p class="thanks-h"><span>今年も1年、<br class="only-mobile">ありがとうございました</span></p>
-    <p class="thanks-p">来年も、すっきり見える毎日を。<br>感謝の気持ちを込めて、<br class="only-mobile">今年 <span class="thanks-em">最後のセール</span> を開催します。</p>
+    <p class="thanks-p">来年も、すっきり見える毎日を。<br>感謝の気持ちを込めて、<br class="only-mobile">今年<span class="thanks-em">最後のセール</span>を開催します。</p>
     <!-- 11/20 Iさんのイラレ案：ありがとう → メガネMAX50%・サングラスMAX30%だけ（数字は赤＝A案）。前の「WINTER SALEとは・AIミラー・標準セット」は下の tk-old で非表示 -->
     <!-- 11/23 割引は4段階（MAXの中身を見せる）。50%はメガネのみ・サングラスは10/20/30% -->
     <!-- 11/23 Iさん「一番知りたいのはMAX50。わざわざ言わなくていい」→4段階は非表示（戻すときは style を消す） -->
