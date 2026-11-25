@@ -2527,7 +2527,10 @@
   .wx-plus-h::before { width: 16px; } .wx-plus-h::after { height: 16px; }
   /* 11/25 結晶はカードの中ではなく緑の背景側へ：パネルのうしろに置き、パネルの外（緑）にだけ見せる */
   .xp-section { isolation: isolate; }
-  .xp-divider { margin-top: -1px; position: relative; background: linear-gradient(#007D37 0 3px, #fff 3px) !important; } /* 11/25 緑と下向き三角の境目の細い線を消す（1px重ねる） */
+  /* 11/25 下向き三角→雪の丘（補聴器と遠近両用は話がつながらないので、矢印ではなく区切りに）。最後のCTAの雪の丘と同じ形 */
+  .xp-divider { margin-top: -1px; position: relative; overflow: hidden; background: #007D37 !important; height: 80px !important; }
+  .xp-divider::before { position: absolute; left: -5%; right: -5%; bottom: -2px; height: 100% !important; background: #fff !important; clip-path: none !important; border-radius: 50% 50% 0 0 / 100% 100% 0 0; box-shadow: none !important; }
+  @media (max-width: 640px) { .xp-divider { height: 56px !important; } } /* 11/25 緑と下向き三角の境目の細い線を消す（1px重ねる） */
   .x8-panel .xperk { position: relative; }
   .wx-gflake { position: absolute; z-index: -1; pointer-events: none; }
   .wx-gflake.g1 { left: -110px; top: 40px; width: 64px; opacity: .9; }
