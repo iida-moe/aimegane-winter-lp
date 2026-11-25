@@ -2400,6 +2400,16 @@
   .wx-two-v b, .wx-two-off, .wx-sub-v b { -webkit-text-stroke: .035em currentColor; paint-order: stroke fill; }
   .wx-two-v b { font-size: 132px !important; letter-spacing: .02em; line-height: .86 !important; }
   .wx-two-note { margin-top: 6px !important; } /* 11/25 ※を数字の近くへ */
+  /* 11/25 修正案4つ：①併用OKは特典の一番下へ ②%だけふちなし ③金の雪の結晶 ④（HTMLで OK の前のすき間をつめた） */
+  .wx .wx-both { margin: 20px 0 0 !important; font-size: 18px; }
+  @media (min-width: 801px) { .wx .wx-both { font-size: 20px; margin-top: 24px !important; } }
+  .wx-pct { -webkit-text-stroke: 0 !important; }
+  .wx-two { position: relative; }
+  .wx-two > *:not(.wx-flake) { position: relative; z-index: 1; }
+  .wx-flake { position: absolute; z-index: 0; opacity: .45; pointer-events: none; }
+  .wx-flake.f1 { right: 14px; top: 14px; width: 34px; }
+  .wx-flake.f2 { left: 14px; top: 46%; width: 24px; opacity: .3; }
+  .wx-flake.f3 { right: 22px; top: 52%; width: 20px; opacity: .3; }
   .wx-two-off { font-size: 48px !important; }
   .wx-sub-v b { font-size: 2.6em !important; letter-spacing: .01em; }
   @media (min-width: 801px) { .wx-two-v b { font-size: 164px !important; } .wx-two-off { font-size: 60px !important; } }
@@ -2832,9 +2842,9 @@
       <p class="x8-panel-en">MORE DISCOUNT</p>
       <h2 class="x8-panel-h xperk-h2">上記の価格から、<br class="only-mobile"><span>さらにおトク！</span></h2>
       <!-- 11/25 BF LPと同じ形に：2本目10%OFFを1枚のカード（大きな数字＋家族）→ LINE・処方箋は下に小さいカード2つ。前の3列(.xp3)は _保存\index.before-1125-2hon.html -->
-      <p class="wx-both">セール価格と<em>すべて併用OK！</em></p>
       <div class="wx">
         <div class="wx-two">
+          <img class="wx-flake f1" src="イメージ画像/snow-gold.svg" alt=""><img class="wx-flake f2" src="イメージ画像/snow-gold.svg" alt=""><img class="wx-flake f3" src="イメージ画像/snow-gold.svg" alt="">
           <div class="wx-two-main">
             <p class="wx-two-t"><span>メガネ・サングラス <span class="wx-nw">同時購入で</span></span></p>
             <!-- 11/25 Iさんの見本2：大きな10の右上に傾いた緑リボン「2本目」・その下に%OFF -->
@@ -2844,7 +2854,7 @@
             <p class="wx-two-note"><span class="wx-nw">※価格の低い方が</span><span class="wx-nw">10%OFFになります。</span></p>
           </div>
           <div class="wx-two-fam">
-            <p class="wx-two-who"><span>ご家族・ご友人でも OK</span></p>
+            <p class="wx-two-who"><span>ご家族・ご友人でもOK</span></p>
             <img src="イメージ画像/winter_family_900_456.png" alt="メガネをかけた3人家族のイラスト" width="900" height="456" loading="lazy">
           </div>
         </div>
@@ -2864,6 +2874,7 @@
             </div>
           </div>
         </div>
+        <p class="wx-both">セール価格と<em>すべて併用OK！</em></p><!-- 11/25 特典を全部見たあとに「全部いっしょに使える」 -->
       </div>
     </div>
 
