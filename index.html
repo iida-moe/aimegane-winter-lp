@@ -2218,6 +2218,9 @@
   .sfv.is-img { background: #009944 !important; } /* 帯の下はしに赤い線が出ないよう緑に（画像の部分は画像でかくれる） */
   .sfv.is-img .sfv-stage { background: #B81B22; }
   .sfv.is-img .sfv-stage { aspect-ratio: 750 / 930 !important; }
+  /* 11/25 FVを最初の画面いっぱいに：画面の高さ−予約バー(69px)−見える帯(6.83vw)まで伸ばす。画像は上ぞろえ・下にはみ出た分は切る（縦長の画像が来たら下の背景が見える） */
+  .sfv.is-img .sfv-stage { aspect-ratio: auto !important; height: max(124vw, calc(100vh - 69px - 6.83vw)); height: max(124vw, calc(100svh - 69px - 6.83vw)); }
+  .sfv.is-img .sfv-img { height: auto !important; bottom: auto !important; }
   .sfv.is-img .sfv-stage::before, .sfv.is-img .sfv-stage::after { display: none !important; }
   .sfv.is-img .sfv-stage > *:not(.sfv-img):not(.sfv-logo-link) { display: none !important; }
   .sfv.is-img .sfv-img { position: absolute; inset: 0; display: block; width: 100%; height: 100%; }
