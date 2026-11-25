@@ -2223,6 +2223,13 @@
     .thanks-sec .sale-frame-inner { padding-left: 12px !important; padding-right: 12px !important; }
   }
   @media (max-width: 370px) { .thanks-p { letter-spacing: 0; font-size: 15px !important; } }
+  /* 11/25 商品の下の※：1行ずつ・折り返しは※の後ろにそろえる・小さめの灰色 */
+  .x8-notes-list { list-style: none; padding: 0; margin-top: 20px !important; color: #555 !important; font-size: 14px !important; line-height: 1.6 !important; }
+  .x8-notes-list li { position: relative; padding-left: 1.1em; }
+  .x8-notes-list .nw { display: inline-block; }
+  .x8-notes-list li + li { margin-top: 4px; }
+  .x8-notes-list li::before { content: '※'; position: absolute; left: 0; top: 0; }
+  @media (max-width: 640px) { .x8-notes-list { padding: 0 4px; letter-spacing: 0; } }
   /* 11/25 PCもスマホとトンマナをそろえる（斜線の太さ・本文の太さと行間・最後のセールは黄色） */
   @media (min-width: 641px) {
     .thanks-h::before, .thanks-h::after { width: 3px !important; height: 1.2em !important; align-self: center !important; background: rgba(255,255,255,.9) !important; border-radius: 2px; }
@@ -2640,7 +2647,11 @@
       </article>
     </div><!-- /x8-grid -->
     <div class="x8-more-wrap"><button type="button" class="x8-more-btn" aria-expanded="false" onclick="var g=this.closest('.x8-panel');var o=g.classList.toggle('is-open');this.setAttribute('aria-expanded',o);this.textContent=o?'閉じる ▲':'ほかの商品を見る（4本） ▼';">ほかの商品を見る（4本） ▼</button></div>
-    <p class="x8-notes">※メガネの価格は、フレーム＋レンズの「メガネ一式」の価格です。<br>※掲載のメガネ・サングラスは一例です。在庫状況は店舗により異なります。<br>※在庫がなくなり次第、終了とさせていただきます。</p>
+    <ul class="x8-notes x8-notes-list"><!-- 11/25 ※を1行ずつ・2行目は※の後ろにそろえる・小さく灰色に（Iさん「ごちゃごちゃ」） -->
+      <li>メガネの価格は、フレーム＋レンズの<span class="nw">「メガネ一式」の価格です。</span></li>
+      <li><span class="nw">掲載のメガネ・サングラスは一例です。</span><span class="nw">在庫状況は店舗により異なります。</span></li>
+      <li><span class="nw">在庫がなくなり次第、</span><span class="nw">終了とさせていただきます。</span></li>
+    </ul>
     <!-- 11/23 値段を見た後に「この価格から、さらに！」 -->
     <div class="xperk">
       <p class="x8-panel-en">MORE DISCOUNT</p>
