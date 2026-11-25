@@ -2528,6 +2528,29 @@
   /* 11/25 結晶はカードの中ではなく緑の背景側へ：パネルのうしろに置き、パネルの外（緑）にだけ見せる */
   .xp-section { isolation: isolate; }
   /* 11/25 下向き三角→雪の丘（補聴器と遠近両用は話がつながらないので、矢印ではなく区切りに）。最後のCTAの雪の丘と同じ形 */
+  /* 11/25 遠近両用セクション：オーナメントをつるす（右はし）＋スマホは短い文を中央ぞろえ */
+  .enkin-sec { position: relative; overflow: visible !important; }
+  .enkin-sec .orn { top: -95px; z-index: 2; }
+  @media (max-width: 640px) { .enkin-sec .orn { top: -60px; } }
+  .enkin-sec > *:not(.orn) { position: relative; z-index: 1; }
+  .orn { position: absolute; top: 0; z-index: 0; pointer-events: none; }
+  .orn::before { content: ''; position: absolute; left: 50%; top: 0; width: 1.5px; height: var(--len); background: #C9A64A; transform: translateX(-50%); }
+  .orn::after { content: ''; position: absolute; left: 50%; top: var(--len); width: var(--d); height: var(--d); border-radius: 50%; transform: translateX(-50%); background: radial-gradient(circle at 32% 30%, rgba(255,255,255,.85) 0 8%, transparent 26%), var(--c); box-shadow: 0 0 0 0 transparent, inset 0 calc(var(--d) * -.12) 0 rgba(0,0,0,.12); }
+  .orn.o1 { right: 8%; --len: 54px; --d: 30px; --c: radial-gradient(circle at 50% 50%, #F2CF6B, #C9A64A); }
+  .orn.o2 { right: 15%; --len: 26px; --d: 22px; --c: radial-gradient(circle at 50% 50%, #E23A4A, #C8102E); }
+  .orn.o3 { right: 3%; --len: 86px; --d: 20px; --c: radial-gradient(circle at 50% 50%, #1FAA5C, #009944); }
+  /* オーナメントの金具（上の小さな四角） */
+  .orn { width: 2px; height: 1px; }
+  @media (min-width: 801px) {
+    .orn.o1 { right: 12%; --len: 70px; --d: 40px; }
+    .orn.o2 { right: 18%; --len: 30px; --d: 30px; }
+    .orn.o3 { right: 7%; --len: 110px; --d: 26px; }
+  }
+  @media (max-width: 640px) {
+    .enkin-sec { padding-top: 40px !important; }
+    .enkin-sec > .bridge, .enkin-sec > .section-title, .enkin-sec > .mf-lead { text-align: center !important; }
+    .enkin-sec > .bridge::before { margin-left: auto !important; margin-right: auto !important; }
+  }
   .xp-divider { margin-top: -1px; position: relative; overflow: hidden; background: #007D37 !important; height: 80px !important; }
   .xp-divider::before { position: absolute; left: -5%; right: -5%; bottom: -2px; height: 100% !important; background: #fff !important; clip-path: none !important; border-radius: 50% 50% 0 0 / 100% 100% 0 0; box-shadow: none !important; }
   @media (max-width: 640px) { .xp-divider { height: 56px !important; } } /* 11/25 緑と下向き三角の境目の細い線を消す（1px重ねる） */
@@ -3098,7 +3121,9 @@
   <div class="xp-divider"></div>
 
   <!-- ②-2 11/20 遠近両用を推す（標準レンズなら遠近・中近・近々も追加料金0円＝いつものサービス）。調光・偏光・HEVの旧版は下の lens-list-old（非表示） -->
-  <section class="section section-white">
+  <section class="section section-white enkin-sec">
+    <!-- 11/25 雪の丘からつるしたオーナメント（右はし） -->
+    <span class="orn o1" aria-hidden="true"></span><span class="orn o2" aria-hidden="true"></span><span class="orn o3" aria-hidden="true"></span>
     <p class="bridge bridge-left">最近、手元の文字が<br class="only-mobile">見えにくくなっていませんか？</p>
     <h2 class="section-title lens-section-title">遠近両用も、<br class="only-mobile"><span class="mf-zero">追加料金0円。</span></h2>
     <p class="mf-lead">標準レンズなら、<br class="only-mobile">遠近両用・中近両用・近々両用も<br>追加料金なしでお作りできます。</p>
