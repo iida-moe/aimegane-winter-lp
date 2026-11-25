@@ -1560,6 +1560,24 @@
     .floating-bar .floating-cta-text { font-size: 22px; letter-spacing: .08em; }
     .floating-bar .floating-cta-text::after { content: '▶'; font-size: .6em; margin-left: 14px; vertical-align: .2em; }
   }
+  /* 11/25 スマホの予約バーもPCと同じ形に：白の半透明バー(72px)＋赤い角丸ボタン・黄色い線はなし */
+  @media (max-width: 640px) {
+    .floating-bar {
+      display: flex; align-items: center; justify-content: center;
+      position: fixed; left: 0; right: 0; bottom: 0; z-index: 1000; height: 72px; padding: 0 16px;
+      background: rgba(255,255,255,.88); -webkit-backdrop-filter: blur(6px); backdrop-filter: blur(6px);
+      box-shadow: 0 -2px 14px rgba(0,0,0,.12);
+      transition: opacity .4s ease;
+    }
+    .floating-bar .floating-cta {
+      position: static; width: 100%; max-width: 360px; height: 52px; padding: 0 20px; gap: 10px;
+      border: none !important; border-radius: 999px; box-shadow: 0 3px 0 #8E0A1F;
+      background: #C8102E;
+    }
+    .floating-bar .floating-cta-icon { width: 24px; }
+    .floating-bar .floating-cta-text { font-size: 18px; letter-spacing: .08em; }
+    .floating-bar .floating-cta-text::after { content: '▶'; font-size: .6em; margin-left: 12px; vertical-align: .2em; }
+  }
   .closing { background: radial-gradient(ellipse at 50% 0%, #EC3A45 0%, #C8102E 50%, #8E0A1E 100%); }
   .closing-copy-main { border-bottom-color: #FFD84A; }
   .closing-period { color: #FFD84A; }
@@ -2446,8 +2464,8 @@
   .sfv.is-img { background: #009944 !important; } /* 帯の下はしに赤い線が出ないよう緑に（画像の部分は画像でかくれる） */
   .sfv.is-img .sfv-stage { background: #B81B22; }
   .sfv.is-img .sfv-stage { aspect-ratio: 750 / 930 !important; }
-  /* 11/25 FVを最初の画面いっぱいに：画面の高さ−予約バー(69px)−見える帯(6.83vw)まで伸ばす。画像は上ぞろえ・下にはみ出た分は切る（縦長の画像が来たら下の背景が見える） */
-  .sfv.is-img .sfv-stage { aspect-ratio: auto !important; height: max(124vw, calc(100vh - 69px - 6.83vw)); height: max(124vw, calc(100svh - 69px - 6.83vw)); }
+  /* 11/25 FVを最初の画面いっぱいに：画面の高さ−予約バー(72px)−見える帯(6.83vw)まで伸ばす。画像は上ぞろえ・下にはみ出た分は切る（縦長の画像が来たら下の背景が見える） */
+  .sfv.is-img .sfv-stage { aspect-ratio: auto !important; height: max(124vw, calc(100vh - 72px - 6.83vw)); height: max(124vw, calc(100svh - 72px - 6.83vw)); }
   .sfv.is-img .sfv-img { height: auto !important; bottom: auto !important; }
   .sfv.is-img .sfv-stage::before, .sfv.is-img .sfv-stage::after { display: none !important; }
   .sfv.is-img .sfv-stage > *:not(.sfv-img):not(.sfv-logo-link) { display: none !important; }
