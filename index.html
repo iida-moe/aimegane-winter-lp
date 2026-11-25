@@ -2445,6 +2445,15 @@
   .wx-flake.f1 { right: 14px; top: 14px; width: 34px; }
   .wx-flake.f2 { left: 14px; top: 46%; width: 24px; opacity: .3; }
   .wx-flake.f3 { right: 22px; top: 52%; width: 20px; opacity: .3; }
+  /* 11/25 PCは横長：左＝見出し・10%OFF・※｜右＝ご家族・ご友人でもOK＋家族（下ぞろえ） */
+  @media (min-width: 801px) {
+    .wx { max-width: 1000px !important; }
+    .wx-two { grid-template-columns: 1.1fr 1fr !important; align-items: stretch; }
+    .wx-two-main { display: flex; flex-direction: column; justify-content: center; padding: 36px 24px 36px 40px !important; }
+    .wx-two-fam { display: flex !important; flex-direction: column; justify-content: flex-end; align-items: center; padding: 36px 24px 0 !important; }
+    .wx-two-who { margin-bottom: 4px; }
+    .wx-two-fam img { width: 100% !important; max-width: 420px; margin: 12px auto 0 !important; }
+  }
   /* 11/25 丸＋（Iさん）：2本目カード→LINE・処方箋の間（縦）／LINEと処方箋の間（横）。白い丸＋赤ふち＋赤い＋ */
   .wx-plus { display: block; width: 40px; height: 40px; border-radius: 50%; background: #fff; border: 2.5px solid #C8102E; position: relative; z-index: 2; box-sizing: border-box; }
   .wx-plus::before, .wx-plus::after { content: ''; position: absolute; left: 50%; top: 50%; background: #C8102E; border-radius: 2px; transform: translate(-50%, -50%); }
