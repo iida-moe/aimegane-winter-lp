@@ -2634,6 +2634,11 @@
   .mfq-who .mfq-bubble { margin-top: 18px; }
   @media (min-width: 801px) { .mfq-img { flex-basis: 190px; width: 190px; } .mfq-who .mfq-bubble { margin-top: 26px; } }
   @media (max-width: 640px) { .mfq-img { flex-basis: 132px; width: 132px; } .mfq-who .mfq-bubble { font-size: 15px; padding: 9px 12px; } }
+  /* 11/26 レンズの枠をほかのカード（2本目・補聴器）とそろえる：赤い2pxの線・角丸12px／＼／は黄色の太い線 */
+  .lf-box { border: 2px solid #C8102E !important; border-radius: 12px; }
+  .lf-hint { gap: 12px !important; }
+  .lf-hint::before, .lf-hint::after { width: 3px !important; height: 1.3em !important; background: #EDDC44 !important; border-radius: 2px; transform: rotate(-25deg) !important; }
+  .lf-hint::after { transform: rotate(25deg) !important; }
   .lf-zero { margin: 18px 0 0; text-align: center; font-size: 16px; font-weight: 700; color: #111; }
   .lf-zero em { font-style: normal; font-weight: 900; font-size: 1.15em; color: #C8102E; background: linear-gradient(transparent 62%, #EDDC44 62%); padding: 0 3px; }
   /* 11/25 「メガネのレンズ」をレンズの図に近づけ、図の中央にそろえる（レンズは画像の横5〜51.5%・上19.4%） */
