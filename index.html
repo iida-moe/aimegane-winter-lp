@@ -2330,6 +2330,11 @@
     .hc2-sep { display: none !important; }
   }
   .hc2-pts b { font-size: 1.9em !important; }
+  /* 11/26 右上にスターキーのロゴ・写真と文字はその分下げる */
+  .hc2 { position: relative; }
+  .hc2-logo { position: absolute; top: 12px; right: 14px; width: 72px; height: auto; }
+  @media (max-width: 800px) { .hc2 { padding-top: 52px !important; } }
+  @media (min-width: 801px) { .hc2 { padding-top: 44px !important; } .hc2-logo { width: 88px; top: 14px; right: 18px; } }
   /* 商品名・価格：名前1行→価格（片耳｜両耳）→（充電器付き） */
   .hc2-name { display: block; }
   .hc2-price { display: inline-flex; gap: 14px; flex-wrap: wrap; justify-content: center; }
@@ -3258,6 +3263,7 @@
         <!-- 11/26 補聴器は「少し触れる」程度に（主役はメガネのセール）：横長の小さいカード1枚。前の大きいカード(.hc)は _保存\index.before-1126-hearmini.html -->
         <h3 class="hc2-head">聴こえの<em>相談</em>も、お気軽に</h3><!-- 11/26 値引きは上司確認中→相談の内容をメインに（前：補聴器もおトク） -->
         <div class="hc2">
+          <img class="hc2-logo" src="イメージ画像/winter_starkey-logo_830_476.webp" alt="Starkey（スターキー）" width="830" height="476" loading="lazy"><!-- 11/26 右上にロゴ（メーカー画像なので加工しない） -->
           <img class="hc2-photo" src="イメージ画像/price-hochouki.png" alt="スターキー Gシリーズ 補聴器" loading="lazy">
           <div class="hc2-body">
             <ul class="hc2-pts"><li><b>2</b>週間の無料貸出</li><li>認定補聴器技能者が在籍<small>※不在の日もあります</small></li></ul>
