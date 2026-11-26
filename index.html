@@ -3338,6 +3338,9 @@
   .x8-panel .x8-before .x8-tax, .x8-panel .x8-after .x8-tax { display: inline !important; font-size: 11px !important; font-weight: 500 !important; margin-left: 2px !important; }
   .x8-panel .x8-before .x8-tax { color: #555 !important; }
   .x8-panel .x8-after .x8-tax { color: #C8102E !important; }
+  /* 11/26 上の2枚の絵の大きさをそろえる（同じ枠の比率・中は収める） */
+  .vzg-top .vzg-img, .vzg-top .vzg-scene, .vzg-top .vzg-img:not(.vzg-scene) { aspect-ratio: 16 / 10 !important; width: 100%; }
+  .vzg-top .vzg-scene img { object-fit: contain !important; }
 </style>
 <style>
   .preview-gate { position: fixed; inset: 0; z-index: 9999; background: #B81B22; display: flex; align-items: center; justify-content: center; padding: 20px; }
