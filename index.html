@@ -2559,6 +2559,12 @@
   }
   .lens-section-title > .hp { color: #111 !important; }
   .enkin-sec > .bridge { color: #333 !important; }
+  /* 11/25 迷っている男性のイラスト（右上を見る）→吹き出しは右上に */
+  .mfq-who { align-items: flex-start !important; gap: 4px !important; margin-bottom: 18px !important; }
+  .mfq-img { flex: 0 0 150px; width: 150px; height: auto; display: block; }
+  .mfq-who .mfq-bubble { margin-top: 18px; }
+  @media (min-width: 801px) { .mfq-img { flex-basis: 190px; width: 190px; } .mfq-who .mfq-bubble { margin-top: 26px; } }
+  @media (max-width: 640px) { .mfq-img { flex-basis: 132px; width: 132px; } .mfq-who .mfq-bubble { font-size: 15px; padding: 9px 12px; } }
   .lf-zero { margin: 18px 0 0; text-align: center; font-size: 16px; font-weight: 700; color: #111; }
   .lf-zero em { font-style: normal; font-weight: 900; font-size: 1.15em; color: #C8102E; background: linear-gradient(transparent 62%, #EDDC44 62%); padding: 0 3px; }
   /* 11/25 「メガネのレンズ」をレンズの図に近づけ、図の中央にそろえる（レンズは画像の横5〜51.5%・上19.4%） */
@@ -3207,7 +3213,7 @@
     <!-- 11/25 人物（少し困っている）＋吹き出し→答え→次のセクション（アコモレフ・技能士）への前ふり。人物はGeminiで作成予定（今は仮の枠） -->
     <div class="mf-support mf-q">
       <div class="mfq-who">
-        <div class="mfq-person"><span>人物イラスト<br>（仮）</span></div>
+        <img class="mfq-img" src="イメージ画像/winter_mayoi_900_1068.png" alt="あごに手をあてて迷っているメガネの男性のイラスト" width="900" height="1068" loading="lazy">
         <p class="mfq-bubble">どれが合うんだろう…？</p>
       </div>
       <p class="mf-support-main">わからなくても大丈夫。</p>
