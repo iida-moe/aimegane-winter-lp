@@ -2700,6 +2700,18 @@
   .lf-tabs button[aria-selected="true"] { background: #009944 !important; color: #fff !important; }
   .lf-for { text-align: center !important; }
   .lf-key, .lf-side .lf-rec-t, .lf-chk { text-align: left; }
+  .x8-panel .xp-grid-old { display: none !important; } /* 11/26 補聴器を店舗検索の前へ移したので、残りの点線と空白を消す */
+  .hear-mini-sec { padding-top: 24px !important; padding-bottom: 24px !important; }
+  .hear-mini-sec .wh { max-width: 760px; margin: 0 auto; }
+  .enkin-sec > .bridge .nw { display: inline-block; }
+  /* 11/26 緑の背景に、Iさんの雪の結晶（イラレ）を散らした柄を重ねる */
+  .section-red-frame.thanks-sec { background: url("イメージ画像/winter_snow-pattern_420_420.svg") 0 0 / 420px repeat, #009944 !important; }
+  .xp-section { background: url("イメージ画像/winter_snow-pattern_420_420.svg") 210px 120px / 420px repeat, linear-gradient(180deg, #009944 0%, #009944 40%, #007D37 100%) !important; }
+  @media (min-width: 801px) { .section-red-frame.thanks-sec { background: url("イメージ画像/winter_snow-pattern_420_420.svg") 0 0 / 420px repeat, linear-gradient(180deg, #007C36 0, #009944 260px) !important; } }
+  @media (max-width: 640px) {
+    .section-red-frame.thanks-sec { background-size: 300px, auto !important; }
+    .xp-section { background-size: 300px, auto !important; }
+  }
   /* こんな方におすすめ：上下にグレーの線・チェックは緑の✓だけ */
   .lf-rec-t { border-bottom: 0 !important; padding: 18px 0 0 !important; border-top: 1px solid #DDD; margin-bottom: 8px !important; }
   .lf-chk li { padding-left: 28px !important; }
@@ -3343,20 +3355,6 @@
         </div>
       </article>
 
-      <!-- 補聴器（11/25 載せる・技能者/2週間無料貸出も今回OK）11/25 BF LPと同じ形に：左＝ロゴ・写真・名前・価格｜右＝アイメガネの補聴器サポート。変更前 _保存\index.before-1125-hear.html -->
-      <div class="wh">
-        <!-- 11/26 補聴器は「少し触れる」程度に（主役はメガネのセール）：横長の小さいカード1枚。前の大きいカード(.hc)は _保存\index.before-1126-hearmini.html -->
-        <h3 class="hc2-head">聴こえの<em>相談</em>も、お気軽に</h3><!-- 11/26 値引きは上司確認中→相談の内容をメインに（前：補聴器もおトク） -->
-        <div class="hc2">
-          <img class="hc2-logo" src="イメージ画像/winter_starkey-logo_830_476.webp" alt="Starkey（スターキー）" width="830" height="476" loading="lazy"><!-- 11/26 右上にロゴ（メーカー画像なので加工しない） -->
-          <img class="hc2-photo" src="イメージ画像/price-hochouki.png" alt="スターキー Gシリーズ 補聴器" loading="lazy">
-          <div class="hc2-body">
-            <ul class="hc2-pts"><li><b>2</b>週間の無料貸出</li><li>認定補聴器技能者が在籍<small>※不在の日もあります</small></li></ul>
-            <p class="hc2-p"><span class="hc2-name">スターキー Gシリーズ RICクラス10（充電式）</span><span class="hc2-price"><span>片耳 &yen;78,500</span><span>両耳 &yen;149,500</span></span><span class="hc2-pn">（充電器つき）</span></p>
-            <a class="hc2-link" href="https://www.aimegane.com/hochouki/soudankai/" target="_blank" rel="noopener" data-cta-location="hearing">補聴器の無料相談はこちら</a>
-          </div>
-        </div>
-      </div>
     </div>
     </div><!-- /x8-panel（11/24 特典もパネルの中へ・11/25 補聴器もパネルの中へ） -->
 
@@ -3370,7 +3368,7 @@
 
   <!-- ②-2 11/20 遠近両用を推す（標準レンズなら遠近・中近・近々も追加料金0円＝いつものサービス）。調光・偏光・HEVの旧版は下の lens-list-old（非表示） -->
   <section class="section section-white enkin-sec">
-    <p class="bridge bridge-left">最近、手元の文字が<br class="only-mobile">見えにくくなっていませんか？</p>
+    <p class="bridge bridge-left">掲載価格は、<span class="nw">レンズ込みの一式価格。</span></p><!-- 11/26 価格の話の続きに（前：最近、手元の文字が見えにくくなっていませんか？） -->
     <div class="enkin-head"><!-- 11/26 カンプに合わせ中央・金の結晶2つ -->
       <img class="enkin-flake k1" src="イメージ画像/snow-gold.svg" alt=""><img class="enkin-flake k2" src="イメージ画像/snow-gold.svg" alt="">
     <h2 class="section-title lens-section-title">遠近両用も<span class="pc-sp"> </span><br class="only-mobile"><span class="mf-zero">追加料金0円</span></h2><!-- 11/26 中央ぞろえで句読点が違和感→見出しは句読点なし -->
@@ -3561,6 +3559,24 @@
         <div class="faq-a"><span>A</span>はい。視力測定は無料です。現在の見え方のチェックやメガネに関するご相談だけでもお気軽にご来店ください。</div>
       </details>
     </div>
+  </section>
+
+  <!-- 11/26 補聴器はメガネの流れの途中だと話が切れる→店舗検索の前に（最後に「ついでに」の位置） -->
+  <section class="section section-white hear-mini-sec">
+      <!-- 補聴器（11/25 載せる・技能者/2週間無料貸出も今回OK）11/25 BF LPと同じ形に：左＝ロゴ・写真・名前・価格｜右＝アイメガネの補聴器サポート。変更前 _保存\index.before-1125-hear.html -->
+      <div class="wh">
+        <!-- 11/26 補聴器は「少し触れる」程度に（主役はメガネのセール）：横長の小さいカード1枚。前の大きいカード(.hc)は _保存\index.before-1126-hearmini.html -->
+        <h3 class="hc2-head">聴こえの<em>相談</em>も、お気軽に</h3><!-- 11/26 値引きは上司確認中→相談の内容をメインに（前：補聴器もおトク） -->
+        <div class="hc2">
+          <img class="hc2-logo" src="イメージ画像/winter_starkey-logo_830_476.webp" alt="Starkey（スターキー）" width="830" height="476" loading="lazy"><!-- 11/26 右上にロゴ（メーカー画像なので加工しない） -->
+          <img class="hc2-photo" src="イメージ画像/price-hochouki.png" alt="スターキー Gシリーズ 補聴器" loading="lazy">
+          <div class="hc2-body">
+            <ul class="hc2-pts"><li><b>2</b>週間の無料貸出</li><li>認定補聴器技能者が在籍<small>※不在の日もあります</small></li></ul>
+            <p class="hc2-p"><span class="hc2-name">スターキー Gシリーズ RICクラス10（充電式）</span><span class="hc2-price"><span>片耳 &yen;78,500</span><span>両耳 &yen;149,500</span></span><span class="hc2-pn">（充電器つき）</span></p>
+            <a class="hc2-link" href="https://www.aimegane.com/hochouki/soudankai/" target="_blank" rel="noopener" data-cta-location="hearing">補聴器の無料相談はこちら</a>
+          </div>
+        </div>
+      </div>
   </section>
 
   <!-- ⑤ 店舗情報(店舗検索) -->
