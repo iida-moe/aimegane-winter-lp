@@ -3267,6 +3267,18 @@
     .ov-col + .ov-col { border-left: 0 !important; }
   }
   /* ===== 商品カード シンプル ここまで ===== */
+  /* 11/26 %OFF札をひと回り大きく */
+  .x8-panel .x8-card .xp-badge-in { padding: 5px 12px 6px !important; }
+  .x8-panel .x8-card .xp-badge-num { font-size: 32px !important; }
+  .x8-panel .x8-card .xp-badge-pct { font-size: 17px !important; }
+  @media (max-width: 640px) {
+    .x8-panel .x8-card .xp-badge-in { padding: 4px 10px 5px !important; }
+    .x8-panel .x8-card .xp-badge-num { font-size: 28px !important; }
+    .x8-panel .x8-card .xp-badge-pct { font-size: 15px !important; }
+  }
+  /* 11/26 商品写真の角を四角に（JINS・眼鏡市場と同じ）・札も四角 */
+  .x8-panel .x8-photo { border-radius: 0 !important; }
+  .x8-panel .x8-card .xp-badge, .x8-panel .x8-card .xp-badge-in { border-radius: 0 !important; }
 </style>
 <style>
   .preview-gate { position: fixed; inset: 0; z-index: 9999; background: #B81B22; display: flex; align-items: center; justify-content: center; padding: 20px; }
