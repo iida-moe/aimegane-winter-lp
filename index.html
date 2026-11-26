@@ -3371,6 +3371,12 @@
     .ov-shop { font-size: 28px !important; }
     .ov-shopw { text-align: left; }
   }
+  /* 11/26 カードの頭にお客さんの悩みのひと言（吹き出し風）→見出しで答える */
+  .vzg-ask { display: inline-block; position: relative; margin: 16px 0 6px; padding: 4px 12px; background: #fff; border: 1.5px solid #111; border-radius: 999px; font-size: 14px; font-weight: 700; color: #111; }
+  .vzg-ask::after { content: ''; position: absolute; left: 18px; bottom: -7px; width: 10px; height: 10px; background: #fff; border-right: 1.5px solid #111; border-bottom: 1.5px solid #111; transform: rotate(45deg); }
+  .vzg-ask + .vzg-h { margin-top: 6px !important; }
+  .vzg-wide .vzg-ask { margin-top: 0; }
+  @media (min-width: 801px) { .vzg-ask { font-size: 15px; } }
 </style>
 <style>
   .preview-gate { position: fixed; inset: 0; z-index: 9999; background: #B81B22; display: flex; align-items: center; justify-content: center; padding: 20px; }
@@ -4014,13 +4020,13 @@
   <text x="196" y="83" font-family="'Noto Sans JP',sans-serif" font-weight="900" font-size="20" fill="#D9A400">中</text>
   <text x="196" y="126" font-family="'Noto Sans JP',sans-serif" font-weight="900" font-size="20" fill="#2DB35A">低</text>
 </svg></div><!-- NHKバッジは本文へ移動 --></div><!-- 11/26 ChatGPTの測定イラスト＋グラフ（SVG）を右上に重ねる -->
-          <h3 class="vzg-h">目の疲れを<em>グラフ</em>で視える化</h3>
-          <p class="vzg-txt">疲れ目や肩こりは、合わないメガネが原因かも。NHKの番組でも紹介された測定機で確かめて、楽に見えるメガネをご提案します。</p>
+          <p class="vzg-ask">最近、目が疲れやすい…</p><h3 class="vzg-h">目の疲れを<em>グラフ</em>で視える化</h3>
+          <p class="vzg-txt">疲れ目や肩こりは、合わないメガネが原因かも。NHKの番組でも紹介された測定機で、目の疲れ具合をチェックできます。</p>
         </div>
         <div class="vzg-card"><p class="vzg-tab">似合い度</p>
           <div class="vzg-img vzg-img-ill vzg-scene"><img src="イメージ画像/winter_mirror_1090_886.webp?v=2" alt="AIミラーの前でメガネを試着し、鏡に似合い度の点数が出ているイラスト" width="1090" height="886" loading="lazy"><!-- 11/26 似合い度の拡大丸は外す（鏡の中の点数で十分） --></div><!-- 11/26 ChatGPTのイラストの鏡の中を左右反転して手の向きを直し、92点を入れた -->
-          <h3 class="vzg-h">似合い度を<em>点数</em>で視える化</h3>
-          <p class="vzg-txt">AIミラーの前に立つだけ。ゲーム感覚で、高得点のメガネを探せます。</p>
+          <p class="vzg-ask">どれが似合うか迷う…</p><h3 class="vzg-h">似合い度を<em>点数</em>で視える化</h3>
+          <p class="vzg-txt">鏡の前でかけるだけで、AIが似合い度を点数に。ゲーム感覚で、自分に似合う一本が見つかります。</p>
         </div>
       </div>
       <p class="vzg-mid">視えた結果をもとに、<span class="nw">スタッフと一緒に選びます</span></p>
@@ -4028,7 +4034,7 @@
         <div class="vzg-wide-in">
           <div class="vzg-img vzg-img-ill"><img src="イメージ画像/winter_sekkyaku_1039_749.webp" alt="スタッフがお客様の話を聞きながら書きこんでいる様子" width="1039" height="749" loading="lazy"></div>
           <div>
-            <h3 class="vzg-h">眼鏡作製技能士が<em>ご提案</em></h3>
+            <p class="vzg-ask">自分に合う度数がわからない…</p><h3 class="vzg-h">眼鏡作製技能士が<em>ご提案</em></h3>
             <p class="vzg-txt">15項目の細かな測定で目の状態を確かめ、普段の過ごし方に合うメガネをご提案します。</p>
             <p class="vzg-more"><a href="https://www.aimegane.com/aboutus/gijutsu/#measurement-15" target="_blank" rel="noopener">15項目の測定とは</a></p>
           </div>
