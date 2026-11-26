@@ -2759,6 +2759,10 @@
   .flow-arrow { display: flex; flex-direction: column; align-items: center; gap: 0; padding: 8px 0 16px; background: #fff; }
   .flow-arrow span { width: 18px; height: 18px; border-right: 3px solid #D4AF37; border-bottom: 3px solid #D4AF37; transform: rotate(45deg); margin-top: -6px; }
   .flow-arrow span:last-child { opacity: .5; }
+  /* 11/26 矢印を大きく */
+  .flow-arrow { padding: 8px 0 24px; }
+  .flow-arrow span { width: 32px; height: 32px; border-right-width: 5px; border-bottom-width: 5px; margin-top: -12px; }
+  @media (min-width: 801px) { .flow-arrow span { width: 40px; height: 40px; border-right-width: 6px; border-bottom-width: 6px; margin-top: -16px; } }
   @media (max-width: 640px) {
     .fit-sec { padding-top: 24px !important; }
     .fit-sec > .bridge, .fit-sec > .section-title, .fit-sec > .lens-standard-note { text-align: center !important; }
@@ -3718,7 +3722,7 @@
       <p class="mf-support-main">わからなくても大丈夫</p>
       <p class="mf-support-sub"><span class="nw">レンズの種類も度数も、</span><span class="nw">生活に合わせて</span><span class="nw">スタッフが一緒に選びます。</span></p><!-- 11/26 「資格を持つ」は全員ではないので外す -->
     </div>
-    <p class="mf-note">※調光・偏光などのレンズは別料金です。</p>
+    <!-- <p class="mf-note">※調光・偏光などのレンズは別料金です。</p> 11/26 消す -->
 
     <!-- 旧：調光・偏光・HEV（ザセールのまま）。使わないので非表示 -->
     <div class="lens-list lens-list-old" style="display:none;">
