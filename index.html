@@ -2847,6 +2847,12 @@
     .vz-title .vz-t2 { font-size: 44px; }
     .vz-lead { font-size: 16px !important; }
   }
+  /* 11/26 順番ではない→数字・縦の線・つなぎの言葉をなくし、3つを同じ形で並べて細い線で区切る */
+  .vz-step { display: block !important; padding: 28px 0 !important; border-top: 1px solid #E6E6E6; }
+  .vz-step:first-child { border-top: 0; padding-top: 0 !important; }
+  .vz-step:last-child { padding-bottom: 0 !important; }
+  .vz-step::before { display: none !important; }
+  @media (min-width: 801px) { .vz-step { padding: 40px 0 !important; } }
   /* ===== 視える化 ここまで ===== */
   /* 11/25 「どれが合うんだろう…？」人物＋吹き出し */
   .mf-q { border: 0 !important; padding: 32px 0 8px !important; text-align: center; }
@@ -3624,7 +3630,6 @@
     <p class="vz-lead"><span class="nw">買う前に気になることを、</span><span class="nw">ひとつずつ目で見て確かめられます。</span></p>
     <ol class="vz">
       <li class="vz-step">
-        <span class="vz-num" aria-hidden="true">01</span>
         <div class="vz-body">
           <div class="vz-q"><img src="イメージ画像/winter_mayoi_900_1068.png" alt="" width="900" height="1068" loading="lazy"><p>私の目に、ちゃんと合う？</p></div>
           <div class="vz-a">
@@ -3635,11 +3640,9 @@
               <a class="vz-more" href="https://www.aimegane.com/aboutus/gijutsu/#measurement-15" target="_blank" rel="noopener">15項目の測定とは</a>
             </div>
           </div>
-          <p class="vz-link">目の状態がわかったら、</p>
         </div>
       </li>
       <li class="vz-step">
-        <span class="vz-num" aria-hidden="true">02</span>
         <div class="vz-body">
           <div class="vz-q"><img src="イメージ画像/winter_mayoi_900_1068.png" alt="" width="900" height="1068" loading="lazy"><p>かけていて、疲れない？</p></div>
           <div class="vz-a">
@@ -3650,11 +3653,9 @@
               <p class="vz-n">※一部店舗を除く</p>
             </div>
           </div>
-          <p class="vz-link">目に合うレンズが決まったら、</p>
         </div>
       </li>
       <li class="vz-step">
-        <span class="vz-num" aria-hidden="true">03</span>
         <div class="vz-body">
           <div class="vz-q"><img src="イメージ画像/winter_mayoi_900_1068.png" alt="" width="900" height="1068" loading="lazy"><p>私に、似合う？</p></div>
           <div class="vz-a">
