@@ -8,5 +8,5 @@
 <circle cx="180" cy="140" r="5" fill="#333333"/>
 <circle cx="180" cy="224" r="5" fill="#333333"/>
 <g fill="none" stroke="#333333" stroke-width="4.5" stroke-linecap="round" stroke-linejoin="round"><rect x="380" y="102" width="50" height="32" rx="3"/><path d="M370,144 H440 L433,135 H377 Z"/><path d="M372,244 Q388,238 405,246 Q422,238 438,244 V280 Q422,274 405,282 Q388,274 372,280 Z M405,246 V282"/></g>
-<g font-family="'Noto Sans JP', sans-serif" font-weight="700"><text x="456" y="120" font-size="40" fill="#111111">少し先</text><text x="456" y="154" font-size="32" fill="#333" font-weight="500">パソコン</text><text x="456" y="260" font-size="40" fill="#111111">手元</text><text x="456" y="294" font-size="32" fill="#333" font-weight="500">書類・本</text></g>
+<g font-family="'Noto Sans JP', sans-serif" font-weight="700"><text x="456" y="120" font-size="40" fill="#111111">少し先</text><text x="456" y="150" font-size="24" fill="#666" font-weight="500">パソコン</text><text x="456" y="260" font-size="40" fill="#111111">手元</text><text x="456" y="290" font-size="24" fill="#666" font-weight="500">書類・本</text></g>
 </svg>

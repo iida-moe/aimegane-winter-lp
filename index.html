@@ -3605,7 +3605,7 @@
       <div class="lf-main">
         <div class="lf-figcol">
           <p class="lf-cap">メガネのレンズ</p>
-          <img class="lf-img" id="lfImg" src="イメージ画像/lens-enkin.svg" alt="遠近両用レンズの見え方" width="640" height="360">
+          <img class="lf-img" id="lfImg" src="イメージ画像/lens-enkin.svg?v=3" alt="遠近両用レンズの見え方" width="640" height="360">
           <p class="lf-key" id="lfKey" data-lens="enkin"><span class="lk"><i class="lk-c" aria-hidden="true"></i>色の部分：よく見える範囲</span><span class="lk lk-dd"><i class="lk-d" aria-hidden="true"></i><span>点線の外側：<span class="lf-nw">ゆがみ・ぼやけが出やすい部分</span></span></span><span class="lk lk-rr"><i class="lk-r" aria-hidden="true"></i>赤い点線：手元を少しサポートする部分</span></p>
         </div>
         <div class="lf-side">
@@ -4324,13 +4324,13 @@ setupShopFilterBarVisibility();
 // 11/20 レンズ選びのタブ（BF LPから移植）
 (function(){
   var LF = {
-    enkin:  { src:'イメージ画像/lens-enkin.svg',  alt:'遠近両用レンズの見え方', forText:'遠くも手元も、これ1本で',
+    enkin:  { src:'イメージ画像/lens-enkin.svg?v=3',  alt:'遠近両用レンズの見え方', forText:'遠くも手元も、これ1本で',
               chk:['かけ外しが面倒','手元用を持ち歩きたくない','外でも手元を見たい'] },
-    chukin: { src:'イメージ画像/lens-chukin.svg', alt:'中近両用レンズの見え方', forText:'家の中で、テレビも手元も',
+    chukin: { src:'イメージ画像/lens-chukin.svg?v=3', alt:'中近両用レンズの見え方', forText:'家の中で、テレビも手元も',
               chk:['家で過ごす時間が長い','料理や家事を楽にしたい','手元を広く見たい'] },
-    kinkin: { src:'イメージ画像/lens-kinkin.svg', alt:'近々レンズの見え方', forText:'デスクまわりを広く、見やすく',
+    kinkin: { src:'イメージ画像/lens-kinkin.svg?v=3', alt:'近々レンズの見え方', forText:'デスクまわりを広く、見やすく',
               chk:['パソコン作業が長い','画面がぼやけやすい','手元の細かい作業が多い'] },
-    assist: { src:'イメージ画像/lens-assist.svg', alt:'アシストレンズの見え方', forText:'遠くもスマホも、ゆがみ少なく',
+    assist: { src:'イメージ画像/lens-assist.svg?v=3', alt:'アシストレンズの見え方', forText:'遠くもスマホも、ゆがみ少なく',
               chk:['スマホをよく見る','手元が少し見えにくい','遠近両用はまだ早いかも'] }
   };
   var tabs = document.querySelectorAll('.lf-tabs button');
