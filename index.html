@@ -3279,6 +3279,19 @@
   /* 11/26 商品写真の角を四角に（JINS・眼鏡市場と同じ）・札も四角 */
   .x8-panel .x8-photo { border-radius: 0 !important; }
   .x8-panel .x8-card .xp-badge, .x8-panel .x8-card .xp-badge-in { border-radius: 0 !important; }
+  /* 11/26 グラフは右下に赤い丸で拡大して見せる（Iさん案）・スマホは上の2枚も縦に積む */
+  .vzg-scene .vzg-zoom { position: absolute; right: -3%; bottom: -6%; width: 40%; aspect-ratio: 1; border-radius: 50%; background: #fff; border: 4px solid #C8102E; display: flex; align-items: center; justify-content: center; box-shadow: 0 4px 10px rgba(0,0,0,.12); }
+  .vzg-scene .vzg-zoom svg { width: 74% !important; height: auto !important; }
+  @media (max-width: 640px) {
+    .vzg-top { grid-template-columns: 1fr !important; gap: 0 !important; }
+    .vzg-card { padding: 16px 16px 18px !important; }
+    .vzg-h { font-size: 18px !important; letter-spacing: 0 !important; }
+    .vzg-txt { font-size: 14px !important; }
+    .vzg-tab { font-size: 14px !important; }
+    .vzg-scene .vzg-zoom { border-width: 3px; }
+  }
+  .vzg-scene .vzg-zoom { bottom: 0; right: -2%; }
+  @media (max-width: 640px) { .vzg-top .vzg-card + .vzg-card { margin-top: 44px !important; } }
 </style>
 <style>
   .preview-gate { position: fixed; inset: 0; z-index: 9999; background: #B81B22; display: flex; align-items: center; justify-content: center; padding: 20px; }
@@ -3913,24 +3926,13 @@
     <div class="vzg">
       <div class="vzg-top">
         <div class="vzg-card"><p class="vzg-tab">グラフで視える化</p>
-          <div class="vzg-img vzg-img-ill vzg-scene"><img src="イメージ画像/winter_sokutei2_1039_749.webp" alt="メガネを外してアコモレフで目を測定しているお客様とスタッフのイラスト" width="1039" height="749" loading="lazy"><svg class="vzg-graph" role="img" aria-label="目の負担を緑・黄・赤のグラフで表示" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 170">
-  <!-- アコモレフの結果画面風：棒が高くなるほど 緑→黄→赤／右に目安の色帯 -->
-  <rect x="2" y="2" width="236" height="166" rx="12" fill="#fff" stroke="#111" stroke-width="3"/>
-  <path d="M24 26 V142 H190" fill="none" stroke="#111" stroke-width="2.5" stroke-linecap="round"/>
-  <g>
-    <rect x="32"  y="112" width="16" height="30" fill="#2DB35A"/>
-    <rect x="52"  y="104" width="16" height="38" fill="#2DB35A"/>
-    <rect x="72"  y="96"  width="16" height="46" fill="#2DB35A"/>
-    <rect x="92"  y="82"  width="16" height="60" fill="#F2C230"/>
-    <rect x="112" y="72"  width="16" height="70" fill="#F2C230"/>
-    <rect x="132" y="56"  width="16" height="86" fill="#E84A3C"/>
-    <rect x="152" y="44"  width="16" height="98" fill="#E84A3C"/>
-    <rect x="172" y="36"  width="16" height="106" fill="#E84A3C"/>
-  </g>
-  <rect x="204" y="26" width="16" height="38" fill="#E84A3C"/>
-  <rect x="204" y="64" width="16" height="38" fill="#F2C230"/>
-  <rect x="204" y="102" width="16" height="40" fill="#2DB35A"/>
-</svg></div><!-- 11/26 ChatGPTの測定イラスト＋グラフ（SVG）を右上に重ねる -->
+          <div class="vzg-img vzg-img-ill vzg-scene"><img src="イメージ画像/winter_sokutei2_1039_749.webp" alt="メガネを外してアコモレフで目を測定しているお客様とスタッフのイラスト" width="1039" height="749" loading="lazy"><div class="vzg-zoom" role="img" aria-label="目の負担を緑・黄・赤のグラフで表示"><svg viewBox="0 0 200 150" aria-hidden="true">
+  <path d="M14 14 V128 H168" fill="none" stroke="#111" stroke-width="2.5" stroke-linecap="round"/>
+  <rect x="22" y="104" width="14" height="24" fill="#2DB35A"/><rect x="40" y="98" width="14" height="30" fill="#2DB35A"/><rect x="58" y="90" width="14" height="38" fill="#2DB35A"/>
+  <rect x="76" y="78" width="14" height="50" fill="#F2C230"/><rect x="94" y="68" width="14" height="60" fill="#F2C230"/>
+  <rect x="112" y="54" width="14" height="74" fill="#E84A3C"/><rect x="130" y="42" width="14" height="86" fill="#E84A3C"/><rect x="148" y="34" width="14" height="94" fill="#E84A3C"/>
+  <rect x="178" y="14" width="14" height="38" fill="#E84A3C"/><rect x="178" y="52" width="14" height="38" fill="#F2C230"/><rect x="178" y="90" width="14" height="38" fill="#2DB35A"/>
+</svg></div></div><!-- 11/26 ChatGPTの測定イラスト＋グラフ（SVG）を右上に重ねる -->
           <h3 class="vzg-h">目のストレスチェック</h3>
           <p class="vzg-txt">NHKの番組でも紹介された「アコモレフ」で、目のピント合わせの力をグラフに。</p>
         </div>
