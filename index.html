@@ -2904,9 +2904,10 @@
     .vzs-n { font-size: 13px; }
   }
   /* 11/26 カード3つ並び（見本：ベージュ背景に白カード・見出し→写真→説明） */
-  .fit-sec { background: #F3EFE8 !important; }
+  .fit-sec { background: #fff !important; } /* 11/26 ベージュはLPの色にない→白 */
+  .vzc-ill svg { display: block; width: 100%; height: 100%; }
   .vzc { list-style: none; padding: 0; margin: 28px 0 0; display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; max-width: 1040px; margin-left: auto; margin-right: auto; }
-  .vzc-card { background: #fff; border-radius: 16px; padding: 20px 18px 22px; box-shadow: 0 4px 16px rgba(80, 60, 30, .08); text-align: left; }
+  .vzc-card { background: #fff; border-radius: 16px; padding: 20px 18px 22px; border: 1px solid #E6E6E6; text-align: left; } /* 白背景なので影→うすい線 */
   .vzc-h { margin: 0 0 14px; font-size: 19px; font-weight: 900; line-height: 1.4; color: #111; }
   .vzc-red { color: #C8102E; }
   .vzc-photo { border-radius: 10px; overflow: hidden; aspect-ratio: 4 / 3; background: #F4F4F2; }
@@ -3797,18 +3798,80 @@
     <ul class="vzc">
       <li class="vzc-card">
         <h3 class="vzc-h"><span class="vzc-red">15項目</span>の精密測定</h3>
-        <div class="vzc-photo"><img src="イメージ画像/staff-fitting-scene.png" alt="アイメガネのスタッフ" width="1536" height="1024" loading="lazy"></div>
+        <div class="vzc-photo vzc-ill"><!-- 11/26 写真→イラスト（元：イメージ画像/staff-fitting-scene.png） --><svg role="img" aria-label="15項目のチェックリスト" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300">
+  <rect width="400" height="300" fill="#F7F7F7"/>
+  <!-- クリップボード -->
+  <rect x="112" y="40" width="176" height="228" rx="14" fill="#fff" stroke="#333" stroke-width="4"/>
+  <rect x="166" y="28" width="68" height="26" rx="8" fill="#333"/>
+  <g stroke-linecap="round" stroke-linejoin="round">
+    <g fill="none" stroke="#009944" stroke-width="7">
+      <path d="M140 92 l9 9 l17 -19"/>
+      <path d="M140 138 l9 9 l17 -19"/>
+      <path d="M140 184 l9 9 l17 -19"/>
+      <path d="M140 230 l9 9 l17 -19"/>
+    </g>
+    <g stroke="#CFCFCF" stroke-width="8">
+      <path d="M184 93 h76"/>
+      <path d="M184 139 h60"/>
+      <path d="M184 185 h70"/>
+      <path d="M184 231 h52"/>
+    </g>
+  </g>
+  <!-- 15項目の丸 -->
+  <circle cx="300" cy="214" r="54" fill="#C8102E"/>
+  <text x="300" y="220" text-anchor="middle" font-family="'Bebas Neue','Anton',sans-serif" font-size="52" fill="#fff">15</text>
+  <text x="300" y="246" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="900" font-size="17" fill="#fff">項目</text>
+</svg></div>
         <p class="vzc-txt">視力だけでなく、見えにくさの原因を15項目の測定で確かめます。</p>
       </li>
       <li class="vzc-card">
         <h3 class="vzc-h">目の疲れを<span class="vzc-red">グラフ</span>で</h3>
-        <div class="vzc-photo"><img src="イメージ画像/winter_acomoref_1200_900.webp" alt="アコモレフで目のピント合わせの力を測定している様子" width="1200" height="900" loading="lazy"></div><!-- 11/26 アイメガネHPのお知らせ記事（news/7662）の測定写真 DSC09751 を4:3に切り出し。前：winter_stress_832_560.webp -->
+        <div class="vzc-photo vzc-ill"><!-- 11/26 写真→イラスト（元：イメージ画像/winter_acomoref_1200_900.webp） --><svg role="img" aria-label="目の負担を緑・黄・赤で表すグラフ" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300">
+  <rect width="400" height="300" fill="#F7F7F7"/>
+  <!-- 画面 -->
+  <rect x="52" y="44" width="296" height="212" rx="14" fill="#fff" stroke="#333" stroke-width="4"/>
+  <!-- 軸 -->
+  <path d="M88 76 V222 H300" fill="none" stroke="#333" stroke-width="3" stroke-linecap="round"/>
+  <!-- 棒（負担が軽い＝緑→重い＝赤） -->
+  <g>
+    <rect x="102" y="178" width="22" height="44" rx="3" fill="#2DB35A"/>
+    <rect x="130" y="170" width="22" height="52" rx="3" fill="#2DB35A"/>
+    <rect x="158" y="160" width="22" height="62" rx="3" fill="#2DB35A"/>
+    <rect x="186" y="140" width="22" height="82" rx="3" fill="#F2C230"/>
+    <rect x="214" y="126" width="22" height="96" rx="3" fill="#F2C230"/>
+    <rect x="242" y="102" width="22" height="120" rx="3" fill="#E84A3C"/>
+    <rect x="270" y="88" width="22" height="134" rx="3" fill="#E84A3C"/>
+  </g>
+  <!-- 右の目安（緑・黄・赤） -->
+  <rect x="314" y="76" width="16" height="48" fill="#E84A3C"/>
+  <rect x="314" y="124" width="16" height="48" fill="#F2C230"/>
+  <rect x="314" y="172" width="16" height="50" fill="#2DB35A"/>
+</svg></div><!-- 11/26 アイメガネHPのお知らせ記事（news/7662）の測定写真 DSC09751 を4:3に切り出し。前：winter_stress_832_560.webp -->
         <p class="vzc-txt">NHKの番組でも紹介された「アコモレフ」で、目のピント合わせの力をグラフに。楽に見える度数をご提案します。</p>
         <p class="vzc-note">※一部店舗を除く</p>
       </li>
       <li class="vzc-card">
         <h3 class="vzc-h">似合い度を<span class="vzc-red">点数</span>で</h3>
-        <div class="vzc-photo"><img src="イメージ画像/aifittingmirror-crop.png" alt="AIフィッティングミラー" loading="lazy"></div>
+        <div class="vzc-photo vzc-ill"><!-- 11/26 写真→イラスト（元：イメージ画像/aifittingmirror-crop.png） --><svg role="img" aria-label="鏡に似合い度の点数が出るイラスト" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300">
+  <rect width="400" height="300" fill="#F7F7F7"/>
+  <!-- 鏡 -->
+  <rect x="116" y="26" width="168" height="248" rx="18" fill="#333"/>
+  <rect x="128" y="38" width="144" height="224" rx="10" fill="#E9EEF2"/>
+  <!-- 人 -->
+  <path d="M148 262 C150 214 172 198 200 198 C228 198 250 214 252 262 Z" fill="#9AA7B4"/>
+  <circle cx="200" cy="146" r="40" fill="#F3D9C4"/>
+  <path d="M160 140 C160 108 182 98 200 98 C222 98 242 110 240 140 C232 124 214 118 200 118 C184 118 168 126 160 140 Z" fill="#3A3A3A"/>
+  <!-- メガネ -->
+  <g fill="none" stroke="#111" stroke-width="4">
+    <circle cx="184" cy="148" r="13"/>
+    <circle cx="216" cy="148" r="13"/>
+    <path d="M197 147 h6"/>
+  </g>
+  <!-- 点数 -->
+  <circle cx="292" cy="92" r="46" fill="#C8102E"/>
+  <text x="286" y="104" text-anchor="middle" font-family="'Bebas Neue','Anton',sans-serif" font-size="46" fill="#fff">92</text>
+  <text x="314" y="104" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="900" font-size="16" fill="#fff">点</text>
+</svg></div>
         <p class="vzc-txt">AIミラーが、かけたメガネの似合い度を点数で表示。参考にしながら選べます。</p>
       </li>
     </ul>
