@@ -2943,6 +2943,27 @@
     .x8-panel .x8-after { font-size: 24px !important; }
     .x8-panel .x8-after small { font-size: 12px !important; }
   }
+  /* 11/26 Iさんの見本：カードの枠なし・写真はうすいグレーの四角・文字は写真の下・価格は1行（札は赤い四角のまま） */
+  .x8-panel .x8-grid > .x8-card { border: 0 !important; border-radius: 0 !important; background: transparent !important; overflow: visible !important; }
+  .x8-panel .x8-photo { background: #F4F4F2 !important; border-radius: 8px; overflow: hidden; aspect-ratio: 1 / 1 !important; align-items: center !important; padding: 34px 14px 14px !important; }
+  .x8-panel .x8-card .xp-badge { border-radius: 8px 0 0 0; overflow: hidden; }
+  .x8-panel .x8-body { padding: 12px 2px 6px !important; }
+  .x8-panel .x8-brand { font-size: 16px !important; color: #111 !important; }
+  .x8-panel .x8-price, .x8-panel .x8-before, .x8-panel .x8-after { text-align: left !important; }
+  .x8-panel .x8-price { display: flex !important; flex-wrap: nowrap !important; align-items: baseline; gap: 0 12px; margin-top: 4px !important; }
+  .x8-panel .x8-before, .x8-panel .x8-after { display: inline-block !important; }
+  .x8-panel .x8-after { font-size: 30px !important; }
+  @media (max-width: 640px) {
+    .x8-panel .x8-grid { gap: 18px 12px !important; }
+    .x8-panel .x8-photo { padding: 30px 8px 8px !important; }
+    .x8-panel .x8-body { padding: 8px 0 4px !important; }
+    .x8-panel .x8-brand { font-size: 13px !important; }
+    .x8-panel .x8-price { gap: 0 6px; }
+    .x8-panel .x8-before { font-size: 12px !important; }
+    .x8-panel .x8-before s { font-size: 12px !important; }
+    .x8-panel .x8-after { font-size: 22px !important; }
+    .x8-panel .x8-after small { font-size: 11px !important; }
+  }
   /* 11/26 概要カード：金の帯（眼鏡市場に似すぎ）→ 緑の線の小さいラベル */
   .ov-h { display: inline-block !important; background: none !important; border: 1.5px solid #009944; color: #009944 !important; border-radius: 999px !important; padding: 3px 16px !important; font-size: 13px !important; letter-spacing: .12em !important; }
   .ov-date { margin: 8px 0 16px !important; }
