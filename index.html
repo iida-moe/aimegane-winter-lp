@@ -3105,6 +3105,15 @@
   .ov-to { margin: 0 6px !important; font-size: 18px !important; }
   @media (max-width: 640px) { .ov-date b { font-size: min(26px, 7vw) !important; } .ov-date small { font-size: 13px !important; } .ov-to { font-size: 15px !important; margin: 0 4px !important; } }
   @media (min-width: 801px) { .ov-date b { font-size: 44px !important; } .ov-date small { font-size: 18px !important; } }
+  /* 11/26 PCの間延び対策：カードを少しせまく＋期間｜店舗を横並び・間に縦線・ボタンは下に */
+  @media (min-width: 801px) {
+    .ov { max-width: 960px !important; margin-left: auto !important; margin-right: auto !important; padding: 32px 40px 28px !important; }
+    .ov-row { display: grid; grid-template-columns: 1.4fr 1fr; align-items: center; margin-bottom: 24px; }
+    .ov-col { padding: 4px 24px; }
+    .ov-col + .ov-col { border-left: 1px solid #E0E0E0; }
+    .ov-col .ov-date, .ov-col .ov-shop { margin-bottom: 0 !important; }
+    .ov-shop { font-size: 32px !important; line-height: 1.2; }
+  }
   /* ===== 商品カード シンプル ここまで ===== */
 </style>
 <style>
@@ -3271,10 +3280,16 @@
     <p class="thanks-p">来年も、すっきり見える毎日を。<br>感謝の気持ちを込めて、<br class="only-mobile">今年<span class="thanks-em">最後のセール</span>を開催します。</p>
     <!-- 11/26 眼鏡市場BF LPを参考に：期間・対象店舗の概要を最初に -->
     <div class="ov">
-      <p class="ov-h">実施期間</p>
-      <p class="ov-date"><b>2026.12.4</b><small>(金)</small><span class="ov-to">〜</span><b>12.27</b><small>(日)</small></p>
-      <p class="ov-h">実施店舗</p>
-      <p class="ov-shop">アイメガネ各店</p>
+      <div class="ov-row"><!-- 11/26 PCは期間｜店舗を横並び（縦に細く積むと間延びする） -->
+        <div class="ov-col">
+          <p class="ov-h">実施期間</p>
+          <p class="ov-date"><b>2026.12.4</b><small>(金)</small><span class="ov-to">〜</span><b>12.27</b><small>(日)</small></p>
+        </div>
+        <div class="ov-col">
+          <p class="ov-h">実施店舗</p>
+          <p class="ov-shop">アイメガネ各店</p>
+        </div>
+      </div>
       <a class="ov-btn" href="#shop-search" data-cta-location="overview">お近くの店舗を探す</a>
       <p class="ov-n">※本庄南大通り店は対象外です</p>
     </div>
