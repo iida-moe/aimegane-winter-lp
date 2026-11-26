@@ -2952,6 +2952,19 @@
   .vzg-img { background: #F7F7F7; }
   .vzg-img-ill { background: #fff; }
   .vzg-tab { background: #111 !important; }
+  /* 11/26 ラベルをファイルの耳（インデックス）に：カードと同じ白・上だけ角丸・カードの左上につながる */
+  .vzg-card { border-top-left-radius: 0 !important; margin-top: 38px; }
+  .vzg-top .vzg-card { margin-top: 38px; }
+  .vzg-tab { left: 0 !important; top: -38px !important; height: 38px; box-sizing: border-box; display: flex; align-items: center; background: #fff !important; color: #111 !important; border-radius: 12px 12px 0 0 !important; padding: 0 20px !important; }
+  .vzg-tab::before { content: ''; width: 8px; height: 8px; border-radius: 50%; background: #C8102E; margin-right: 8px; flex-shrink: 0; }
+  .vzg-card { padding-top: 20px !important; }
+  .vzg-mid { margin-bottom: 0 !important; }
+  @media (max-width: 640px) {
+    .vzg-card, .vzg-top .vzg-card { margin-top: 32px; }
+    .vzg-tab { top: -32px !important; height: 32px; padding: 0 12px !important; font-size: 13px !important; }
+    .vzg-tab::before { width: 6px; height: 6px; margin-right: 6px; }
+    .vzg-card { padding-top: 14px !important; }
+  }
   .fit-sec + .section { border-top: 0; }
   @media (max-width: 640px) {
     .vzg-top { gap: 12px; }
