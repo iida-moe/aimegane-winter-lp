@@ -3347,6 +3347,16 @@
   .vzg-zoom-score .vzs-n { font-family: 'Bebas Neue','Anton',sans-serif; font-size: clamp(40px, 5vw, 64px); line-height: 1; -webkit-text-stroke: .02em currentColor; color: #C8102E; }
   .vzg-zoom-score .vzs-n small { font-family: 'Noto Sans JP',sans-serif; font-size: .3em; font-weight: 900; margin-left: 2px; -webkit-text-stroke: 0; }
   @media (max-width: 640px) { .vzg-zoom-score .vzs-l { font-size: 13px; } .vzg-zoom-score .vzs-n { font-size: 44px; } }
+  /* 11/26 カードの見出しを大きく */
+  .vzg-h { font-size: 23px !important; }
+  .vzg-wide .vzg-h { font-size: 26px !important; }
+  @media (max-width: 640px) { .vzg-h, .vzg-wide .vzg-h { font-size: 21px !important; } }
+  /* 11/26 最終CTA：メガネの雪だるまを雪の丘の右に */
+  .closing .cl-snowman { position: absolute; z-index: 2; right: 6%; bottom: 38px; width: 120px; height: auto; transform: rotate(4deg); }
+  @media (max-width: 640px) { .closing .cl-snowman { width: 78px; right: 3%; bottom: 46px; } }
+  .closing { position: relative !important; }
+  .closing .cl-snowman { position: absolute !important; left: auto !important; top: auto !important; right: 12% !important; bottom: 30px !important; width: 130px !important; margin: 0 !important; display: block !important; z-index: 3 !important; }
+  @media (max-width: 640px) { .closing .cl-snowman { right: 4% !important; bottom: 36px !important; width: 76px !important; } }
 </style>
 <style>
   .preview-gate { position: fixed; inset: 0; z-index: 9999; background: #B81B22; display: flex; align-items: center; justify-content: center; padding: 20px; }
@@ -3989,9 +3999,9 @@
   <text x="196" y="40" font-family="'Noto Sans JP',sans-serif" font-weight="900" font-size="20" fill="#E84A3C">高</text>
   <text x="196" y="83" font-family="'Noto Sans JP',sans-serif" font-weight="900" font-size="20" fill="#D9A400">中</text>
   <text x="196" y="126" font-family="'Noto Sans JP',sans-serif" font-weight="900" font-size="20" fill="#2DB35A">低</text>
-</svg></div><span class="vzg-nhk">NHKの番組で紹介された測定機</span></div><!-- 11/26 ChatGPTの測定イラスト＋グラフ（SVG）を右上に重ねる -->
+</svg></div><!-- NHKバッジは本文へ移動 --></div><!-- 11/26 ChatGPTの測定イラスト＋グラフ（SVG）を右上に重ねる -->
           <h3 class="vzg-h">目の疲れを<em>グラフ</em>で視える化</h3>
-          <p class="vzg-txt">疲れ目や肩こりは、合わないメガネが原因かも。目のストレスチェックで確かめて、楽に見えるメガネをご提案します。</p>
+          <p class="vzg-txt">疲れ目や肩こりは、合わないメガネが原因かも。NHKの番組でも紹介された測定機で確かめて、楽に見えるメガネをご提案します。</p>
         </div>
         <div class="vzg-card"><p class="vzg-tab">似合い度</p>
           <div class="vzg-img vzg-img-ill vzg-scene"><img src="イメージ画像/winter_mirror_1090_886.webp" alt="AIミラーの前でメガネを試着し、鏡に似合い度の点数が出ているイラスト" width="1090" height="886" loading="lazy"><div class="vzg-zoom vzg-zoom-score" aria-hidden="true"><span class="vzs-l">似合い度</span><span class="vzs-n">92<small>点</small></span></div></div><!-- 11/26 ChatGPTのイラストの鏡の中を左右反転して手の向きを直し、92点を入れた -->
@@ -4268,6 +4278,7 @@
     <p class="closing-period">12.4 <span class="closing-period-dow">fri</span> &rarr; 12.27 <span class="closing-period-dow">sun</span></p>
     <a href="#shop-search" class="fv-cta" data-cta-location="fv">ご来店予約はこちら</a>
     <span class="cl-snow"></span>
+    <img class="cl-snowman" src="イメージ画像/winter_snowman_200_240.svg" alt="" width="200" height="240"><!-- 11/26 メガネをかけた雪だるま -->
   </section>
 
   <!-- ⑦ フッター -->
