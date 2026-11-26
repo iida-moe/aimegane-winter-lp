@@ -2890,6 +2890,38 @@
   /* 帯を画像に重ねる：帯の上の三角は透明（FV画像の赤がそのまま見える）・下だけ緑。境目の細い線を出さない */
   .sfv.is-img .sfv-obi { margin-top: -5.94%; background: transparent; z-index: 2; }
   .sfv.is-img .sfv-obi::before { background: #009944; clip-path: polygon(0 1.5%, 100% 47.5%, 100% 100%, 0 100%); }
+
+  /* ===== 11/26 商品カードをシンプルに（眼鏡市場BFを参考）：傾き・クリップ・穴・影・点線をやめ、写真／割引率／名前／価格だけ。前 _保存\index.before-1126-simplecard.html ===== */
+  .x8-panel .x8-grid { gap: 16px !important; row-gap: 16px !important; }
+  .x8-panel .x8-grid > .x8-card { transform: none !important; box-shadow: none !important; border: 1px solid #E6E6E6 !important; border-radius: 10px !important; margin-top: 0 !important; }
+  .x8-panel .x8-card::before, .x8-panel .x8-card::after { display: none !important; }
+  .x8-panel .x8-photo { padding: 40px 16px 8px !important; }
+  .x8-panel .x8-card .xp-badge-in { padding: 4px 10px 5px !important; border-radius: 0 0 8px 0 !important; }
+  .x8-panel .x8-card .xp-badge-num { font-size: 22px !important; }
+  .x8-panel .x8-card .xp-badge-pct { font-size: 13px !important; }
+  .x8-panel .x8-body { padding: 4px 14px 18px !important; text-align: center !important; }
+  .x8-panel .x8-brand { font-family: 'Noto Sans JP', sans-serif !important; font-weight: 700 !important; font-size: 15px !important; color: #333 !important; letter-spacing: .04em !important; margin: 0 0 6px !important; }
+  .x8-panel .x8-price { border-top: 0 !important; padding-top: 0 !important; }
+  .x8-panel .x8-before { margin: 0 !important; font-size: 13px !important; font-weight: 400 !important; color: #777 !important; }
+  .x8-panel .x8-before-l, .x8-panel .x8-before-v { display: inline !important; }
+  .x8-panel .x8-before-l { margin-right: 4px; }
+  .x8-panel .x8-before s { font-family: 'Noto Sans JP', sans-serif !important; font-weight: 400 !important; font-size: 14px !important; text-decoration-thickness: 1px !important; }
+  .x8-panel .x8-before small { font-size: 12px !important; }
+  .x8-panel .x8-after { font-size: 34px !important; line-height: 1.15 !important; }
+  .x8-panel .x8-after small { display: inline !important; font-size: 13px !important; font-weight: 700 !important; color: #333 !important; margin-left: 2px !important; }
+  @media (max-width: 640px) {
+    .x8-panel .x8-grid { gap: 10px !important; }
+    .x8-panel .x8-photo { padding: 34px 8px 6px !important; }
+    .x8-panel .x8-body { padding: 2px 8px 14px !important; }
+    .x8-panel .x8-brand { font-size: 13px !important; letter-spacing: 0 !important; }
+    .x8-panel .x8-before { font-size: 12px !important; white-space: nowrap; }
+    .x8-panel .x8-before-l { display: none !important; } /* スマホは取り消し線だけで「通常価格」とわかる */
+    .x8-panel .x8-before small { display: none !important; }
+    .x8-panel .x8-before s { font-size: 13px !important; }
+    .x8-panel .x8-after { font-size: 28px !important; }
+    .x8-panel .x8-after small { font-size: 12px !important; }
+  }
+  /* ===== 商品カード シンプル ここまで ===== */
 </style>
 <style>
   .preview-gate { position: fixed; inset: 0; z-index: 9999; background: #B81B22; display: flex; align-items: center; justify-content: center; padding: 20px; }
