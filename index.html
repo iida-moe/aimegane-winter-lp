@@ -3311,6 +3311,22 @@
     .fit-sec .vz-cta { margin-top: 22px !important; }
     .vzg-nhk { font-size: 11px; padding: 3px 8px; }
   }
+  /* 11/26 見出しで「何を・どう視えるか」を言う：ラベル（目の疲れ等）はやめる */
+  .vzg-tab { display: none !important; }
+  .vzg-card, .vzg-top .vzg-card { margin-top: 0 !important; border-top-left-radius: 12px !important; padding-top: 18px !important; }
+  .vzg-top .vzg-card:first-child { padding-top: 18px !important; }
+  .vzg-top { gap: 20px !important; }
+  .vzg-mid { margin: 28px 0 20px !important; }
+  .vzg-h { white-space: normal !important; font-size: 20px !important; line-height: 1.4 !important; margin-top: 14px !important; }
+  .vzg-h em { font-style: normal; color: #C8102E; }
+  .vzg-wide .vzg-h { margin-top: 0 !important; font-size: 24px !important; }
+  @media (max-width: 640px) {
+    .vzg-top { gap: 16px !important; }
+    .vzg-top .vzg-card + .vzg-card { margin-top: 0 !important; }
+    .vzg-h { font-size: 19px !important; }
+    .vzg-wide .vzg-h { font-size: 19px !important; margin-top: 4px !important; }
+    .vzg-mid { margin: 22px 0 16px !important; }
+  }
 </style>
 <style>
   .preview-gate { position: fixed; inset: 0; z-index: 9999; background: #B81B22; display: flex; align-items: center; justify-content: center; padding: 20px; }
@@ -3953,9 +3969,9 @@
   <text x="196" y="40" font-family="'Noto Sans JP',sans-serif" font-weight="900" font-size="20" fill="#E84A3C">高</text>
   <text x="196" y="83" font-family="'Noto Sans JP',sans-serif" font-weight="900" font-size="20" fill="#D9A400">中</text>
   <text x="196" y="126" font-family="'Noto Sans JP',sans-serif" font-weight="900" font-size="20" fill="#2DB35A">低</text>
-</svg></div><span class="vzg-nhk">NHKの番組で紹介</span></div><!-- 11/26 ChatGPTの測定イラスト＋グラフ（SVG）を右上に重ねる -->
-          <h3 class="vzg-h">目のストレスチェック</h3>
-          <p class="vzg-txt">疲れ目や肩こりは、合わないメガネが原因かも。目の疲れ具合をグラフで確かめて、楽に見えるメガネをご提案します。</p>
+</svg></div><span class="vzg-nhk">NHKの番組で紹介された測定機</span></div><!-- 11/26 ChatGPTの測定イラスト＋グラフ（SVG）を右上に重ねる -->
+          <h3 class="vzg-h">目の疲れを<em>グラフ</em>で視える化</h3>
+          <p class="vzg-txt">疲れ目や肩こりは、合わないメガネが原因かも。目のストレスチェックで確かめて、楽に見えるメガネをご提案します。</p>
         </div>
         <div class="vzg-card"><p class="vzg-tab">似合い度</p>
           <div class="vzg-img"><svg role="img" aria-label="鏡に似合い度の点数が出るイラスト" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300">
@@ -3978,8 +3994,8 @@
   <text x="286" y="104" text-anchor="middle" font-family="'Bebas Neue','Anton',sans-serif" font-size="46" fill="#fff">92</text>
   <text x="314" y="104" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="900" font-size="16" fill="#fff">点</text>
 </svg></div>
-          <h3 class="vzg-h">AIミラー</h3>
-          <p class="vzg-txt">鏡の前に立つだけで、かけたメガネの似合い度を点数で判定。ゲーム感覚で、高得点のメガネを探せます。</p>
+          <h3 class="vzg-h">似合い度を<em>点数</em>で視える化</h3>
+          <p class="vzg-txt">AIミラーの前に立つだけ。ゲーム感覚で、高得点のメガネを探せます。</p>
         </div>
       </div>
       <p class="vzg-mid">視えた結果をもとに、<span class="nw">スタッフと一緒に選びます</span></p>
@@ -3987,7 +4003,7 @@
         <div class="vzg-wide-in">
           <div class="vzg-img vzg-img-ill"><img src="イメージ画像/winter_sekkyaku_1039_749.webp" alt="スタッフがお客様の話を聞きながら書きこんでいる様子" width="1039" height="749" loading="lazy"></div>
           <div>
-            <h3 class="vzg-h">15項目の測定</h3>
+            <h3 class="vzg-h">見えにくさの原因を<em>15項目</em>で確認</h3>
             <p class="vzg-txt">普段よく見るものや過ごし方を伺い、見えにくさの原因を確かめて、ぴったりのレンズと度数をご提案します。</p>
           </div>
         </div>
