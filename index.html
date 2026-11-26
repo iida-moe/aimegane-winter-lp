@@ -3332,6 +3332,12 @@
   /* 11/26 グラフの円を小さく（人と機械が主役） */
   .vzg-scene .vzg-zoom { width: 34% !important; right: 0 !important; bottom: 2% !important; }
   @media (max-width: 640px) { .vzg-scene .vzg-zoom { width: 36% !important; right: -1% !important; bottom: 0 !important; } }
+  /* 11/26 価格表記をJINS・眼鏡市場風に：商品名は太字／¥＋(税込)／取り消し線は赤 */
+  .x8-panel .x8-brand { font-weight: 700 !important; }
+  .x8-panel .x8-before s { text-decoration-color: #C8102E !important; text-decoration-thickness: 2px !important; }
+  .x8-panel .x8-before .x8-tax, .x8-panel .x8-after .x8-tax { display: inline !important; font-size: 11px !important; font-weight: 500 !important; margin-left: 2px !important; }
+  .x8-panel .x8-before .x8-tax { color: #555 !important; }
+  .x8-panel .x8-after .x8-tax { color: #C8102E !important; }
 </style>
 <style>
   .preview-gate { position: fixed; inset: 0; z-index: 9999; background: #B81B22; display: flex; align-items: center; justify-content: center; padding: 20px; }
@@ -3619,9 +3625,9 @@
           <p class="x8-brand">PRADO</p>
           <p class="x8-desc">女性の目元を優しく魅せる、上品で落ち着いたデザイン。</p>
           <div class="x8-price">
-            <p class="x8-before"><span class="x8-before-l">通常価格</span><span class="x8-before-v"><s>26,950</s>円</span></p>
+            <p class="x8-before"><span class="x8-before-l">通常価格</span><span class="x8-before-v"><s>¥26,950</s><small class="x8-tax">(税込)</small></span></p>
             <p class="x8-after-label">WINTER SALE価格</p>
-            <p class="x8-after">13,475<small>円</small></p>
+            <p class="x8-after">¥13,475<small class="x8-tax">(税込)</small></p>
           </div>
         </div>
       </article>
@@ -3635,9 +3641,9 @@
           <p class="x8-brand">PRODUCT EYES CLASSIC</p>
           <p class="x8-desc">装いが少し知的に見える、定番のクラシカルデザイン。</p>
           <div class="x8-price">
-            <p class="x8-before"><span class="x8-before-l">通常価格</span><span class="x8-before-v"><s>23,650</s>円</span></p>
+            <p class="x8-before"><span class="x8-before-l">通常価格</span><span class="x8-before-v"><s>¥23,650</s><small class="x8-tax">(税込)</small></span></p>
             <p class="x8-after-label">WINTER SALE価格</p>
-            <p class="x8-after">11,825<small>円</small></p>
+            <p class="x8-after">¥11,825<small class="x8-tax">(税込)</small></p>
           </div>
         </div>
       </article>
@@ -3651,9 +3657,9 @@
           <p class="x8-brand">VIVO</p>
           <p class="x8-desc">地球環境に配慮したエコアセテート素材を使用したアイウェアシリーズ。</p>
           <div class="x8-price">
-            <p class="x8-before"><span class="x8-before-l">通常価格</span><span class="x8-before-v"><s>16,500</s>円</span></p>
+            <p class="x8-before"><span class="x8-before-l">通常価格</span><span class="x8-before-v"><s>¥16,500</s><small class="x8-tax">(税込)</small></span></p>
             <p class="x8-after-label">WINTER SALE価格</p>
-            <p class="x8-after">11,550<small>円</small></p>
+            <p class="x8-after">¥11,550<small class="x8-tax">(税込)</small></p>
           </div>
         </div>
       </article>
@@ -3667,9 +3673,9 @@
           <p class="x8-brand">palacio donna</p>
           <p class="x8-desc">美しいグラデーションカラーがまぶしさを抑え、目元を彩ります。</p>
           <div class="x8-price">
-            <p class="x8-before"><span class="x8-before-l">通常価格</span><span class="x8-before-v"><s>8,800</s>円</span></p>
+            <p class="x8-before"><span class="x8-before-l">通常価格</span><span class="x8-before-v"><s>¥8,800</s><small class="x8-tax">(税込)</small></span></p>
             <p class="x8-after-label">WINTER SALE価格</p>
-            <p class="x8-after">6,160<small>円</small></p>
+            <p class="x8-after">¥6,160<small class="x8-tax">(税込)</small></p>
           </div>
         </div>
       </article>
@@ -3683,9 +3689,9 @@
           <p class="x8-brand">NEO MODE</p>
           <p class="x8-desc">ビジネスシーンからレジャーまで、掛けるシーンを選ばないデザイン。</p>
           <div class="x8-price">
-            <p class="x8-before"><span class="x8-before-l">通常価格</span><span class="x8-before-v"><s>29,700</s>円</span></p>
+            <p class="x8-before"><span class="x8-before-l">通常価格</span><span class="x8-before-v"><s>¥29,700</s><small class="x8-tax">(税込)</small></span></p>
             <p class="x8-after-label">WINTER SALE価格</p>
-            <p class="x8-after">20,790<small>円</small></p>
+            <p class="x8-after">¥20,790<small class="x8-tax">(税込)</small></p>
           </div>
         </div>
       </article>
@@ -3699,9 +3705,9 @@
           <p class="x8-brand">WELLNESS GLASSES</p>
           <p class="x8-desc">なめらかで美しい曲線のフォルムが、柔らかい印象を与えます。</p>
           <div class="x8-price">
-            <p class="x8-before"><span class="x8-before-l">通常価格</span><span class="x8-before-v"><s>29,700</s>円</span></p>
+            <p class="x8-before"><span class="x8-before-l">通常価格</span><span class="x8-before-v"><s>¥29,700</s><small class="x8-tax">(税込)</small></span></p>
             <p class="x8-after-label">WINTER SALE価格</p>
-            <p class="x8-after">20,790<small>円</small></p>
+            <p class="x8-after">¥20,790<small class="x8-tax">(税込)</small></p>
           </div>
         </div>
       </article>
@@ -3715,9 +3721,9 @@
           <p class="x8-brand">WELLNESS GLASSES</p>
           <p class="x8-desc">フレーム全体に抗酸化溶液をコーティングしたフレーム。</p>
           <div class="x8-price">
-            <p class="x8-before"><span class="x8-before-l">通常価格</span><span class="x8-before-v"><s>29,700</s>円</span></p>
+            <p class="x8-before"><span class="x8-before-l">通常価格</span><span class="x8-before-v"><s>¥29,700</s><small class="x8-tax">(税込)</small></span></p>
             <p class="x8-after-label">WINTER SALE価格</p>
-            <p class="x8-after">20,790<small>円</small></p>
+            <p class="x8-after">¥20,790<small class="x8-tax">(税込)</small></p>
           </div>
         </div>
       </article>
@@ -3731,9 +3737,9 @@
           <p class="x8-brand">GLASSES HOUSE</p>
           <p class="x8-desc">インパクトのある強めのデザイン。紫外線で色が変わるレンズで、明るさをコントロール。</p>
           <div class="x8-price">
-            <p class="x8-before"><span class="x8-before-l">通常価格</span><span class="x8-before-v"><s>8,800</s>円</span></p>
+            <p class="x8-before"><span class="x8-before-l">通常価格</span><span class="x8-before-v"><s>¥8,800</s><small class="x8-tax">(税込)</small></span></p>
             <p class="x8-after-label">WINTER SALE価格</p>
-            <p class="x8-after">7,040<small>円</small></p>
+            <p class="x8-after">¥7,040<small class="x8-tax">(税込)</small></p>
           </div>
         </div>
       </article>
@@ -3743,7 +3749,7 @@
       <!-- <li>メガネは<span class="nw">フレーム＋レンズの一式価格です</span></li> 11/26 見出しの下へ移動 -->
       <li>掲載商品は一例・<span class="nw">在庫は店舗で異なります</span></li>
       <li>在庫がなくなり次第、終了します</li>
-      <li>価格はすべて税込です</li>
+      <!-- <li>価格はすべて税込です</li> 11/26 価格の横に(税込)を入れたので外す -->
     </ul>
     <!-- 11/23 値段を見た後に「この価格から、さらに！」 -->
     <div class="xperk">
