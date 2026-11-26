@@ -2994,11 +2994,12 @@
   .enkin-slash .ek-1 { color: inherit; font-size: inherit !important; background: none !important; padding: 0 !important; }
   /* 11/26 PCは棒を短く */
   .enkin-slash::before, .enkin-slash::after { height: .8em !important; width: 4px !important; }
+  @media (min-width: 801px) { .enkin-slash { gap: 36px !important; } }
   /* 11/26 スマホは棒を1行目「遠近両用も」だけに（2行分の長い棒はかっこに見えて重い） */
   @media (max-width: 800px) {
     .enkin-slash { display: block !important; }
     .enkin-slash::before, .enkin-slash::after { display: none !important; }
-    .enkin-slash .ek-1 { display: inline-flex !important; align-items: center; gap: 14px; }
+    .enkin-slash .ek-1 { display: inline-flex !important; align-items: center; gap: 24px; } /* 11/26 棒と文字の間を広げる（14→24px） */
     .enkin-slash .ek-1::before, .enkin-slash .ek-1::after { content: ''; display: block; width: 3px; height: .75em; background: #111; border-radius: 2px; }
     .enkin-slash .ek-1::before { transform: rotate(-25deg); }
     .enkin-slash .ek-1::after { transform: rotate(25deg); }
