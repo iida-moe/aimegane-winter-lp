@@ -2948,6 +2948,12 @@
   .ov-date { margin: 8px 0 16px !important; }
   .ov-shop { margin: 8px 0 14px !important; }
   .ov-h + .ov-shop, .ov-h + .ov-date { margin-top: 6px !important; }
+  /* 11/26 期間の行：文字を少し小さくして左右に余白・曜日を少し大きくして数字との間をつめる */
+  .ov-date b { font-size: 34px !important; }
+  .ov-date small { font-size: 16px !important; margin-left: 1px; letter-spacing: -.05em; }
+  .ov-to { margin: 0 6px !important; font-size: 18px !important; }
+  @media (max-width: 640px) { .ov-date b { font-size: min(26px, 7vw) !important; } .ov-date small { font-size: 13px !important; } .ov-to { font-size: 15px !important; margin: 0 4px !important; } }
+  @media (min-width: 801px) { .ov-date b { font-size: 44px !important; } .ov-date small { font-size: 18px !important; } }
   /* ===== 商品カード シンプル ここまで ===== */
 </style>
 <style>
@@ -3115,7 +3121,7 @@
     <!-- 11/26 眼鏡市場BF LPを参考に：期間・対象店舗の概要を最初に -->
     <div class="ov">
       <p class="ov-h">実施期間</p>
-      <p class="ov-date"><b>2026.12.4</b><small>（金）</small><span class="ov-to">〜</span><b>12.27</b><small>（日）</small></p>
+      <p class="ov-date"><b>2026.12.4</b><small>(金)</small><span class="ov-to">〜</span><b>12.27</b><small>(日)</small></p>
       <p class="ov-h">実施店舗</p>
       <p class="ov-shop">アイメガネ各店</p>
       <a class="ov-btn" href="#shop-search" data-cta-location="overview">お近くの店舗を探す</a>
