@@ -2909,6 +2909,41 @@
   }
   /* 11/26 カード3つ並び（見本：ベージュ背景に白カード・見出し→写真→説明） */
   .fit-sec { background: #fff !important; } /* 11/26 ベージュはLPの色にない→白 */
+  /* 11/26 Iさん見本：緑の背景（感謝・特典と同じ緑＋端の雪）・白文字の見出し・赤いラベルの白カード */
+  .fit-sec { background: url("イメージ画像/winter_snow-edge-l_160_640.svg") left top / 160px repeat-y, url("イメージ画像/winter_snow-edge-r_160_640.svg") right 80px / 160px repeat-y, #009944 !important; }
+  @media (max-width: 640px) { .fit-sec { background-size: 70px, 70px, auto !important; } }
+  .fit-sec .vz-title .vz-t1, .fit-sec .vz-title .vz-t2, .fit-sec .vz-title .vz-q { color: #fff !important; }
+  .fit-sec .vz-title .vz-em { color: #fff !important; background: #C8102E; padding: 0 .15em; margin-left: .1em; }
+  .fit-sec .vz-lead { color: #fff !important; }
+  .vzg { max-width: 1000px; margin: 28px auto 0; }
+  .vzg-top { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+  .vzg-card { position: relative; background: #fff; border-radius: 12px; padding: 40px 18px 20px; text-align: left; }
+  .vzg-tab { position: absolute; left: -6px; top: -12px; margin: 0; background: #C8102E; color: #fff; font-size: 16px; font-weight: 900; padding: 6px 14px; border-radius: 8px; letter-spacing: .02em; }
+  .vzg-img { border-radius: 8px; overflow: hidden; aspect-ratio: 4 / 3; background: #F7F7F7; }
+  .vzg-img svg, .vzg-img img { display: block; width: 100%; height: 100%; object-fit: contain; }
+  .vzg-img-ill { background: #fff; aspect-ratio: auto; }
+  .vzg-top .vzg-img { aspect-ratio: 16 / 10; }
+  .vzg-h { white-space: nowrap; }
+  .vzg-h { margin: 14px 0 4px; font-size: 18px; font-weight: 900; color: #111; }
+  .vzg-txt { margin: 0; font-size: 14px; line-height: 1.7; color: #333; }
+  .vzg-mid { margin: 28px 0 26px; text-align: center; color: #fff; font-size: 20px; font-weight: 900; line-height: 1.5; }
+  .vzg-mid .nw { display: inline-block; }
+  .vzg-wide-in { display: grid; grid-template-columns: 1.1fr 1fr; gap: 24px; align-items: center; }
+  .vzg-wide .vzg-h { margin-top: 0; font-size: 22px; }
+  .vzg-wide .vzg-txt { font-size: 15px; }
+  .fit-sec .vz-cta { margin-top: 32px; }
+  @media (max-width: 640px) {
+    .vzg-top { gap: 12px; }
+    .vzg-card { padding: 34px 10px 14px; }
+    .vzg-tab { font-size: 13px; padding: 5px 10px; left: -4px; }
+    .vzg-h { font-size: min(15px, 3.9vw); margin-top: 10px; letter-spacing: -.02em; }
+    .vzg-txt { font-size: 13px; }
+    .vzg-mid { font-size: 17px; margin: 22px 0 22px; }
+    .vzg-wide-in { grid-template-columns: 1fr; gap: 12px; }
+    .vzg-wide .vzg-h { font-size: 18px; }
+    .vzg-wide .vzg-txt { font-size: 14px; }
+  }
+  @media (min-width: 801px) { .vzg-card { padding: 44px 24px 24px; } .vzg-tab { font-size: 18px; } .vzg-h { font-size: 20px; } .vzg-txt { font-size: 15px; } .vzg-mid { font-size: 24px; } .vzg-wide .vzg-h { font-size: 26px; } }
   .vzc-ill svg { display: block; width: 100%; height: 100%; }
   .vzc { list-style: none; padding: 0; margin: 28px 0 0; display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; max-width: 1040px; margin-left: auto; margin-right: auto; }
   .vzc-card { background: #fff; border-radius: 16px; padding: 20px 18px 22px; border: 1px solid #E6E6E6; text-align: left; } /* 白背景なので影→うすい線 */
@@ -3799,7 +3834,71 @@
     <!-- 11/26 カード3つ並び（Iさんの見本：見出し→写真→説明。番号・STEP札・詳しく見るボタンはなし）。スマホは横スワイプ -->
     <h2 class="section-title vz-title"><span class="vz-t1">メガネ選びの</span><span class="vz-t2"><span class="vz-q">「わからない」</span>を<span class="vz-em">視える化</span></span></h2>
     <p class="vz-lead">お店で、こんな体験ができます</p>
-    <ul class="vzc">
+    <!-- 11/26 Iさん見本：緑の背景・上に2枚（機械で視える化）→つなぎの一文→下に横長1枚（人と一緒に選ぶ）。赤いラベル。前の3つ並びは _保存\index.before-1126-vzgreen.html -->
+    <div class="vzg">
+      <div class="vzg-top">
+        <div class="vzg-card"><p class="vzg-tab">グラフで視える化</p>
+          <div class="vzg-img"><svg role="img" aria-label="目の負担を緑・黄・赤で表すグラフ" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300">
+  <rect width="400" height="300" fill="#F7F7F7"/>
+  <!-- 画面 -->
+  <rect x="52" y="44" width="296" height="212" rx="14" fill="#fff" stroke="#333" stroke-width="4"/>
+  <!-- 軸 -->
+  <path d="M88 76 V222 H300" fill="none" stroke="#333" stroke-width="3" stroke-linecap="round"/>
+  <!-- 棒（負担が軽い＝緑→重い＝赤） -->
+  <g>
+    <rect x="102" y="178" width="22" height="44" rx="3" fill="#2DB35A"/>
+    <rect x="130" y="170" width="22" height="52" rx="3" fill="#2DB35A"/>
+    <rect x="158" y="160" width="22" height="62" rx="3" fill="#2DB35A"/>
+    <rect x="186" y="140" width="22" height="82" rx="3" fill="#F2C230"/>
+    <rect x="214" y="126" width="22" height="96" rx="3" fill="#F2C230"/>
+    <rect x="242" y="102" width="22" height="120" rx="3" fill="#E84A3C"/>
+    <rect x="270" y="88" width="22" height="134" rx="3" fill="#E84A3C"/>
+  </g>
+  <!-- 右の目安（緑・黄・赤） -->
+  <rect x="314" y="76" width="16" height="48" fill="#E84A3C"/>
+  <rect x="314" y="124" width="16" height="48" fill="#F2C230"/>
+  <rect x="314" y="172" width="16" height="50" fill="#2DB35A"/>
+</svg></div>
+          <h3 class="vzg-h">目のストレスチェック</h3>
+          <p class="vzg-txt">NHKの番組でも紹介された「アコモレフ」で、目のピント合わせの力をグラフに。</p>
+        </div>
+        <div class="vzg-card"><p class="vzg-tab">似合い度を視える化</p>
+          <div class="vzg-img"><svg role="img" aria-label="鏡に似合い度の点数が出るイラスト" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300">
+  <rect width="400" height="300" fill="#F7F7F7"/>
+  <!-- 鏡 -->
+  <rect x="116" y="26" width="168" height="248" rx="18" fill="#333"/>
+  <rect x="128" y="38" width="144" height="224" rx="10" fill="#E9EEF2"/>
+  <!-- 人 -->
+  <path d="M148 262 C150 214 172 198 200 198 C228 198 250 214 252 262 Z" fill="#9AA7B4"/>
+  <circle cx="200" cy="146" r="40" fill="#F3D9C4"/>
+  <path d="M160 140 C160 108 182 98 200 98 C222 98 242 110 240 140 C232 124 214 118 200 118 C184 118 168 126 160 140 Z" fill="#3A3A3A"/>
+  <!-- メガネ -->
+  <g fill="none" stroke="#111" stroke-width="4">
+    <circle cx="184" cy="148" r="13"/>
+    <circle cx="216" cy="148" r="13"/>
+    <path d="M197 147 h6"/>
+  </g>
+  <!-- 点数 -->
+  <circle cx="292" cy="92" r="46" fill="#C8102E"/>
+  <text x="286" y="104" text-anchor="middle" font-family="'Bebas Neue','Anton',sans-serif" font-size="46" fill="#fff">92</text>
+  <text x="314" y="104" text-anchor="middle" font-family="'Noto Sans JP',sans-serif" font-weight="900" font-size="16" fill="#fff">点</text>
+</svg></div>
+          <h3 class="vzg-h">AIミラー</h3>
+          <p class="vzg-txt">かけたメガネの似合い度を点数で表示。参考にしながら選べます。</p>
+        </div>
+      </div>
+      <p class="vzg-mid">視えた結果をもとに、<span class="nw">スタッフと一緒に選びます</span></p>
+      <div class="vzg-card vzg-wide"><p class="vzg-tab">15項目の測定</p>
+        <div class="vzg-wide-in">
+          <div class="vzg-img vzg-img-ill"><img src="イメージ画像/winter_sekkyaku_1039_749.webp" alt="スタッフがお客様の話を聞きながら書きこんでいる様子" width="1039" height="749" loading="lazy"></div>
+          <div>
+            <h3 class="vzg-h">ぴったりの見え方に</h3>
+            <p class="vzg-txt">普段よく見るものや過ごし方を伺い、見えにくさの原因を15項目で確かめます。結果をもとに、レンズと度数をご提案します。</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <ul class="vzc" style="display:none">
       <li class="vzc-card">
         <h3 class="vzc-h"><span class="vzc-red">15項目</span>の精密測定</h3>
         <div class="vzc-photo vzc-ill"><!-- 11/26 写真→イラスト（元：イメージ画像/staff-fitting-scene.png） --><svg role="img" aria-label="15項目のチェックリスト" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300">
