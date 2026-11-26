@@ -1578,6 +1578,12 @@
     .floating-bar .floating-cta-text { font-size: 18px; letter-spacing: .08em; }
     .floating-bar .floating-cta-text::after { content: '▶'; font-size: .6em; margin-left: 12px; vertical-align: .2em; }
   }
+  /* 11/26 予約ボタンの効果：押すと沈む（スマホも）・▶がゆっくりゆれる・PCはのせると濃く。キラッと光るのはNG（Iさん） */
+  .floating-bar .floating-cta { transition: transform .12s ease, box-shadow .12s ease, background .2s; }
+  .floating-bar .floating-cta:active { transform: translateY(3px); box-shadow: 0 0 0 #8E0A1F !important; }
+  .floating-bar .floating-cta-text::after { display: inline-block; animation: cta-nudge 1.6s ease-in-out infinite; }
+  @keyframes cta-nudge { 0%, 60%, 100% { transform: translateX(0); } 30% { transform: translateX(5px); } }
+  @media (prefers-reduced-motion: reduce) { .floating-bar .floating-cta-text::after { animation: none; } }
   .closing { background: radial-gradient(ellipse at 50% 0%, #EC3A45 0%, #C8102E 50%, #8E0A1E 100%); }
   .closing-copy-main { border-bottom-color: #FFD84A; }
   .closing-period { color: #FFD84A; }
