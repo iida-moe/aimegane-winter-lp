@@ -2639,6 +2639,13 @@
     .vz-q p { font-size: 18px; }
     .vz-end { font-size: 28px; }
   }
+  /* 11/26 つなぎの一言（縦の線の横）・数字のうしろに金の結晶・最後に予約ボタン */
+  .vz-link { position: relative; margin: 28px 0 0 !important; padding-left: 2px; font-size: 15px; font-weight: 700; color: #A8862A; }
+  .vz-link::after { content: ''; display: inline-block; width: 7px; height: 7px; margin-left: 8px; border-right: 2px solid #D4AF37; border-bottom: 2px solid #D4AF37; transform: rotate(45deg) translateY(-3px); }
+  .vz-num { position: relative; z-index: 0; align-self: start; }
+  .vz-num::before { content: ''; position: absolute; z-index: -1; left: 50%; top: 50%; width: 1.25em; height: 1.25em; transform: translate(-50%, -50%); background: url("イメージ画像/snow-gold.svg") center / contain no-repeat; opacity: .22; }
+  .vz-cta { margin-top: 24px; text-align: center; }
+  @media (min-width: 801px) { .vz-link { font-size: 17px; margin-top: 36px !important; } }
   /* ===== 視える化 ここまで ===== */
   /* 11/25 「どれが合うんだろう…？」人物＋吹き出し */
   .mf-q { border: 0 !important; padding: 32px 0 8px !important; text-align: center; }
@@ -3359,11 +3366,12 @@
           <div class="vz-a">
             <div class="vz-photo"><img src="イメージ画像/staff-fitting-scene.png" alt="アイメガネのスタッフ" width="1536" height="1024" loading="lazy"></div>
             <div class="vz-txt">
-              <h3><span class="vz-big">15項目</span>の測定で、<span class="nw">しっかり確かめる</span></h3>
+              <h3>見えにくさの原因を、<span class="nw"><span class="vz-big">15項目</span>で確かめる</span></h3>
               <p>国家検定資格「眼鏡作製技能士」が、普段よく見るものや過ごし方も伺いながら、見えにくさの原因を確かめます。</p>
               <a class="vz-more" href="https://www.aimegane.com/aboutus/gijutsu/#measurement-15" target="_blank" rel="noopener">15項目の測定とは</a>
             </div>
           </div>
+          <p class="vz-link">目の状態がわかったら、</p>
         </div>
       </li>
       <li class="vz-step">
@@ -3378,6 +3386,7 @@
               <p class="vz-n">※一部店舗を除く</p>
             </div>
           </div>
+          <p class="vz-link">目に合うレンズが決まったら、</p>
         </div>
       </li>
       <li class="vz-step">
@@ -3395,6 +3404,7 @@
       </li>
     </ol>
     <p class="vz-end">だから、<span class="nw">セールでも安心して選べる。</span></p>
+    <div class="vz-cta"><a href="#shop-search" class="xp-cta" data-cta-location="mieruka">お近くの店舗を探す</a></div><!-- 11/26 読んだ流れのまま予約へ -->
   </section>
 
   <!-- ④ よくある質問 -->
