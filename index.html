@@ -2761,6 +2761,9 @@
   .flow-arrow span:last-child { opacity: .5; }
   /* 11/26 矢印を大きく */
   .flow-arrow { padding: 8px 0 24px; }
+  /* 11/26 矢印が下のグレーにくっついていた→上に寄せて下をあける */
+  .flow-arrow { margin-top: -32px; padding-bottom: 48px !important; position: relative; }
+  @media (min-width: 801px) { .flow-arrow { margin-top: -40px; padding-bottom: 64px !important; } }
   .flow-arrow span { width: 32px; height: 32px; border-right-width: 5px; border-bottom-width: 5px; margin-top: -12px; }
   @media (min-width: 801px) { .flow-arrow span { width: 40px; height: 40px; border-right-width: 6px; border-bottom-width: 6px; margin-top: -16px; } }
   @media (max-width: 640px) {
