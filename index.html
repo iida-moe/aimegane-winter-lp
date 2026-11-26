@@ -2584,6 +2584,62 @@
     .fit-sec .hp { margin-right: -.5em; }
   }
   .fit-sec .hp-k { color: #111 !important; }
+  /* ===== 11/26 視える化セクション（.vz-*）：大きな数字＋金の細い縦線・問いはイラスト＋吹き出し・答えは写真 ===== */
+  .fit-sec .nw { display: inline-block; }
+  .vz-title { text-align: center !important; }
+  .vz-em { color: #C8102E !important; }
+  .vz-title .nw { color: #111 !important; }
+  .fit-sec > .bridge { text-align: center !important; }
+  .fit-sec > .bridge::before { margin-left: auto !important; margin-right: auto !important; }
+  .vz-lead { margin: 10px auto 0; text-align: center; font-size: 16px; color: #333; }
+  .vz { list-style: none; max-width: 960px; margin: 44px auto 0; padding: 0; }
+  .vz-step { position: relative; display: grid; grid-template-columns: 64px 1fr; column-gap: 12px; padding-bottom: 48px; }
+  .vz-step:last-child { padding-bottom: 0; }
+  /* 数字どうしをつなぐ金の細い線 */
+  .vz-step::before { content: ''; position: absolute; left: 31px; top: 64px; bottom: 6px; width: 1px; background: #D4AF37; }
+  .vz-step:last-child::before { display: none; }
+  .vz-num { font-family: 'Bebas Neue', 'Anton', sans-serif; font-size: 60px; line-height: 1; color: #C8102E; text-align: center; letter-spacing: .02em; -webkit-text-stroke: .02em currentColor; }
+  .vz-body { min-width: 0; }
+  .vz-q { display: flex; align-items: center; gap: 10px; margin: 2px 0 14px; }
+  .vz-q img { flex: 0 0 52px; width: 52px; height: 52px; object-fit: cover; object-position: 50% 12%; border-radius: 50%; background: #F5F1E6; border: 1.5px solid #E6DDC6; }
+  .vz-q p { position: relative; margin: 0; padding: 9px 14px; background: #fff; border: 1.5px solid #111; border-radius: 14px; font-size: 16px; font-weight: 900; color: #111; }
+  .vz-q p::before, .vz-q p::after { content: ''; position: absolute; top: 50%; border: solid transparent; }
+  .vz-q p::before { left: -10px; margin-top: -6px; border-width: 6px 10px 6px 0; border-right-color: #111; }
+  .vz-q p::after { left: -7px; margin-top: -5px; border-width: 5px 8px 5px 0; border-right-color: #fff; }
+  .vz-photo { position: relative; border-radius: 12px; overflow: hidden; aspect-ratio: 4 / 3; background: #F5F1E6; }
+  .vz-photo img { display: block; width: 100%; height: 100%; object-fit: cover; }
+  .vz-photo-contain img { object-fit: contain; padding: 10px; box-sizing: border-box; }
+  .vz-tag { position: absolute; left: 10px; top: 10px; background: #C8102E; color: #fff; font-size: 13px; font-weight: 700; padding: 4px 10px; border-radius: 999px; }
+  .vz-txt h3 { margin: 14px 0 6px; font-size: 20px; font-weight: 900; color: #111; line-height: 1.5; }
+  .vz-big { color: #C8102E; font-size: 1.25em; }
+  .vz-txt p { margin: 0; font-size: 15px; line-height: 1.75; color: #333; }
+  .vz-txt .vz-n { margin-top: 4px; font-size: 14px; color: #555; }
+  .vz-more { display: inline-block; margin-top: 8px; font-size: 14px; font-weight: 700; color: #0B7A3E; text-decoration: underline; text-underline-offset: 3px; }
+  .vz-more::after { content: ' ›'; }
+  .vz-end { margin: 48px 0 0; text-align: center; font-size: 22px; font-weight: 900; color: #111; }
+  .vz-end .nw { background: linear-gradient(transparent 62%, #EDDC44 62%); padding: 0 2px; }
+  @media (max-width: 640px) {
+    .vz-step { grid-template-columns: 48px 1fr; column-gap: 10px; }
+    .vz-step::before { left: 23px; top: 50px; }
+    .vz-num { font-size: 46px; }
+    .vz-q img { flex-basis: 46px; width: 46px; height: 46px; }
+    .vz-q p { font-size: 15px; padding: 8px 12px; }
+    .vz-txt h3 { font-size: 18px; }
+    .vz-end { font-size: 19px; }
+    .vz-lead { font-size: 15px; }
+  }
+  /* PC：写真｜文字 の横並び */
+  @media (min-width: 801px) {
+    .vz-step { grid-template-columns: 110px 1fr; column-gap: 24px; padding-bottom: 64px; }
+    .vz-step::before { left: 54px; top: 96px; }
+    .vz-num { font-size: 96px; }
+    .vz-a { display: grid; grid-template-columns: 1fr 1fr; gap: 32px; align-items: center; }
+    .vz-txt h3 { margin-top: 0; font-size: 24px; }
+    .vz-txt p { font-size: 16px; }
+    .vz-q p { font-size: 18px; }
+    .vz-end { font-size: 28px; }
+  }
+  /* ===== 視える化 ここまで ===== */
   /* 11/25 「どれが合うんだろう…？」人物＋吹き出し */
   .mf-q { border: 0 !important; padding: 32px 0 8px !important; text-align: center; }
   .mfq-who { display: flex; align-items: center; justify-content: center; gap: 14px; margin-bottom: 14px; }
@@ -3292,25 +3348,53 @@
   <!-- ③ かけ心地(調節機能解析装置・眼鏡作製技能士) -->
   <section class="section section-cream fit-sec">
     <p class="bridge bridge-left">お得でも、<br class="only-mobile">合わないメガネでは意味がありません。</p>
-    <h2 class="section-title fit-title-lg">あなたの目に<span class="hp hp-k">、</span><br class="only-mobile"><span>ちょうどいい一本を<span class="hp">。</span></span></h2>
-    <p class="lens-standard-note">無料の測定と、資格を持つプロの技術で。あなたに合う一本を、とことん追求。</p>
-    <div class="fit-band-list">
-      <div class="fit-band">
-        <div class="fit-band-photo"><img class="is-contain" src="イメージ画像/accomref-speedy-i.png?v=2" alt="調節機能解析装置 アコモレフSpeedy-i(測定無料)"></div>
-        <div class="fit-band-text">
-          <span class="tv-bubble">NHK番組で紹介されました!</span>
-          <h3>調節機能解析装置で<br>眼のストレスを無料解析!</h3>
-          <p>その疲れ目、メガネが原因かもしれません。「アコモレフSpeedy-i」で目の調節力やストレス度合いを無料でチェック(約2分)。<span class="fit-band-note-tight">他店でお作りのメガネのご相談も歓迎です。</span></p>
+    <!-- 11/26 「視える化」セクション（A案：大きな数字＋金の細い縦線でつなぐ・問いは迷っている男性のイラスト＋吹き出し・答えは実物の写真）。前の帯2つは _保存\index.before-1126-vz.html -->
+    <h2 class="section-title vz-title">メガネ選びの<span class="nw">「わからない」を、</span><br class="only-mobile"><span class="vz-em">視える化</span><span class="hp">。</span></h2>
+    <p class="vz-lead"><span class="nw">買う前に気になることを、</span><span class="nw">ひとつずつ目で見て確かめられます。</span></p>
+    <ol class="vz">
+      <li class="vz-step">
+        <span class="vz-num" aria-hidden="true">01</span>
+        <div class="vz-body">
+          <div class="vz-q"><img src="イメージ画像/winter_mayoi_900_1068.png" alt="" width="900" height="1068" loading="lazy"><p>私の目に、ちゃんと合う？</p></div>
+          <div class="vz-a">
+            <div class="vz-photo"><img src="イメージ画像/staff-fitting-scene.png" alt="アイメガネのスタッフ" width="1536" height="1024" loading="lazy"></div>
+            <div class="vz-txt">
+              <h3><span class="vz-big">15項目</span>の測定で、<span class="nw">しっかり確かめる</span></h3>
+              <p>国家検定資格「眼鏡作製技能士」が、普段よく見るものや過ごし方も伺いながら、見えにくさの原因を確かめます。</p>
+              <a class="vz-more" href="https://www.aimegane.com/aboutus/gijutsu/#measurement-15" target="_blank" rel="noopener">15項目の測定とは</a>
+            </div>
+          </div>
         </div>
-      </div>
-      <div class="fit-band fit-band-reverse">
-        <div class="fit-band-photo"><img src="イメージ画像/staff-fitting-scene.png" alt="スタッフがメガネを丁寧に手入れしている様子"></div>
-        <div class="fit-band-text">
-          <h3><span class="fit-title-lead">全店に</span><br class="only-mobile"><span class="fit-title-bracket">「眼鏡作製技能士」が在籍</span></h3>
-          <p>フィッティングもレンズ選びも、国家検定資格「眼鏡作製技能士」<span style="white-space:nowrap;">におまかせください。</span>あなたに合わせて、心地よい一本をご提案します。</p>
+      </li>
+      <li class="vz-step">
+        <span class="vz-num" aria-hidden="true">02</span>
+        <div class="vz-body">
+          <div class="vz-q"><img src="イメージ画像/winter_mayoi_900_1068.png" alt="" width="900" height="1068" loading="lazy"><p>かけていて、疲れない？</p></div>
+          <div class="vz-a">
+            <div class="vz-photo vz-photo-contain"><img src="イメージ画像/accomref-speedy-i.png?v=2" alt="調節機能解析装置 アコモレフSpeedy-i" width="3024" height="4032" loading="lazy"><span class="vz-tag">NHK番組で紹介</span></div>
+            <div class="vz-txt">
+              <h3>目の疲れを、<span class="nw"><span class="vz-big">数値</span>で視える化</span></h3>
+              <p>調節機能解析装置「アコモレフ」で、目の調節力やストレス度を数値とグラフでお見せします。<span class="nw">無料・約2分。</span></p>
+              <p class="vz-n">※一部店舗を除く</p>
+            </div>
+          </div>
         </div>
-      </div>
-    </div>
+      </li>
+      <li class="vz-step">
+        <span class="vz-num" aria-hidden="true">03</span>
+        <div class="vz-body">
+          <div class="vz-q"><img src="イメージ画像/winter_mayoi_900_1068.png" alt="" width="900" height="1068" loading="lazy"><p>私に、似合う？</p></div>
+          <div class="vz-a">
+            <div class="vz-photo"><img src="イメージ画像/aifittingmirror-cutout.png" alt="AIフィッティングミラーでメガネの似合い度を確かめる様子" width="630" height="396" loading="lazy"></div>
+            <div class="vz-txt">
+              <h3>似合い度を、<span class="nw"><span class="vz-big">点数</span>で視える化</span></h3>
+              <p>AIフィッティングミラーが、かけたメガネの似合い度を点数で表示。参考にしながら、楽しく選べます。</p>
+            </div>
+          </div>
+        </div>
+      </li>
+    </ol>
+    <p class="vz-end">だから、<span class="nw">セールでも安心して選べる。</span></p>
   </section>
 
   <!-- ④ よくある質問 -->
