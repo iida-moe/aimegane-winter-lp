@@ -2903,6 +2903,29 @@
     .vzs-h { font-size: 18px; }
     .vzs-n { font-size: 13px; }
   }
+  /* 11/26 カード3つ並び（見本：ベージュ背景に白カード・見出し→写真→説明） */
+  .fit-sec { background: #F3EFE8 !important; }
+  .vzc { list-style: none; padding: 0; margin: 28px 0 0; display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; max-width: 1040px; margin-left: auto; margin-right: auto; }
+  .vzc-card { background: #fff; border-radius: 16px; padding: 20px 18px 22px; box-shadow: 0 4px 16px rgba(80, 60, 30, .08); text-align: left; }
+  .vzc-h { margin: 0 0 14px; font-size: 19px; font-weight: 900; line-height: 1.4; color: #111; }
+  .vzc-red { color: #C8102E; }
+  .vzc-photo { border-radius: 10px; overflow: hidden; aspect-ratio: 4 / 3; background: #F4F4F2; }
+  .vzc-photo img { display: block; width: 100%; height: 100%; object-fit: cover; }
+  .vzc-photo-contain img { object-fit: contain; padding: 10px; box-sizing: border-box; }
+  .vzc-txt { margin: 14px 0 0; font-size: 14px; line-height: 1.75; color: #333; }
+  .vzc-note { margin: 4px 0 0; font-size: 12px; color: #777; }
+  @media (max-width: 800px) {
+    /* スマホは横スワイプ：次のカードが右に少しのぞく */
+    .vzc { display: flex; gap: 14px; overflow-x: auto; scroll-snap-type: x mandatory; margin: 24px -20px 0; padding: 4px 20px 16px; scrollbar-width: none; -webkit-overflow-scrolling: touch; }
+    .vzc::-webkit-scrollbar { display: none; }
+    .vzc-card { flex: 0 0 80%; scroll-snap-align: center; }
+  }
+  @media (min-width: 801px) {
+    .vzc { margin-top: 40px; }
+    .vzc-card { padding: 24px 22px 26px; }
+    .vzc-h { font-size: 21px; }
+    .vzc-txt { font-size: 15px; }
+  }
   /* ===== 視える化 ここまで ===== */
   /* 11/25 「どれが合うんだろう…？」人物＋吹き出し */
   .mf-q { border: 0 !important; padding: 32px 0 8px !important; text-align: center; }
@@ -3676,18 +3699,26 @@
   <section class="section section-cream fit-sec">
     <p class="bridge bridge-left">お得なときこそ、ぴったりの一本を。</p>
     <!-- 11/26 軽い版：説明セクションをやめて「セールでも、いつもどおり」を数字と資格で短く。写真3ブロック版は _保存\index.before-1126-vzlight.html -->
-    <!-- 11/26 中間版：主役（15項目）を大きく＋添え物2つを小さく。超シンプル版（数字3つだけ）は不採用 -->
+    <!-- 11/26 カード3つ並び（Iさんの見本：見出し→写真→説明。番号・STEP札・詳しく見るボタンはなし）。スマホは横スワイプ -->
     <h2 class="section-title vz-title"><span class="vz-t1">メガネ選びの</span><span class="vz-t2"><span class="vz-q">「わからない」</span>を<span class="vz-em">視える化</span></span></h2>
     <p class="vz-lead">セールでも、選び方はいつもどおり</p>
-    <div class="vzm">
-      <div class="vzm-photo"><img src="イメージ画像/staff-fitting-scene.png" alt="スタッフが測定結果を説明する様子" width="1536" height="1024" loading="lazy"><p class="vzm-q">私の目に、<br>ちゃんと合う？</p></div>
-      <h3 class="vzm-h">見えにくさの原因を、<br><span class="vzm-big"><b>15</b>項目</span>で確かめる</h3>
-      <p class="vzm-txt">国家検定資格の眼鏡作製技能士が、<br>一人ひとりの目を確かめます</p>
-      <p class="vzl-more"><a href="https://www.aimegane.com/aboutus/gijutsu/#measurement-15" target="_blank" rel="noopener">15項目の測定とは</a></p>
-    </div>
-    <ul class="vzs">
-      <li><div class="vzs-img"><img src="イメージ画像/accomref-speedy-i.png?v=2" alt="調節機能解析装置 アコモレフ" width="3024" height="4032" loading="lazy"></div><p class="vzs-h">目の疲れも、<br>グラフで</p><p class="vzs-n">無料・約2分<br>※一部店舗を除く</p></li>
-      <li><div class="vzs-img"><img src="イメージ画像/aifittingmirror-crop.png" alt="AIフィッティングミラー" loading="lazy"></div><p class="vzs-h">似合い度も、<br>点数で</p><p class="vzs-n">AIミラーで参考に</p></li>
+    <ul class="vzc">
+      <li class="vzc-card">
+        <h3 class="vzc-h"><span class="vzc-red">15項目</span>の精密測定</h3>
+        <div class="vzc-photo"><img src="イメージ画像/staff-fitting-scene.png" alt="アイメガネのスタッフ" width="1536" height="1024" loading="lazy"></div>
+        <p class="vzc-txt">国家検定資格の眼鏡作製技能士が、見えにくさの原因を15項目で確かめます。</p>
+      </li>
+      <li class="vzc-card">
+        <h3 class="vzc-h">目の疲れを<span class="vzc-red">グラフ</span>で</h3>
+        <div class="vzc-photo vzc-photo-contain"><img src="イメージ画像/accomref-speedy-i.png?v=2" alt="調節機能解析装置 アコモレフ" width="3024" height="4032" loading="lazy"></div>
+        <p class="vzc-txt">調節機能解析装置「アコモレフ」で、目の疲れを数値とグラフでお見せします。無料・約2分。</p>
+        <p class="vzc-note">※一部店舗を除く</p>
+      </li>
+      <li class="vzc-card">
+        <h3 class="vzc-h">似合い度を<span class="vzc-red">点数</span>で</h3>
+        <div class="vzc-photo"><img src="イメージ画像/aifittingmirror-crop.png" alt="AIフィッティングミラー" loading="lazy"></div>
+        <p class="vzc-txt">AIミラーが、かけたメガネの似合い度を点数で表示。参考にしながら選べます。</p>
+      </li>
     </ul>
     <ol class="vz" style="display:none">
       <li class="vz-step">
