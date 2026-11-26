@@ -2965,6 +2965,15 @@
   .vzg-tab::before { content: ''; width: 8px; height: 8px; border-radius: 50%; background: #C8102E; margin-right: 8px; flex-shrink: 0; }
   .vzg-card { padding-top: 20px !important; }
   .vzg-mid { margin-bottom: 0 !important; }
+  /* 11/26 レンズ選びをBFの形に（色はウィンター：緑・黒・グレー）：「メガネのレンズ」見出し・凡例を中央・一言をうすい緑の箱に・チェックは緑の四角 */
+  .lf-cap { display: block !important; color: #555 !important; font-size: 15px !important; font-weight: 700 !important; }
+  .lf-key { width: fit-content; margin-left: auto !important; margin-right: auto !important; color: #555 !important; }
+  .lf-for { background: #EAF6EE; border-radius: 12px; padding: 16px 12px; color: #111 !important; font-size: 20px !important; margin: 20px 0 22px !important; }
+  .lf-rec-t { border-top: 0 !important; padding-top: 0 !important; font-size: 17px !important; }
+  .lf-chk li { padding-left: 34px !important; margin-bottom: 10px !important; }
+  .lf-chk li::before { content: '' !important; position: absolute; left: 0 !important; top: .1em !important; width: 22px !important; height: 22px !important; background: #009944 !important; border-radius: 5px !important; }
+  .lf-chk li::after { left: 8px !important; top: .22em !important; width: 6px !important; height: 11px !important; border-color: #fff !important; border-width: 0 3px 3px 0 !important; }
+  @media (min-width: 801px) { .lf-for { font-size: 24px !important; padding: 18px 16px; } .lf-chk li::before { top: .2em !important; } .lf-chk li::after { top: .32em !important; } }
   /* 11/26 測定イラストの右上にグラフを重ねる */
   .vzg-scene { position: relative; overflow: visible !important; }
   .vzg-top .vzg-scene { aspect-ratio: 1039 / 749 !important; }
@@ -3795,7 +3804,7 @@
         </div>
         <div class="lf-side">
           <p class="lf-for" id="lfFor">遠くも手元も、これ1本で</p>
-          <p class="lf-rec-t">こんな方におすすめ</p>
+          <p class="lf-rec-t">こんな方におすすめ！</p>
           <ul class="lf-chk" id="lfChk"></ul>
         </div>
       </div>
