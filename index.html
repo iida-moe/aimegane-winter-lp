@@ -2943,6 +2943,13 @@
   .vzg-end .nw { display: inline-block; color: #C8102E; }
   .vzg-end + .vz-cta { margin-top: 18px !important; }
   @media (max-width: 640px) { .vzg-end { font-size: 21px; margin-top: 28px; } }
+  /* 11/26 プロ目線の直し：背景はうすいグレーで上下と区切る・カードは白で線なし・赤は「視える化」とボタンだけ（ラベルは黒） */
+  .fit-sec { background: #F7F7F7 !important; }
+  .vzg-card { border: 0 !important; }
+  .vzg-img { background: #F7F7F7; }
+  .vzg-img-ill { background: #fff; }
+  .vzg-tab { background: #111 !important; }
+  .fit-sec + .section { border-top: 0; }
   @media (max-width: 640px) {
     .vzg-top { gap: 12px; }
     .vzg-card { padding: 34px 10px 14px; }
@@ -4030,7 +4037,7 @@
       </li>
     </ol>
     <!-- <p class="vz-end">だから、<span class="nw">セールでも安心して選べる</span></p> 11/26 見出しで言っているので外す -->
-    <p class="vzg-end">この冬、<span class="nw">ぴったりの一本を</span></p><!-- 11/26 締めの一言 -->
+    <!-- <p class="vzg-end">この冬、<span class="nw">ぴったりの一本を</span></p> 11/26 文字の段を減らすため外す（つなぎの一文を残す） -->
     <div class="vz-cta"><a href="#shop-search" class="xp-cta" data-cta-location="mieruka">お近くの店舗を探す</a></div><!-- 11/26 読んだ流れのまま予約へ -->
   </section>
 
