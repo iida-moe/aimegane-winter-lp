@@ -2876,6 +2876,33 @@
     .vzl-word { font-size: 30px; margin-bottom: 6px; }
     .vzl-cap { font-size: 16px; margin-top: 14px; }
   }
+  /* 11/26 中間版：主役1つ（写真＋15項目）＋小さい丸写真2つ */
+  .vzm { max-width: 640px; margin: 28px auto 0; text-align: center; }
+  .vzm-photo { position: relative; border-radius: 12px; overflow: hidden; aspect-ratio: 3 / 2; }
+  .vzm-photo img { display: block; width: 100%; height: 100%; object-fit: cover; }
+  .vzm-photo::after { content: ''; position: absolute; inset: 45% 0 0; background: linear-gradient(transparent, rgba(0,0,0,.55)); }
+  .vzm-q { position: absolute; left: 16px; bottom: 14px; z-index: 1; margin: 0; text-align: left; color: #fff; font-size: 20px; font-weight: 900; line-height: 1.35; }
+  .vzm-h { margin: 20px 0 0; font-size: 20px; font-weight: 900; line-height: 1.45; color: #111; }
+  .vzm-big { color: #C8102E; font-size: 1.5em; }
+  .vzm-big b { font-family: 'Bebas Neue', 'Anton', sans-serif; font-weight: 400; font-size: 1.35em; -webkit-text-stroke: .02em currentColor; margin-right: 2px; vertical-align: -.04em; }
+  .vzm-txt { margin: 10px 0 0; font-size: 14px; line-height: 1.7; color: #555; }
+  .vzs { display: grid; grid-template-columns: 1fr 1fr; max-width: 640px; margin: 28px auto 0; padding: 24px 0 0; list-style: none; border-top: 1px solid #E6E6E6; }
+  .vzs li { text-align: center; padding: 0 8px; }
+  .vzs li + li { border-left: 1px solid #E6E6E6; }
+  .vzs-img { width: 96px; height: 96px; margin: 0 auto; border-radius: 50%; overflow: hidden; background: #F4F4F2; }
+  .vzs-img img { display: block; width: 100%; height: 100%; object-fit: cover; }
+  .vzs li:first-child .vzs-img img { object-fit: contain; padding: 8px; box-sizing: border-box; }
+  .vzs-h { margin: 12px 0 0; font-size: 16px; font-weight: 900; line-height: 1.45; color: #111; }
+  .vzs-n { margin: 6px 0 0; font-size: 12px; line-height: 1.6; color: #777; }
+  @media (min-width: 801px) {
+    .vzm { margin-top: 40px; }
+    .vzm-q { left: 24px; bottom: 20px; font-size: 26px; }
+    .vzm-h { font-size: 26px; }
+    .vzm-txt { font-size: 16px; }
+    .vzs-img { width: 120px; height: 120px; }
+    .vzs-h { font-size: 18px; }
+    .vzs-n { font-size: 13px; }
+  }
   /* ===== 視える化 ここまで ===== */
   /* 11/25 「どれが合うんだろう…？」人物＋吹き出し */
   .mf-q { border: 0 !important; padding: 32px 0 8px !important; text-align: center; }
@@ -3649,13 +3676,19 @@
   <section class="section section-cream fit-sec">
     <p class="bridge bridge-left">お得なときこそ、ぴったりの一本を。</p>
     <!-- 11/26 軽い版：説明セクションをやめて「セールでも、いつもどおり」を数字と資格で短く。写真3ブロック版は _保存\index.before-1126-vzlight.html -->
-    <h2 class="section-title vz-title"><span class="vz-t1">セールでも</span><span class="vz-t2">選び方は<span class="vz-em">いつもどおり</span></span></h2>
-    <ul class="vzl">
-      <li><div class="vzl-big"><span class="vzl-num">15</span><span class="vzl-unit">項目</span></div><p class="vzl-cap">見えにくさの<br>原因を測定</p></li>
-      <li><div class="vzl-big"><span class="vzl-word">国家資格</span></div><p class="vzl-cap">眼鏡作製<br>技能士が担当</p></li>
-      <li><div class="vzl-big"><span class="vzl-num">AI</span><span class="vzl-unit">ミラー</span></div><p class="vzl-cap">似合い度を<br>点数で表示</p></li>
+    <!-- 11/26 中間版：主役（15項目）を大きく＋添え物2つを小さく。超シンプル版（数字3つだけ）は不採用 -->
+    <h2 class="section-title vz-title"><span class="vz-t1">メガネ選びの</span><span class="vz-t2"><span class="vz-q">「わからない」</span>を<span class="vz-em">視える化</span></span></h2>
+    <p class="vz-lead">セールでも、選び方はいつもどおり</p>
+    <div class="vzm">
+      <div class="vzm-photo"><img src="イメージ画像/staff-fitting-scene.png" alt="スタッフが測定結果を説明する様子" width="1536" height="1024" loading="lazy"><p class="vzm-q">私の目に、<br>ちゃんと合う？</p></div>
+      <h3 class="vzm-h">見えにくさの原因を、<br><span class="vzm-big"><b>15</b>項目</span>で確かめる</h3>
+      <p class="vzm-txt">国家検定資格の眼鏡作製技能士が、<br>一人ひとりの目を確かめます</p>
+      <p class="vzl-more"><a href="https://www.aimegane.com/aboutus/gijutsu/#measurement-15" target="_blank" rel="noopener">15項目の測定とは</a></p>
+    </div>
+    <ul class="vzs">
+      <li><div class="vzs-img"><img src="イメージ画像/accomref-speedy-i.png?v=2" alt="調節機能解析装置 アコモレフ" width="3024" height="4032" loading="lazy"></div><p class="vzs-h">目の疲れも、<br>グラフで</p><p class="vzs-n">無料・約2分<br>※一部店舗を除く</p></li>
+      <li><div class="vzs-img"><img src="イメージ画像/aifittingmirror-crop.png" alt="AIフィッティングミラー" loading="lazy"></div><p class="vzs-h">似合い度も、<br>点数で</p><p class="vzs-n">AIミラーで参考に</p></li>
     </ul>
-    <p class="vzl-more"><a href="https://www.aimegane.com/aboutus/gijutsu/#measurement-15" target="_blank" rel="noopener">15項目の測定とは</a></p>
     <ol class="vz" style="display:none">
       <li class="vz-step">
         <div class="vz-body">
