@@ -2853,6 +2853,29 @@
   .vz-step:last-child { padding-bottom: 0 !important; }
   .vz-step::before { display: none !important; }
   @media (min-width: 801px) { .vz-step { padding: 40px 0 !important; } }
+  /* ===== 11/26 視える化を軽く（眼鏡市場のように「条件と数字で短く」）：大きな文字3つ横並び＋グレーの縦線 ===== */
+  .vzl { display: grid; grid-template-columns: repeat(3, 1fr); margin: 28px auto 0; max-width: 760px; padding: 0; list-style: none; }
+  .vzl li { text-align: center; padding: 4px 6px; border-left: 1px solid #E0E0E0; }
+  .vzl li:first-child { border-left: 0; }
+  .vzl-big { display: flex; align-items: flex-end; justify-content: center; height: 52px; color: #C8102E; font-weight: 900; line-height: 1; }
+  .vzl-num { font-family: 'Bebas Neue', 'Anton', sans-serif; font-size: 52px; font-weight: 400; -webkit-text-stroke: .02em currentColor; letter-spacing: .01em; }
+  .vzl-unit { font-size: 15px; color: #111; margin: 0 0 5px 2px; }
+  .vzl-word { font-size: 21px; letter-spacing: .02em; margin-bottom: 4px; }
+  .vzl-cap { margin: 10px 0 0; font-size: 14px; font-weight: 700; line-height: 1.5; color: #333; }
+  .vzl-more { margin: 20px 0 0; text-align: center; }
+  .vzl-more a { font-size: 14px; color: #555; text-decoration: underline; text-underline-offset: 3px; }
+  .vzl-more a::after { content: ' ›'; }
+  .fit-sec .vz-cta { margin-top: 28px; }
+  @media (max-width: 360px) { .vzl-word { font-size: 18px; } .vzl-cap { font-size: 13px; } }
+  @media (min-width: 801px) {
+    .vzl { margin-top: 40px; }
+    .vzl li { padding: 4px 20px; }
+    .vzl-big { height: 72px; }
+    .vzl-num { font-size: 76px; }
+    .vzl-unit { font-size: 20px; margin-bottom: 8px; }
+    .vzl-word { font-size: 30px; margin-bottom: 6px; }
+    .vzl-cap { font-size: 16px; margin-top: 14px; }
+  }
   /* ===== 視える化 ここまで ===== */
   /* 11/25 「どれが合うんだろう…？」人物＋吹き出し */
   .mf-q { border: 0 !important; padding: 32px 0 8px !important; text-align: center; }
@@ -3624,11 +3647,16 @@
 
   <!-- ③ かけ心地(調節機能解析装置・眼鏡作製技能士) -->
   <section class="section section-cream fit-sec">
-    <p class="bridge bridge-left">お得でも、<br class="only-mobile">合わないメガネでは意味がありません。</p>
-    <!-- 11/26 「視える化」セクション（A案：大きな数字＋金の細い縦線でつなぐ・問いは迷っている男性のイラスト＋吹き出し・答えは実物の写真）。前の帯2つは _保存\index.before-1126-vz.html -->
-    <h2 class="section-title vz-title"><span class="vz-t1">メガネ選びの</span><span class="vz-t2"><span class="vz-q">「わからない」</span>を<span class="vz-em">視える化</span></span></h2><!-- 11/26 3行→2行（小さい1行目＋大きい2行目） -->
-    <p class="vz-lead"><span class="nw">買う前に気になることを、</span><span class="nw">ひとつずつ目で見て確かめられます。</span></p>
-    <ol class="vz">
+    <p class="bridge bridge-left">お得なときこそ、ぴったりの一本を。</p>
+    <!-- 11/26 軽い版：説明セクションをやめて「セールでも、いつもどおり」を数字と資格で短く。写真3ブロック版は _保存\index.before-1126-vzlight.html -->
+    <h2 class="section-title vz-title"><span class="vz-t1">セールでも</span><span class="vz-t2">選び方は<span class="vz-em">いつもどおり</span></span></h2>
+    <ul class="vzl">
+      <li><div class="vzl-big"><span class="vzl-num">15</span><span class="vzl-unit">項目</span></div><p class="vzl-cap">見えにくさの<br>原因を測定</p></li>
+      <li><div class="vzl-big"><span class="vzl-word">国家資格</span></div><p class="vzl-cap">眼鏡作製<br>技能士が担当</p></li>
+      <li><div class="vzl-big"><span class="vzl-num">AI</span><span class="vzl-unit">ミラー</span></div><p class="vzl-cap">似合い度を<br>点数で表示</p></li>
+    </ul>
+    <p class="vzl-more"><a href="https://www.aimegane.com/aboutus/gijutsu/#measurement-15" target="_blank" rel="noopener">15項目の測定とは</a></p>
+    <ol class="vz" style="display:none">
       <li class="vz-step">
         <div class="vz-body">
           <div class="vz-q"><img src="イメージ画像/winter_mayoi_900_1068.png" alt="" width="900" height="1068" loading="lazy"><p>私の目に、ちゃんと合う？</p></div>
@@ -3668,7 +3696,7 @@
         </div>
       </li>
     </ol>
-    <p class="vz-end">だから、<span class="nw">セールでも安心して選べる</span></p>
+    <!-- <p class="vz-end">だから、<span class="nw">セールでも安心して選べる</span></p> 11/26 見出しで言っているので外す -->
     <div class="vz-cta"><a href="#shop-search" class="xp-cta" data-cta-location="mieruka">お近くの店舗を探す</a></div><!-- 11/26 読んだ流れのまま予約へ -->
   </section>
 
