@@ -2723,11 +2723,14 @@
   /* 11/26 緑の背景に、Iさんの雪の結晶（イラレ）を散らした柄を重ねる */
   .section-red-frame.thanks-sec { background: url("イメージ画像/winter_snow-pattern_420_420.svg") 0 0 / 420px repeat, #009944 !important; }
   .xp-section { background: url("イメージ画像/winter_snow-pattern_420_420.svg") 210px 120px / 420px repeat, linear-gradient(180deg, #009944 0%, #009944 40%, #007D37 100%) !important; }
-  @media (min-width: 801px) { .section-red-frame.thanks-sec { background: url("イメージ画像/winter_snow-pattern_420_420.svg") 0 0 / 420px repeat, linear-gradient(180deg, #007C36 0, #009944 260px) !important; } }
-  @media (max-width: 640px) {
-    .section-red-frame.thanks-sec { background-size: 300px, auto !important; }
-    .xp-section { background-size: 300px, auto !important; }
+  /* 11/26 結晶は文字にかからないよう画面の左右のはしだけ（Iさん）・PCの帯とのつなぎ目は同じ緑 #009944 に */
+  .section-red-frame.thanks-sec, .xp-section {
+    background: url("イメージ画像/winter_snow-edge-l_160_640.svg") left top / 160px repeat-y, url("イメージ画像/winter_snow-edge-r_160_640.svg") right 80px / 160px repeat-y, #009944 !important;
   }
+  @media (max-width: 800px) {
+    .section-red-frame.thanks-sec, .xp-section { background-size: 70px, 70px !important; }
+  }
+  .thanks-flake, .th-gold, .xp-flake { display: none !important; } /* 前に置いていた結晶（文字にかかる）は非表示 */
   /* こんな方におすすめ：上下にグレーの線・チェックは緑の✓だけ */
   .lf-rec-t { border-bottom: 0 !important; padding: 18px 0 0 !important; border-top: 1px solid #DDD; margin-bottom: 8px !important; }
   .lf-chk li { padding-left: 28px !important; }
@@ -2921,6 +2924,30 @@
     .x8-panel .x8-after { font-size: 28px !important; }
     .x8-panel .x8-after small { font-size: 12px !important; }
   }
+  /* 11/26 Iさん案：白い背景にフレーム→その下にブランド名（左ぞろえ）→通常価格（取り消し線）の右にセール価格（赤）。%OFFと商品の間に余裕 */
+  .x8-panel .x8-photo { background: #fff; padding: 64px 18px 14px !important; }
+  .x8-panel .x8-body { text-align: left !important; padding: 0 16px 18px !important; }
+  .x8-panel .x8-brand { text-align: left !important; font-size: 15px !important; margin-bottom: 4px !important; }
+  .x8-panel .x8-price { display: flex; align-items: baseline; flex-wrap: wrap; gap: 0 10px; }
+  .x8-panel .x8-before { order: 0; white-space: nowrap; }
+  .x8-panel .x8-before-l { display: none !important; }
+  .x8-panel .x8-before s { color: #888; }
+  .x8-panel .x8-after { order: 1; font-size: 32px !important; white-space: nowrap; }
+  .x8-panel .x8-after small { color: #C8102E !important; font-size: 14px !important; }
+  @media (max-width: 640px) {
+    .x8-panel .x8-photo { padding: 48px 10px 10px !important; }
+    .x8-panel .x8-body { padding: 0 10px 14px !important; }
+    .x8-panel .x8-brand { font-size: 13px !important; }
+    .x8-panel .x8-price, .x8-panel .x8-before, .x8-panel .x8-after { display: block !important; text-align: left !important; }
+    .x8-panel .x8-before { line-height: 1.3; }
+    .x8-panel .x8-after { font-size: 24px !important; }
+    .x8-panel .x8-after small { font-size: 12px !important; }
+  }
+  /* 11/26 概要カード：金の帯（眼鏡市場に似すぎ）→ 緑の線の小さいラベル */
+  .ov-h { display: inline-block !important; background: none !important; border: 1.5px solid #009944; color: #009944 !important; border-radius: 999px !important; padding: 3px 16px !important; font-size: 13px !important; letter-spacing: .12em !important; }
+  .ov-date { margin: 8px 0 16px !important; }
+  .ov-shop { margin: 8px 0 14px !important; }
+  .ov-h + .ov-shop, .ov-h + .ov-date { margin-top: 6px !important; }
   /* ===== 商品カード シンプル ここまで ===== */
 </style>
 <style>
@@ -3201,9 +3228,9 @@
           <p class="x8-brand">PRADO</p>
           <p class="x8-desc">女性の目元を優しく魅せる、上品で落ち着いたデザイン。</p>
           <div class="x8-price">
-            <p class="x8-before"><span class="x8-before-l">通常価格</span><span class="x8-before-v"><s>26,950</s>円<small>(税込)</small></span></p>
+            <p class="x8-before"><span class="x8-before-l">通常価格</span><span class="x8-before-v"><s>26,950</s>円</span></p>
             <p class="x8-after-label">WINTER SALE価格</p>
-            <p class="x8-after">13,475<small>円(税込)</small></p>
+            <p class="x8-after">13,475<small>円</small></p>
           </div>
         </div>
       </article>
@@ -3217,9 +3244,9 @@
           <p class="x8-brand">PRODUCT EYES CLASSIC</p>
           <p class="x8-desc">装いが少し知的に見える、定番のクラシカルデザイン。</p>
           <div class="x8-price">
-            <p class="x8-before"><span class="x8-before-l">通常価格</span><span class="x8-before-v"><s>23,650</s>円<small>(税込)</small></span></p>
+            <p class="x8-before"><span class="x8-before-l">通常価格</span><span class="x8-before-v"><s>23,650</s>円</span></p>
             <p class="x8-after-label">WINTER SALE価格</p>
-            <p class="x8-after">11,825<small>円(税込)</small></p>
+            <p class="x8-after">11,825<small>円</small></p>
           </div>
         </div>
       </article>
@@ -3233,9 +3260,9 @@
           <p class="x8-brand">VIVO</p>
           <p class="x8-desc">地球環境に配慮したエコアセテート素材を使用したアイウェアシリーズ。</p>
           <div class="x8-price">
-            <p class="x8-before"><span class="x8-before-l">通常価格</span><span class="x8-before-v"><s>16,500</s>円<small>(税込)</small></span></p>
+            <p class="x8-before"><span class="x8-before-l">通常価格</span><span class="x8-before-v"><s>16,500</s>円</span></p>
             <p class="x8-after-label">WINTER SALE価格</p>
-            <p class="x8-after">11,550<small>円(税込)</small></p>
+            <p class="x8-after">11,550<small>円</small></p>
           </div>
         </div>
       </article>
@@ -3249,9 +3276,9 @@
           <p class="x8-brand">palacio donna</p>
           <p class="x8-desc">美しいグラデーションカラーがまぶしさを抑え、目元を彩ります。</p>
           <div class="x8-price">
-            <p class="x8-before"><span class="x8-before-l">通常価格</span><span class="x8-before-v"><s>8,800</s>円<small>(税込)</small></span></p>
+            <p class="x8-before"><span class="x8-before-l">通常価格</span><span class="x8-before-v"><s>8,800</s>円</span></p>
             <p class="x8-after-label">WINTER SALE価格</p>
-            <p class="x8-after">6,160<small>円(税込)</small></p>
+            <p class="x8-after">6,160<small>円</small></p>
           </div>
         </div>
       </article>
@@ -3265,9 +3292,9 @@
           <p class="x8-brand">NEO MODE</p>
           <p class="x8-desc">ビジネスシーンからレジャーまで、掛けるシーンを選ばないデザイン。</p>
           <div class="x8-price">
-            <p class="x8-before"><span class="x8-before-l">通常価格</span><span class="x8-before-v"><s>29,700</s>円<small>(税込)</small></span></p>
+            <p class="x8-before"><span class="x8-before-l">通常価格</span><span class="x8-before-v"><s>29,700</s>円</span></p>
             <p class="x8-after-label">WINTER SALE価格</p>
-            <p class="x8-after">20,790<small>円(税込)</small></p>
+            <p class="x8-after">20,790<small>円</small></p>
           </div>
         </div>
       </article>
@@ -3281,9 +3308,9 @@
           <p class="x8-brand">WELLNESS GLASSES</p>
           <p class="x8-desc">なめらかで美しい曲線のフォルムが、柔らかい印象を与えます。</p>
           <div class="x8-price">
-            <p class="x8-before"><span class="x8-before-l">通常価格</span><span class="x8-before-v"><s>29,700</s>円<small>(税込)</small></span></p>
+            <p class="x8-before"><span class="x8-before-l">通常価格</span><span class="x8-before-v"><s>29,700</s>円</span></p>
             <p class="x8-after-label">WINTER SALE価格</p>
-            <p class="x8-after">20,790<small>円(税込)</small></p>
+            <p class="x8-after">20,790<small>円</small></p>
           </div>
         </div>
       </article>
@@ -3297,9 +3324,9 @@
           <p class="x8-brand">WELLNESS GLASSES</p>
           <p class="x8-desc">フレーム全体に抗酸化溶液をコーティングしたフレーム。</p>
           <div class="x8-price">
-            <p class="x8-before"><span class="x8-before-l">通常価格</span><span class="x8-before-v"><s>29,700</s>円<small>(税込)</small></span></p>
+            <p class="x8-before"><span class="x8-before-l">通常価格</span><span class="x8-before-v"><s>29,700</s>円</span></p>
             <p class="x8-after-label">WINTER SALE価格</p>
-            <p class="x8-after">20,790<small>円(税込)</small></p>
+            <p class="x8-after">20,790<small>円</small></p>
           </div>
         </div>
       </article>
@@ -3313,9 +3340,9 @@
           <p class="x8-brand">GLASSES HOUSE</p>
           <p class="x8-desc">インパクトのある強めのデザイン。紫外線で色が変わるレンズで、明るさをコントロール。</p>
           <div class="x8-price">
-            <p class="x8-before"><span class="x8-before-l">通常価格</span><span class="x8-before-v"><s>8,800</s>円<small>(税込)</small></span></p>
+            <p class="x8-before"><span class="x8-before-l">通常価格</span><span class="x8-before-v"><s>8,800</s>円</span></p>
             <p class="x8-after-label">WINTER SALE価格</p>
-            <p class="x8-after">7,040<small>円(税込)</small></p>
+            <p class="x8-after">7,040<small>円</small></p>
           </div>
         </div>
       </article>
@@ -3325,6 +3352,7 @@
       <li>メガネは<span class="nw">フレーム＋レンズの一式価格です</span></li>
       <li>掲載商品は一例・<span class="nw">在庫は店舗で異なります</span></li>
       <li>在庫がなくなり次第、終了します</li>
+      <li>価格はすべて税込です</li>
     </ul>
     <!-- 11/23 値段を見た後に「この価格から、さらに！」 -->
     <div class="xperk">
