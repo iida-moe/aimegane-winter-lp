@@ -3153,7 +3153,8 @@
     .ov-col .ov-date, .ov-col .ov-shop { margin: 0 !important; }
     .ov-shop { font-size: 30px !important; white-space: nowrap; }
     .ov-date-jp b { font-size: 40px !important; }
-    .ov-row { margin-bottom: 10px !important; }
+    .ov-row { margin-bottom: 0 !important; column-gap: 0; }
+    .ov-col > * { flex-shrink: 0; } /* 日付が縮んで縦線にかからないように */
     .ov-col:first-child { padding-right: 44px !important; }
     .ov-col + .ov-col { padding-left: 44px !important; }
   }
@@ -3340,7 +3341,7 @@
         </div>
       </div>
       <!-- <a class="ov-btn" href="#shop-search" data-cta-location="overview">お近くの店舗を探す</a> 11/26 下に予約バー・店舗検索があるので外す -->
-      <p class="ov-n">※本庄南大通り店は対象外です</p>
+      <!-- <p class="ov-n">※本庄南大通り店は対象外です</p> 11/26 一旦消す（今回も対象外か確認中） -->
     </div>
     <!-- 11/20 Iさんのイラレ案：ありがとう → メガネMAX50%・サングラスMAX30%だけ（数字は赤＝A案）。前の「WINTER SALEとは・AIミラー・標準セット」は下の tk-old で非表示 -->
     <!-- 11/23 割引は4段階（MAXの中身を見せる）。50%はメガネのみ・サングラスは10/20/30% -->
