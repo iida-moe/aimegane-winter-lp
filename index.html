@@ -2310,6 +2310,23 @@
     .hc-name { font-size: 18px; }
     .hc-feat, .hc-price, .hc-price small { font-size: 15px; }
   }
+  /* 11/26 補聴器の小さいカード（.hc2） */
+  .hc2 { display: flex; align-items: center; gap: 16px; max-width: 760px; margin: 0 auto; padding: 18px 18px; background: #fff; border: 1px solid #E3DCC8; border-radius: 12px; text-align: left; }
+  .hc2 p { margin: 0; }
+  .hc2-photo { flex: 0 0 92px; width: 92px; height: auto; }
+  .hc2-body { min-width: 0; }
+  .hc2-k { display: inline-block; font-size: 13px; font-weight: 700; color: #0B7A3E; border: 1px solid #0B7A3E; border-radius: 999px; padding: 1px 10px; }
+  .hc2-t { margin-top: 6px !important; font-size: 18px; font-weight: 900; color: #111; line-height: 1.4; }
+  .hc2-pts { list-style: none; margin: 6px 0 0; padding: 0; font-size: 15px; font-weight: 700; color: #111; line-height: 1.6; }
+  .hc2-pts li::before { content: '✓'; color: #C8102E; font-weight: 900; margin-right: 6px; }
+  .hc2-pts b { color: #C8102E; font-size: 1.15em; }
+  .hc2-pts small { display: inline-block; margin-left: 6px; font-size: 14px; font-weight: 400; color: #555; }
+  .hc2-p { margin-top: 6px !important; font-size: 14px; color: #555; line-height: 1.6; }
+  .hc2 .nw { display: inline-block; }
+  .hc2-link { display: inline-block; margin-top: 8px; font-size: 15px; font-weight: 700; color: #0B7A3E; text-decoration: underline; text-underline-offset: 3px; }
+  .hc2-link::after { content: ' ›'; }
+  @media (max-width: 640px) { .hc2-sep, .hc2-p br { display: none; } .hc2-p .nw { display: block; } .hc2 { align-items: flex-start; gap: 12px; padding: 16px 14px; } .hc2-photo { flex-basis: 72px; width: 72px; margin-top: 30px; } .hc2-t { font-size: 17px; } }
+  @media (min-width: 801px) { .hc2 { padding: 24px 32px; gap: 28px; } .hc2-photo { flex-basis: 150px; width: 150px; } .hc2-t { font-size: 20px; } }
   /* ===== 補聴器 ここまで ===== */
 
   /* ===== 11/25 スマホ：感謝の文を読みやすく（見出しと本文の強弱をつける・行間を広げる・斜線は短く細く） ===== */
@@ -3207,31 +3224,15 @@
 
       <!-- 補聴器（11/25 載せる・技能者/2週間無料貸出も今回OK）11/25 BF LPと同じ形に：左＝ロゴ・写真・名前・価格｜右＝アイメガネの補聴器サポート。変更前 _保存\index.before-1125-hear.html -->
       <div class="wh">
-        <p class="x8-panel-en">HEARING AID</p>
-        <h2 class="x8-panel-h wh-head">聞こえのことも、<br class="sp-only">お気軽にご相談を。</h2>
-        <!-- 11/25 わかりにくい→2本目10%OFFのカードと同じ形に：大きな「2週間 無料貸出」→技能者→ボタン→商品は下に小さく（価格は黒）。前の形 _保存\index.before-1125-hearcard.html -->
-        <div class="hc">
-          <div class="hc-main">
-            <p class="hc-t">補聴器も、まずは試してから</p>
-            <p class="hc-v"><b>2</b><span class="hc-u"><span class="hc-rib">無料貸出</span><span class="hc-wk">週間</span></span></p>
-            <p class="hc-note">家で、普段の音で試せます</p>
-            <p class="hc-who">認定補聴器技能者が在籍</p>
-            <p class="hc-d">選び方から調整までおまかせ</p>
-            <p class="hc-n"><span class="nw">※不在の日もあるため、</span><span class="nw">ご予約がおすすめです</span></p>
-            <details class="wh-q hc-q">
-              <summary><span class="wh-q-i" aria-hidden="true">?</span><span>認定補聴器技能者<span class="nw">とは？</span></span></summary>
-              <p>公益財団法人テクノエイド協会が認定する、補聴器の専門資格です。聴こえを測り、お一人おひとりに合わせた補聴器選びから調整までサポートします。</p>
-            </details>
-            <a class="wh-btn hc-btn" href="https://www.aimegane.com/hochouki/soudankai/" target="_blank" rel="noopener" data-cta-location="hearing">補聴器の無料相談はこちら</a>
-          </div>
-          <div class="hc-prod">
-            <img class="hc-photo" src="イメージ画像/price-hochouki.png" alt="スターキー Gシリーズ 補聴器" loading="lazy">
-            <div class="hc-info">
-              <img class="hc-logo" src="イメージ画像/winter_starkey-logo_830_476.webp" alt="Starkey（スターキー）" width="830" height="476" loading="lazy">
-              <p class="hc-name">Gシリーズ クラス10 RIC</p>
-              <p class="hc-feat"><span class="nw">耳かけ型｜</span><span class="nw">AIがまわりの音に</span><span class="nw">合わせて自動調整</span></p>
-              <p class="hc-price"><span class="nw">片耳 &yen;78,500</span><span class="hc-sep"> ／ </span><span class="nw">両耳 &yen;149,500</span></p><p class="hc-price-n">※充電器付きの価格です</p>
-            </div>
+        <!-- 11/26 補聴器は「少し触れる」程度に（主役はメガネのセール）：横長の小さいカード1枚。前の大きいカード(.hc)は _保存\index.before-1126-hearmini.html -->
+        <div class="hc2">
+          <img class="hc2-photo" src="イメージ画像/price-hochouki.png" alt="スターキー Gシリーズ 補聴器" loading="lazy">
+          <div class="hc2-body">
+            <p class="hc2-k">補聴器のご相談も</p>
+            <p class="hc2-t">聞こえのことも、<span class="nw">お気軽に。</span></p>
+            <ul class="hc2-pts"><li><b>2</b>週間の無料貸出</li><li>認定補聴器技能者が在籍<small>※不在の日もあります</small></li></ul>
+            <p class="hc2-p"><span class="nw">スターキー Gシリーズ</span> <span class="nw">クラス10 RIC</span><br><span class="nw">片耳 &yen;78,500</span><span class="hc2-sep"> ／ </span><span class="nw">両耳 &yen;149,500（充電器付き）</span></p>
+            <a class="hc2-link" href="https://www.aimegane.com/hochouki/soudankai/" target="_blank" rel="noopener" data-cta-location="hearing">補聴器の無料相談はこちら</a>
           </div>
         </div>
       </div>
