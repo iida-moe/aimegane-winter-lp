@@ -2314,6 +2314,27 @@
   .hc2-head { margin: 0 0 14px; text-align: center; font-size: 22px; font-weight: 900; color: #111; letter-spacing: .04em; }
   .hc2-head em { font-style: normal; color: #C8102E; }
   .hc2-head .nw { display: inline-block; }
+  /* 11/26 Iさんの見本：赤い枠のカード・写真を上の真ん中に大きく→その下にポイント2つを大きく */
+  .hc2 { border: 2px solid #C8102E !important; }
+  .hc2-pts { font-size: 18px !important; line-height: 1.7; }
+  .hc2-pts b { font-family: 'Bebas Neue', 'Anton', sans-serif; font-weight: 400; font-size: 1.6em; line-height: 1; vertical-align: -.06em; -webkit-text-stroke: .03em currentColor; }
+  @media (max-width: 800px) {
+    .hc2 { flex-direction: column; align-items: center !important; text-align: center; padding: 22px 16px 22px !important; gap: 14px !important; }
+    .hc2-photo { flex: none !important; width: 58% !important; max-width: 220px; margin: 0 !important; }
+    .hc2-body { text-align: center; }
+    .hc2-pts { display: inline-block; text-align: left; }
+    .hc2-pts small { display: block; margin: 0 0 0 1.4em; }
+    .hc2-p { margin-top: 10px !important; }
+    .hc2-p .nw:nth-of-type(n+3) { display: block !important; }
+    .hc2-p br { display: inline !important; }
+    .hc2-sep { display: none !important; }
+  }
+  .hc2-pts b { font-size: 1.9em !important; }
+  /* 商品名・価格：名前1行→価格（片耳｜両耳）→（充電器付き） */
+  .hc2-name { display: block; }
+  .hc2-price { display: inline-flex; gap: 14px; flex-wrap: wrap; justify-content: center; }
+  .hc2-price span { white-space: nowrap; }
+  .hc2-pn { white-space: nowrap; }
   .hc2-head { white-space: nowrap; }
   @media (max-width: 640px) { .hc2-head { font-size: min(22px, 6.2vw); letter-spacing: .02em; } }
   @media (max-width: 360px) { .hc2-photo { flex-basis: 50px !important; width: 50px !important; } .hc2 { gap: 10px !important; padding: 14px 12px !important; } .hc2-pts { font-size: 14px; } .hc2-link { font-size: 14px; } }
@@ -3239,7 +3260,7 @@
           <img class="hc2-photo" src="イメージ画像/price-hochouki.png" alt="スターキー Gシリーズ 補聴器" loading="lazy">
           <div class="hc2-body">
             <ul class="hc2-pts"><li><b>2</b>週間の無料貸出</li><li>認定補聴器技能者が在籍<small>※不在の日もあります</small></li></ul>
-            <p class="hc2-p"><span class="nw">スターキー Gシリーズ</span> <span class="nw">クラス10 RIC</span><br><span class="nw">片耳 &yen;78,500</span><span class="hc2-sep"> ／ </span><span class="nw">両耳 &yen;149,500（充電器付き）</span></p>
+            <p class="hc2-p"><span class="hc2-name">スターキー Gシリーズ クラス10 RIC</span><span class="hc2-price"><span>片耳 &yen;78,500</span><span>両耳 &yen;149,500</span></span><span class="hc2-pn">（充電器付き）</span></p>
             <a class="hc2-link" href="https://www.aimegane.com/hochouki/soudankai/" target="_blank" rel="noopener" data-cta-location="hearing">補聴器の無料相談はこちら</a>
           </div>
         </div>
