@@ -2389,6 +2389,10 @@
   .x8-notes-list li + li { margin-top: 4px; }
   .x8-notes-list li::before { content: '※'; position: absolute; left: 0; top: 0; }
   @media (max-width: 640px) { .x8-notes-list { padding: 0 4px; letter-spacing: 0; } }
+  /* 11/26 すっきり：行間・すき間をつめる */
+  .x8-notes-list { margin-top: 14px !important; line-height: 1.5 !important; }
+  .x8-notes-list li + li { margin-top: 2px !important; }
+  .x8-panel .x8-notes + .xperk { margin-top: 24px !important; }
   /* 11/25 スマホの特典：1段目＝2本目10%OFFを横いっぱい（左アイコン・右文字）／2段目＝LINE・処方箋の2列。数字の大きさをそろえる・※は14px */
   @media (max-width: 640px) {
     .xp3-cols { grid-template-columns: 1fr 1fr !important; padding: 18px 0 16px !important; row-gap: 16px; }
@@ -3182,10 +3186,10 @@
       </article>
     </div><!-- /x8-grid -->
     <div class="x8-more-wrap"><button type="button" class="x8-more-btn" aria-expanded="false" onclick="var g=this.closest('.x8-panel');var o=g.classList.toggle('is-open');this.setAttribute('aria-expanded',o);this.textContent=o?'閉じる ▲':'ほかの商品を見る（4本） ▼';">ほかの商品を見る（4本） ▼</button></div>
-    <ul class="x8-notes x8-notes-list"><!-- 11/25 ※を1行ずつ・2行目は※の後ろにそろえる・小さく灰色に（Iさん「ごちゃごちゃ」） -->
-      <li>メガネの価格は、フレーム＋レンズの<span class="nw">「メガネ一式」の価格です。</span></li>
-      <li><span class="nw">掲載のメガネ・サングラスは一例です。</span><span class="nw">在庫状況は店舗により異なります。</span></li>
-      <li><span class="nw">在庫がなくなり次第、</span><span class="nw">終了とさせていただきます。</span></li>
+    <ul class="x8-notes x8-notes-list"><!-- 11/26 短くすっきり（前：メガネの価格は、フレーム＋レンズの「メガネ一式」の価格です。／掲載のメガネ・サングラスは一例です。在庫状況は店舗により異なります。／在庫がなくなり次第、終了とさせていただきます。） -->
+      <li>メガネは<span class="nw">フレーム＋レンズの一式価格です</span></li>
+      <li>掲載商品は一例です。<span class="nw">在庫は店舗により異なります</span></li>
+      <li>在庫がなくなり次第、終了します</li>
     </ul>
     <!-- 11/23 値段を見た後に「この価格から、さらに！」 -->
     <div class="xperk">
