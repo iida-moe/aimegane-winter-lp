@@ -2927,6 +2927,18 @@
     .vzc-txt { font-size: 15px; }
   }
   /* ===== 視える化 ここまで ===== */
+  /* 11/26 遠近の見出しを ＼ ／ で挟む */
+  .enkin-slash { display: flex !important; justify-content: center; align-items: center; gap: 24px; }
+  .enkin-slash > span { text-align: center; color: #111 !important; font-size: inherit !important; font-weight: inherit !important; display: block !important; background: none !important; padding: 0 !important; }
+  .enkin-slash::before, .enkin-slash::after { content: '' !important; display: block !important; position: static !important; flex-shrink: 0; width: 5px !important; height: 1.1em !important; background: #111 !important; border-radius: 3px; margin: 0 !important; }
+  .enkin-slash::before { transform: rotate(-22deg) !important; }
+  .enkin-slash::after { transform: rotate(22deg) !important; }
+  @media (max-width: 800px) {
+    .enkin-slash { gap: 16px; }
+    .enkin-slash::before, .enkin-slash::after { width: 3.5px !important; height: auto !important; align-self: stretch; margin: 6px 0 !important; }
+    .enkin-slash::before { transform: rotate(-12deg) !important; }
+    .enkin-slash::after { transform: rotate(12deg) !important; }
+  }
   /* 11/25 「どれが合うんだろう…？」人物＋吹き出し */
   .mf-q { border: 0 !important; padding: 32px 0 8px !important; text-align: center; }
   .mfq-who { display: flex; align-items: center; justify-content: center; gap: 14px; margin-bottom: 14px; }
@@ -3631,7 +3643,7 @@
     <p class="bridge bridge-left">掲載価格は、<span class="nw">レンズ込みの一式価格。</span></p><!-- 11/26 価格の話の続きに（前：最近、手元の文字が見えにくくなっていませんか？） -->
     <div class="enkin-head"><!-- 11/26 カンプに合わせ中央・金の結晶2つ -->
       <img class="enkin-flake k1" src="イメージ画像/snow-gold.svg" alt=""><img class="enkin-flake k2" src="イメージ画像/snow-gold.svg" alt="">
-    <h2 class="section-title lens-section-title">遠近両用も<span class="pc-sp"> </span><br class="only-mobile"><span class="mf-zero">追加料金0円</span></h2><!-- 11/26 中央ぞろえで句読点が違和感→見出しは句読点なし -->
+    <h2 class="section-title lens-section-title enkin-slash"><span>遠近両用も<span class="pc-sp"> </span><br class="only-mobile"><span class="mf-zero">追加料金0円</span></span></h2><!-- 11/26 ＼ ／ で挟む（感謝の見出しと同じ斜め線） --><!-- 11/26 中央ぞろえで句読点が違和感→見出しは句読点なし -->
     <!-- 11/25 文章量が多い→説明3行をやめて条件だけ（遠近・中近・近々は下のタブで見せる）。前の文：標準レンズなら、遠近両用・中近両用・近々両用も追加料金なしでお作りできます。 -->
     <p class="mf-lead mf-lead-short">※標準レンズの場合</p>
     </div>
