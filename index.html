@@ -2965,6 +2965,12 @@
   .vzg-tab::before { content: ''; width: 8px; height: 8px; border-radius: 50%; background: #C8102E; margin-right: 8px; flex-shrink: 0; }
   .vzg-card { padding-top: 20px !important; }
   .vzg-mid { margin-bottom: 0 !important; }
+  /* 11/26 測定イラストの右上にグラフを重ねる */
+  .vzg-scene { position: relative; overflow: visible !important; }
+  .vzg-top .vzg-scene { aspect-ratio: 1039 / 749 !important; }
+  .vzg-scene .vzg-graph { position: absolute; left: 30%; top: -9%; width: 30% !important; height: auto !important; filter: drop-shadow(0 3px 6px rgba(0,0,0,.12)); } /* 機械の真上（顔にかからない位置） */
+  .vzg-top .vzg-card:first-child { padding-top: 32px !important; }
+  @media (max-width: 640px) { .vzg-top .vzg-card:first-child { padding-top: 22px !important; } }
   @media (max-width: 640px) {
     .vzg-card, .vzg-top .vzg-card { margin-top: 32px; }
     .vzg-tab { top: -32px !important; height: 32px; padding: 0 12px !important; font-size: 13px !important; }
@@ -3886,27 +3892,24 @@
     <div class="vzg">
       <div class="vzg-top">
         <div class="vzg-card"><p class="vzg-tab">グラフで視える化</p>
-          <div class="vzg-img"><svg role="img" aria-label="目の負担を緑・黄・赤で表すグラフ" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300">
-  <rect width="400" height="300" fill="#F7F7F7"/>
-  <!-- 画面 -->
-  <rect x="52" y="44" width="296" height="212" rx="14" fill="#fff" stroke="#333" stroke-width="4"/>
-  <!-- 軸 -->
-  <path d="M88 76 V222 H300" fill="none" stroke="#333" stroke-width="3" stroke-linecap="round"/>
-  <!-- 棒（負担が軽い＝緑→重い＝赤） -->
+          <div class="vzg-img vzg-img-ill vzg-scene"><img src="イメージ画像/winter_sokutei_1039_749.webp" alt="アコモレフで目を測定しているお客様とスタッフのイラスト" width="1039" height="749" loading="lazy"><svg class="vzg-graph" role="img" aria-label="目の負担を緑・黄・赤のグラフで表示" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 170">
+  <!-- アコモレフの結果画面風：棒が高くなるほど 緑→黄→赤／右に目安の色帯 -->
+  <rect x="2" y="2" width="236" height="166" rx="12" fill="#fff" stroke="#111" stroke-width="3"/>
+  <path d="M24 26 V142 H190" fill="none" stroke="#111" stroke-width="2.5" stroke-linecap="round"/>
   <g>
-    <rect x="102" y="178" width="22" height="44" rx="3" fill="#2DB35A"/>
-    <rect x="130" y="170" width="22" height="52" rx="3" fill="#2DB35A"/>
-    <rect x="158" y="160" width="22" height="62" rx="3" fill="#2DB35A"/>
-    <rect x="186" y="140" width="22" height="82" rx="3" fill="#F2C230"/>
-    <rect x="214" y="126" width="22" height="96" rx="3" fill="#F2C230"/>
-    <rect x="242" y="102" width="22" height="120" rx="3" fill="#E84A3C"/>
-    <rect x="270" y="88" width="22" height="134" rx="3" fill="#E84A3C"/>
+    <rect x="32"  y="112" width="16" height="30" fill="#2DB35A"/>
+    <rect x="52"  y="104" width="16" height="38" fill="#2DB35A"/>
+    <rect x="72"  y="96"  width="16" height="46" fill="#2DB35A"/>
+    <rect x="92"  y="82"  width="16" height="60" fill="#F2C230"/>
+    <rect x="112" y="72"  width="16" height="70" fill="#F2C230"/>
+    <rect x="132" y="56"  width="16" height="86" fill="#E84A3C"/>
+    <rect x="152" y="44"  width="16" height="98" fill="#E84A3C"/>
+    <rect x="172" y="36"  width="16" height="106" fill="#E84A3C"/>
   </g>
-  <!-- 右の目安（緑・黄・赤） -->
-  <rect x="314" y="76" width="16" height="48" fill="#E84A3C"/>
-  <rect x="314" y="124" width="16" height="48" fill="#F2C230"/>
-  <rect x="314" y="172" width="16" height="50" fill="#2DB35A"/>
-</svg></div>
+  <rect x="204" y="26" width="16" height="38" fill="#E84A3C"/>
+  <rect x="204" y="64" width="16" height="38" fill="#F2C230"/>
+  <rect x="204" y="102" width="16" height="40" fill="#2DB35A"/>
+</svg></div><!-- 11/26 ChatGPTの測定イラスト＋グラフ（SVG）を右上に重ねる -->
           <h3 class="vzg-h">目のストレスチェック</h3>
           <p class="vzg-txt">NHKの番組でも紹介された「アコモレフ」で、目のピント合わせの力をグラフに。</p>
         </div>
