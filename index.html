@@ -3153,7 +3153,11 @@
     .ov-col .ov-date, .ov-col .ov-shop { margin: 0 !important; }
     .ov-shop { font-size: 30px !important; white-space: nowrap; }
     .ov-date-jp b { font-size: 40px !important; }
+    .ov-row { margin-bottom: 10px !important; }
+    .ov-col:first-child { padding-right: 44px !important; }
+    .ov-col + .ov-col { padding-left: 44px !important; }
   }
+  .ov-row + .ov-n { margin-top: 14px !important; } /* ボタンを外したので※を少しつめる */
   @media (min-width: 801px) and (max-width: 1199px) {
     .ov-row { grid-template-columns: 1fr !important; row-gap: 14px; }
     .ov-col { justify-content: center; }
@@ -3335,7 +3339,7 @@
           <p class="ov-shop">アイメガネ各店</p>
         </div>
       </div>
-      <a class="ov-btn" href="#shop-search" data-cta-location="overview">お近くの店舗を探す</a>
+      <!-- <a class="ov-btn" href="#shop-search" data-cta-location="overview">お近くの店舗を探す</a> 11/26 下に予約バー・店舗検索があるので外す -->
       <p class="ov-n">※本庄南大通り店は対象外です</p>
     </div>
     <!-- 11/20 Iさんのイラレ案：ありがとう → メガネMAX50%・サングラスMAX30%だけ（数字は赤＝A案）。前の「WINTER SALEとは・AIミラー・標準セット」は下の tk-old で非表示 -->
