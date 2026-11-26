@@ -2764,6 +2764,12 @@
   /* 11/26 矢印が下のグレーにくっついていた→上に寄せて下をあける */
   .flow-arrow { margin-top: -56px; padding-bottom: 48px !important; position: relative; }
   @media (min-width: 801px) { .flow-arrow { margin-top: -72px; padding-bottom: 64px !important; } }
+  /* 11/26 男性の上の余白をつめる・∨を白とグレーの境目にまたがせる */
+  .mf-q { margin-top: 0 !important; padding-top: 8px !important; }
+  .flow-arrow { background: transparent !important; z-index: 2; padding-top: 0 !important; padding-bottom: 0 !important; margin-top: -40px; margin-bottom: -30px; }
+  @media (min-width: 801px) { .enkin-sec .mf-q { margin-top: 32px !important; } }
+  .flow-arrow + .fit-sec { padding-top: 56px !important; }
+  @media (min-width: 801px) { .flow-arrow { margin-top: -40px; margin-bottom: -36px; } .flow-arrow + .fit-sec { padding-top: 72px !important; } }
   .flow-arrow span { width: 32px; height: 32px; border-right-width: 5px; border-bottom-width: 5px; margin-top: -12px; }
   @media (min-width: 801px) { .flow-arrow span { width: 40px; height: 40px; border-right-width: 6px; border-bottom-width: 6px; margin-top: -16px; } }
   @media (max-width: 640px) {
