@@ -2680,6 +2680,8 @@
     .enkin-sec .enkin-head .lens-section-title .hp, .enkin-sec .enkin-head .lens-section-title > .hp { margin-right: 0 !important; }
   }
   @media (max-width: 800px) { .enkin-flake.k1 { top: -56px; right: -4px; } }
+  .enkin-head .pc-sp { display: none; }
+  @media (min-width: 801px) { .enkin-head .pc-sp { display: inline; } }
   /* 11/26 ※とカードの間をつめる（結晶は※の左に並べる） */
   .enkin-head { padding-bottom: 0 !important; margin-bottom: 0 !important; }
   .enkin-head .mf-lead-short { margin-bottom: 0 !important; }
@@ -3367,7 +3369,7 @@
     <p class="bridge bridge-left">最近、手元の文字が<br class="only-mobile">見えにくくなっていませんか？</p>
     <div class="enkin-head"><!-- 11/26 カンプに合わせ中央・金の結晶2つ -->
       <img class="enkin-flake k1" src="イメージ画像/snow-gold.svg" alt=""><img class="enkin-flake k2" src="イメージ画像/snow-gold.svg" alt="">
-    <h2 class="section-title lens-section-title">遠近両用も<span class="hp">、</span><br class="only-mobile"><span class="mf-zero">追加料金0円<span class="hp">。</span></span></h2>
+    <h2 class="section-title lens-section-title">遠近両用も<span class="pc-sp"> </span><br class="only-mobile"><span class="mf-zero">追加料金0円</span></h2><!-- 11/26 中央ぞろえで句読点が違和感→見出しは句読点なし -->
     <!-- 11/25 文章量が多い→説明3行をやめて条件だけ（遠近・中近・近々は下のタブで見せる）。前の文：標準レンズなら、遠近両用・中近両用・近々両用も追加料金なしでお作りできます。 -->
     <p class="mf-lead mf-lead-short">※標準レンズの場合</p>
     </div>
