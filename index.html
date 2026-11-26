@@ -2932,6 +2932,17 @@
   .vzg-wide .vzg-h { margin-top: 0; font-size: 22px; }
   .vzg-wide .vzg-txt { font-size: 15px; }
   .fit-sec .vz-cta { margin-top: 32px; }
+  /* 11/26 緑の背景はやめて白に（文字は黒・強調は赤・カードはうすい線） */
+  .fit-sec { background: #fff !important; }
+  .fit-sec .vz-title .vz-t1, .fit-sec .vz-title .vz-t2, .fit-sec .vz-title .vz-q { color: #111 !important; }
+  .fit-sec .vz-title .vz-em { color: #C8102E !important; background: none !important; padding: 0 !important; margin-left: 0 !important; }
+  .fit-sec .vz-lead { color: #555 !important; }
+  .vzg-card { border: 1px solid #E0E0E0; }
+  .vzg-mid { color: #111 !important; }
+  .vzg-end { margin: 36px 0 0; text-align: center; font-size: 26px; font-weight: 900; color: #111; letter-spacing: .04em; }
+  .vzg-end .nw { display: inline-block; color: #C8102E; }
+  .vzg-end + .vz-cta { margin-top: 18px !important; }
+  @media (max-width: 640px) { .vzg-end { font-size: 21px; margin-top: 28px; } }
   @media (max-width: 640px) {
     .vzg-top { gap: 12px; }
     .vzg-card { padding: 34px 10px 14px; }
@@ -3833,7 +3844,7 @@
     <!-- 11/26 軽い版：説明セクションをやめて「セールでも、いつもどおり」を数字と資格で短く。写真3ブロック版は _保存\index.before-1126-vzlight.html -->
     <!-- 11/26 カード3つ並び（Iさんの見本：見出し→写真→説明。番号・STEP札・詳しく見るボタンはなし）。スマホは横スワイプ -->
     <h2 class="section-title vz-title"><span class="vz-t1">メガネ選びの</span><span class="vz-t2"><span class="vz-q">「わからない」</span>を<span class="vz-em">視える化</span></span></h2>
-    <p class="vz-lead">お店で、こんな体験ができます</p>
+    <p class="vz-lead">目のことも、似合うことも、もっと知る</p>
     <!-- 11/26 Iさん見本：緑の背景・上に2枚（機械で視える化）→つなぎの一文→下に横長1枚（人と一緒に選ぶ）。赤いラベル。前の3つ並びは _保存\index.before-1126-vzgreen.html -->
     <div class="vzg">
       <div class="vzg-top">
@@ -4019,6 +4030,7 @@
       </li>
     </ol>
     <!-- <p class="vz-end">だから、<span class="nw">セールでも安心して選べる</span></p> 11/26 見出しで言っているので外す -->
+    <p class="vzg-end">この冬、<span class="nw">ぴったりの一本を</span></p><!-- 11/26 締めの一言 -->
     <div class="vz-cta"><a href="#shop-search" class="xp-cta" data-cta-location="mieruka">お近くの店舗を探す</a></div><!-- 11/26 読んだ流れのまま予約へ -->
   </section>
 
