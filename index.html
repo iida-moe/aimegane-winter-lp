@@ -3294,6 +3294,23 @@
   @media (max-width: 640px) { .vzg-top .vzg-card + .vzg-card { margin-top: 44px !important; } }
   .vzg-scene .vzg-zoom svg { width: 80% !important; }
   @media (max-width: 640px) { .vzg-scene .vzg-zoom { width: 46%; right: -3%; bottom: -2%; } }
+  /* 11/26 厳しめ評価の直し：NHKは小さいバッジ／赤を減らす（丸の枠・ラベルの点は黒）／スマホの縦の長さをつめる */
+  .vzg-nhk { position: absolute; left: 0; top: 0; background: #111; color: #fff; font-size: 12px; font-weight: 700; padding: 4px 10px; border-radius: 4px; letter-spacing: .02em; }
+  .vzg-scene .vzg-zoom { border-color: #111 !important; border-width: 3px !important; }
+  .vzg-tab::before { background: #111 !important; }
+  @media (max-width: 640px) {
+    .fit-sec { padding-top: 48px !important; padding-bottom: 40px !important; }
+    .vzg { margin-top: 18px !important; }
+    .vzg-card { padding: 12px 14px 16px !important; }
+    .vzg-h { margin-top: 8px !important; font-size: 17px !important; }
+    .vzg-txt { line-height: 1.6 !important; }
+    .vzg-top .vzg-card + .vzg-card { margin-top: 40px !important; }
+    .vzg-mid { margin: 18px 0 0 !important; font-size: 16px !important; }
+    .vzg-wide-in { gap: 6px !important; }
+    .vzg-top .vzg-img:not(.vzg-scene) { aspect-ratio: 2 / 1 !important; }
+    .fit-sec .vz-cta { margin-top: 22px !important; }
+    .vzg-nhk { font-size: 11px; padding: 3px 8px; }
+  }
 </style>
 <style>
   .preview-gate { position: fixed; inset: 0; z-index: 9999; background: #B81B22; display: flex; align-items: center; justify-content: center; padding: 20px; }
@@ -3927,22 +3944,20 @@
     <!-- 11/26 Iさん見本：緑の背景・上に2枚（機械で視える化）→つなぎの一文→下に横長1枚（人と一緒に選ぶ）。赤いラベル。前の3つ並びは _保存\index.before-1126-vzgreen.html -->
     <div class="vzg">
       <div class="vzg-top">
-        <div class="vzg-card"><p class="vzg-tab">グラフで視える化</p>
-          <div class="vzg-img vzg-img-ill vzg-scene"><img src="イメージ画像/winter_sokutei2_1039_749.webp" alt="メガネを外してアコモレフで目を測定しているお客様とスタッフのイラスト" width="1039" height="749" loading="lazy"><div class="vzg-zoom" role="img" aria-label="目のストレス度を緑（低）・黄（中）・赤（高）のグラフで表示"><svg viewBox="0 -34 228 184" aria-hidden="true">
-  <text x="14" y="-8" font-family="'Noto Sans JP',sans-serif" font-weight="900" font-size="26" fill="#111">目のストレス度</text>
+        <div class="vzg-card"><p class="vzg-tab">目の疲れ</p>
+          <div class="vzg-img vzg-img-ill vzg-scene"><img src="イメージ画像/winter_sokutei2_1039_749.webp" alt="メガネを外してアコモレフで目を測定しているお客様とスタッフのイラスト" width="1039" height="749" loading="lazy"><div class="vzg-zoom" role="img" aria-label="目のストレス度を緑（低）・黄（中）・赤（高）で表すグラフ"><svg viewBox="0 -34 228 184" aria-hidden="true">
+  <text x="14" y="-8" font-family="'Noto Sans JP',sans-serif" font-weight="900" font-size="26" fill="#111">ストレス度</text>
+  <path d="M14 14 V128 H168" fill="none" stroke="#111" stroke-width="2.5" stroke-linecap="round"/>
+  <rect x="22" y="58" width="14" height="70" fill="#2DB35A"/><rect x="40" y="70" width="14" height="58" fill="#2DB35A"/><rect x="58" y="44" width="14" height="84" fill="#F2C230"/><rect x="76" y="78" width="14" height="50" fill="#2DB35A"/><rect x="94" y="28" width="14" height="100" fill="#E84A3C"/><rect x="112" y="66" width="14" height="62" fill="#2DB35A"/><rect x="130" y="50" width="14" height="78" fill="#F2C230"/><rect x="148" y="74" width="14" height="54" fill="#2DB35A"/>
+  <rect x="178" y="14" width="14" height="38" fill="#E84A3C"/><rect x="178" y="52" width="14" height="38" fill="#F2C230"/><rect x="178" y="90" width="14" height="38" fill="#2DB35A"/>
   <text x="196" y="40" font-family="'Noto Sans JP',sans-serif" font-weight="900" font-size="20" fill="#E84A3C">高</text>
   <text x="196" y="83" font-family="'Noto Sans JP',sans-serif" font-weight="900" font-size="20" fill="#D9A400">中</text>
   <text x="196" y="126" font-family="'Noto Sans JP',sans-serif" font-weight="900" font-size="20" fill="#2DB35A">低</text>
-  <path d="M14 14 V128 H168" fill="none" stroke="#111" stroke-width="2.5" stroke-linecap="round"/>
-  <rect x="22" y="104" width="14" height="24" fill="#2DB35A"/><rect x="40" y="98" width="14" height="30" fill="#2DB35A"/><rect x="58" y="90" width="14" height="38" fill="#2DB35A"/>
-  <rect x="76" y="78" width="14" height="50" fill="#F2C230"/><rect x="94" y="68" width="14" height="60" fill="#F2C230"/>
-  <rect x="112" y="54" width="14" height="74" fill="#E84A3C"/><rect x="130" y="42" width="14" height="86" fill="#E84A3C"/><rect x="148" y="34" width="14" height="94" fill="#E84A3C"/>
-  <rect x="178" y="14" width="14" height="38" fill="#E84A3C"/><rect x="178" y="52" width="14" height="38" fill="#F2C230"/><rect x="178" y="90" width="14" height="38" fill="#2DB35A"/>
-</svg></div></div><!-- 11/26 ChatGPTの測定イラスト＋グラフ（SVG）を右上に重ねる -->
+</svg></div><span class="vzg-nhk">NHKの番組で紹介</span></div><!-- 11/26 ChatGPTの測定イラスト＋グラフ（SVG）を右上に重ねる -->
           <h3 class="vzg-h">目のストレスチェック</h3>
-          <p class="vzg-txt">NHKの番組でも紹介された「アコモレフ」で、目の筋肉の負担具合をグラフで確認できます。</p>
+          <p class="vzg-txt">目の筋肉の負担具合をグラフで確認。楽に見えるメガネ選びの目安になります。</p>
         </div>
-        <div class="vzg-card"><p class="vzg-tab">似合い度を視える化</p>
+        <div class="vzg-card"><p class="vzg-tab">似合い度</p>
           <div class="vzg-img"><svg role="img" aria-label="鏡に似合い度の点数が出るイラスト" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300">
   <rect width="400" height="300" fill="#F7F7F7"/>
   <!-- 鏡 -->
@@ -3968,12 +3983,12 @@
         </div>
       </div>
       <p class="vzg-mid">視えた結果をもとに、<span class="nw">スタッフと一緒に選びます</span></p>
-      <div class="vzg-card vzg-wide"><p class="vzg-tab">15項目の測定</p>
+      <div class="vzg-card vzg-wide"><p class="vzg-tab">見え方</p>
         <div class="vzg-wide-in">
           <div class="vzg-img vzg-img-ill"><img src="イメージ画像/winter_sekkyaku_1039_749.webp" alt="スタッフがお客様の話を聞きながら書きこんでいる様子" width="1039" height="749" loading="lazy"></div>
           <div>
-            <h3 class="vzg-h">ぴったりの見え方に</h3>
-            <p class="vzg-txt">普段よく見るものや過ごし方を伺い、見えにくさの原因を15項目で確かめます。結果をもとに、レンズと度数をご提案します。</p>
+            <h3 class="vzg-h">15項目の測定</h3>
+            <p class="vzg-txt">普段よく見るものや過ごし方を伺い、見えにくさの原因を確かめて、ぴったりのレンズと度数をご提案します。</p>
           </div>
         </div>
       </div>
