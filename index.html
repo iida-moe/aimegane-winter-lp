@@ -2386,6 +2386,22 @@
   .x8-notes-list { list-style: none; padding: 0; margin-top: 20px !important; color: #555 !important; font-size: 14px !important; line-height: 1.6 !important; }
   .x8-notes-list li { position: relative; padding-left: 1.1em; }
   .x8-notes-list .nw { display: inline-block; }
+  /* 11/26 概要（実施期間・実施店舗）：白いカード・金の見出し帯 */
+  .ov { max-width: 760px; margin: 28px auto 0; padding: 24px 20px 20px; background: #fff; border-radius: 14px; text-align: center; color: #111; }
+  .ov p { margin: 0; }
+  .ov-h { background: #E8D59A; border-radius: 6px; padding: 7px 0; font-size: 15px; font-weight: 900; letter-spacing: .3em; color: #111; }
+  .ov-date { margin: 12px 0 18px !important; display: flex; justify-content: center; align-items: baseline; flex-wrap: wrap; gap: 0 2px; }
+  .ov-date b { font-family: 'Bebas Neue', 'Anton', sans-serif; font-weight: 400; font-size: 40px; line-height: 1; letter-spacing: .02em; }
+  .ov-date small { font-size: 15px; font-weight: 700; }
+  .ov-to { margin: 0 8px; font-size: 20px; font-weight: 700; }
+  .ov-shop { margin: 12px 0 14px !important; font-size: 20px; font-weight: 900; }
+  .ov-btn { display: inline-flex; align-items: center; justify-content: center; min-height: 48px; padding: 0 30px; border-radius: 999px; background: #C8102E; color: #fff; font-size: 16px; font-weight: 900; text-decoration: none; }
+  .ov-btn::after { content: '›'; margin-left: 10px; font-size: 1.2em; }
+  .ov-n { margin-top: 10px !important; font-size: 14px; color: #555; }
+  @media (max-width: 640px) { .ov-date { flex-wrap: nowrap; white-space: nowrap; } .ov-date b { font-size: min(30px, 8vw); } .ov-date small { font-size: 12px; } .ov-to { margin: 0 4px; font-size: 16px; } .ov { padding: 20px 16px 18px; } }
+  @media (min-width: 801px) { .ov { padding: 32px 48px 28px; } .ov-date b { font-size: 52px; } .ov-shop { font-size: 24px; } }
+  /* 11/26 PCは商品8本を最初から全部見せる（「ほかの商品を見る」はスマホだけ） */
+  @media (min-width: 801px) { .x8-panel .x8-more { display: flex !important; } .x8-more-wrap { display: none !important; } }
   .x8-notes-list li + li { margin-top: 4px; }
   .x8-notes-list li::before { content: '※'; position: absolute; left: 0; top: 0; }
   @media (max-width: 640px) { .x8-notes-list { padding: 0 4px; letter-spacing: 0; } }
@@ -3037,6 +3053,15 @@
     <!-- 11/20 Iさんのイラレ案に合わせる（B案の文） -->
     <p class="thanks-h"><span>今年も1年、ありがとうございました</span></p>
     <p class="thanks-p">来年も、すっきり見える毎日を。<br>感謝の気持ちを込めて、<br class="only-mobile">今年<span class="thanks-em">最後のセール</span>を開催します。</p>
+    <!-- 11/26 眼鏡市場BF LPを参考に：期間・対象店舗の概要を最初に -->
+    <div class="ov">
+      <p class="ov-h">実施期間</p>
+      <p class="ov-date"><b>2026.12.4</b><small>（金）</small><span class="ov-to">〜</span><b>12.27</b><small>（日）</small></p>
+      <p class="ov-h">実施店舗</p>
+      <p class="ov-shop">アイメガネ各店</p>
+      <a class="ov-btn" href="#shop-search" data-cta-location="overview">お近くの店舗を探す</a>
+      <p class="ov-n">※本庄南大通り店は対象外です</p>
+    </div>
     <!-- 11/20 Iさんのイラレ案：ありがとう → メガネMAX50%・サングラスMAX30%だけ（数字は赤＝A案）。前の「WINTER SALEとは・AIミラー・標準セット」は下の tk-old で非表示 -->
     <!-- 11/23 割引は4段階（MAXの中身を見せる）。50%はメガネのみ・サングラスは10/20/30% -->
     <!-- 11/23 Iさん「一番知りたいのはMAX50。わざわざ言わなくていい」→4段階は非表示（戻すときは style を消す） -->
