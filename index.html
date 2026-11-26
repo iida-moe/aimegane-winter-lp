@@ -3357,6 +3357,20 @@
   .closing { position: relative !important; }
   .closing .cl-snowman { position: absolute !important; left: auto !important; top: auto !important; right: 12% !important; bottom: 30px !important; width: 130px !important; margin: 0 !important; display: block !important; z-index: 3 !important; }
   @media (max-width: 640px) { .closing .cl-snowman { right: 4% !important; bottom: 36px !important; width: 76px !important; } }
+  /* 11/26 概要：店舗の下に※・PCで右にはみ出していたのを中央に収める */
+  .ov-shopw { text-align: center; }
+  .ov-shop-n { margin: 4px 0 0 !important; font-size: 13px; color: #555; font-weight: 500; }
+  @media (min-width: 801px) {
+    .ov-row { width: 100%; justify-content: center !important; }
+    .ov-col { padding: 0 28px !important; gap: 12px !important; min-width: 0; }
+    .ov-col:first-child { padding-right: 32px !important; }
+    .ov-col + .ov-col { padding-left: 32px !important; }
+    .ov-date-jp b { font-size: 36px !important; }
+    .ov-date-jp small { font-size: 16px !important; }
+    .ov-date-jp .ov-y { font-size: 22px !important; }
+    .ov-shop { font-size: 28px !important; }
+    .ov-shopw { text-align: left; }
+  }
 </style>
 <style>
   .preview-gate { position: fixed; inset: 0; z-index: 9999; background: #B81B22; display: flex; align-items: center; justify-content: center; padding: 20px; }
@@ -3529,7 +3543,7 @@
         </div>
         <div class="ov-col">
           <p class="ov-h">実施店舗</p>
-          <p class="ov-shop">アイメガネ各店</p>
+          <div class="ov-shopw"><p class="ov-shop">アイメガネ各店</p><p class="ov-shop-n">※本庄南大通り店を除く</p></div>
         </div>
       </div>
       <!-- <a class="ov-btn" href="#shop-search" data-cta-location="overview">お近くの店舗を探す</a> 11/26 下に予約バー・店舗検索があるので外す -->
