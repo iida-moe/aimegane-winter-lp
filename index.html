@@ -3144,6 +3144,21 @@
     .ov-col .ov-date, .ov-col .ov-shop { margin-bottom: 0 !important; }
     .ov-shop { font-size: 32px !important; line-height: 1.2; }
   }
+  /* 11/26 PC：はみ出し修正（vwはスクロールバー込みでずれる→親の幅から計算）・ラベルを値の左に並べて1行に */
+  @media (min-width: 801px) {
+    .ov { width: min(1200px, calc(100% * 1.0976)) !important; padding: 28px 40px 24px !important; }
+    .ov-row { grid-template-columns: auto auto !important; justify-content: center; align-items: center !important; margin-bottom: 20px !important; }
+    .ov-col { display: flex; align-items: center; gap: 16px; padding: 0 36px !important; }
+    .ov-col .ov-h { margin: 0 !important; flex-shrink: 0; }
+    .ov-col .ov-date, .ov-col .ov-shop { margin: 0 !important; }
+    .ov-shop { font-size: 30px !important; white-space: nowrap; }
+    .ov-date-jp b { font-size: 40px !important; }
+  }
+  @media (min-width: 801px) and (max-width: 1199px) {
+    .ov-row { grid-template-columns: 1fr !important; row-gap: 14px; }
+    .ov-col { justify-content: center; }
+    .ov-col + .ov-col { border-left: 0 !important; }
+  }
   /* ===== 商品カード シンプル ここまで ===== */
 </style>
 <style>
