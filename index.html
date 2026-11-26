@@ -2330,6 +2330,11 @@
     .hc2-sep { display: none !important; }
   }
   .hc2-pts b { font-size: 1.9em !important; }
+  /* 11/26 スマホは全部中央ぞろえ（左寄せと混ざってわかりにくい） */
+  @media (max-width: 800px) {
+    .hc2-pts { display: block !important; text-align: center !important; }
+    .hc2-pts small { display: block !important; margin: 0 !important; }
+  }
   /* 11/26 右上にスターキーのロゴ・写真と文字はその分下げる */
   .hc2 { position: relative; }
   .hc2-logo { position: absolute; top: 12px; right: 14px; width: 72px; height: auto; }
