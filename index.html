@@ -3398,6 +3398,10 @@
     .ov-shop { font-size: 32px !important; }
     .ov-shop-n { font-size: 14px; }
   }
+  /* 11/27 店舗検索の※は区切りで改行／最終CTA：曜日を日本語・ボタンは白地に赤文字（赤い背景の上なので） */
+  .shop-intro-note .nw { display: inline-block; }
+  .closing-period .cl-jp { font-family: 'Noto Sans JP', sans-serif !important; font-weight: 900; font-size: .42em; margin: 0 .2em 0 .05em; }
+  .closing .fv-cta { background: #fff !important; color: #C8102E !important; border-color: #fff !important; }
 </style>
 <style>
   .preview-gate { position: fixed; inset: 0; z-index: 9999; background: #B81B22; display: flex; align-items: center; justify-content: center; padding: 20px; }
@@ -3902,7 +3906,7 @@
 
     <!-- 11/25 確認メモは一旦非表示（Iさん）: <div class="memo xp-memo">確認：掲載8本はチラシと同じ（価格は202611メガネ.xlsx）／ウェルネスグラス茶の説明は「活性酸素・身体の酸化を抑える」を外した（効能の表現になるため）</div> -->
     <div class="xp-cta-wrap">
-      <a href="#shop-search" class="xp-cta" data-cta-location="price_card">まずはお近くの店舗を探す</a>
+      <a href="#shop-search" class="xp-cta" data-cta-location="price_card">お近くの店舗を探す</a>
     </div>
   </section>
 
@@ -4237,7 +4241,7 @@
     <p class="bridge">気になったら、お近くのお店へ。</p>
     <h2 class="section-title">お近くの<span>店舗を探す</span></h2>
     <p class="shop-intro">現在地、または郵便番号(上3桁)で<br class="only-mobile">お近くの店舗を探せます</p>
-    <p class="shop-intro-note">※WEB予約は、本日から3日後以降の日程でお取りいただけます。お急ぎの場合はお電話にてお問い合わせください。</p>
+    <p class="shop-intro-note"><span class="nw">※WEB予約は、本日から3日後以降の日程で</span><span class="nw">お取りいただけます。</span><span class="nw">お急ぎの場合は</span><span class="nw">お電話にてお問い合わせください。</span></p>
 
     <div class="shop-search-box">
       <div class="shop-geo-wrap">
@@ -4316,8 +4320,8 @@
     <img class="cl-flake cf1" src="イメージ画像/snow.svg" alt=""><img class="cl-flake cf2" src="イメージ画像/snow-gold.svg" alt=""><img class="cl-flake cf3" src="イメージ画像/snow.svg" alt=""><img class="cl-flake cf4" src="イメージ画像/snow-gold.svg" alt=""><img class="cl-flake cf5" src="イメージ画像/snow.svg" alt="">
     <p class="cl-en">Merry Christmas &amp; Happy New Year</p>
     <p class="closing-copy"><span class="closing-copy-sub">新しいメガネで、</span><span class="closing-copy-main">新しい年を。</span></p>
-    <p class="closing-period">12.4 <span class="closing-period-dow">fri</span> &rarr; 12.27 <span class="closing-period-dow">sun</span></p>
-    <a href="#shop-search" class="fv-cta" data-cta-location="fv">ご来店予約はこちら</a>
+    <p class="closing-period">12.4<span class="closing-period-dow cl-jp">(金)</span> &rarr; 12.27<span class="closing-period-dow cl-jp">(日)</span></p>
+    <a href="#shop-search" class="fv-cta" data-cta-location="fv">お近くの店舗を探す</a>
     <span class="cl-snow"></span>
     <img class="cl-snowman" src="イメージ画像/winter_snowman_200_240.svg" alt="" width="200" height="240"><!-- 11/26 メガネをかけた雪だるま -->
   </section>
