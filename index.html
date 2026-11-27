@@ -3419,6 +3419,16 @@
   .fit-sec .vz-title2 .vz-k:first-child { margin-left: -.4em; }
   .fit-sec .vz-title2 .vz-em { margin: 0 .12em !important; } /* 11/27 「」と字間をあける */
   @media (min-width: 801px) { .fit-sec .vz-title2 .vz-t2 { font-size: 40px !important; } }
+
+  /* 11/27 スマホ：検索ボタンを郵便番号の横に */
+  @media (max-width: 640px) {
+    .shop-search-form { flex-wrap: nowrap !important; gap: 6px !important; justify-content: center !important; }
+    .shop-zip-label { flex: 0 0 auto; font-size: 16px !important; }
+    .shop-zip-sep { flex: 0 0 auto; }
+    .shop-zip-input { flex: 3 1 0 !important; width: auto !important; min-width: 0 !important; padding: 12px 4px !important; font-size: 17px !important; }
+    .shop-zip-input-lg { flex: 4 1 0 !important; }
+    .shop-search-btn { flex: 0 0 auto !important; width: auto !important; padding: 13px 16px !important; margin: 0 !important; white-space: nowrap; }
+  }
 </style>
 <style>
   .preview-gate { position: fixed; inset: 0; z-index: 9999; background: #B81B22; display: flex; align-items: center; justify-content: center; padding: 20px; }
