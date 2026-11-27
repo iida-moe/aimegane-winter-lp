@@ -3474,6 +3474,12 @@
   .closing .cl-ski.done { animation: none; }
   @media (min-width: 641px) { .closing .cl-ski.done { left: 89.6%; bottom: 69px; transform: translateX(-50%) rotate(8deg); } }
   @media (max-width: 640px) { .closing .cl-ski.done { left: 86.5%; bottom: 46px; transform: translateX(-50%) rotate(15deg); } }
+
+  /* 11/27 店舗検索の上を短く：すき間を詰める・注意書きは2行 */
+  #shop-search .bridge { margin-bottom: 4px !important; }
+  #shop-search .section-title { margin-bottom: 14px !important; }
+  #shop-search .shop-note2 { margin: 0 auto 18px !important; font-size: 13px !important; line-height: 1.7 !important; color: #555 !important; }
+  @media (min-width: 641px) { #shop-search .shop-note2 { font-size: 14px !important; margin-bottom: 24px !important; } }
 </style>
 <style>
   .preview-gate { position: fixed; inset: 0; z-index: 9999; background: #B81B22; display: flex; align-items: center; justify-content: center; padding: 20px; }
@@ -4311,10 +4317,10 @@
 
   <!-- ⑤ 店舗情報(店舗検索) -->
   <section class="section section-white" id="shop-search">
-    <p class="bridge">気になったら、お近くのお店へ。</p>
+    <p class="bridge">気になったら お近くのお店へ</p>
     <h2 class="section-title">お近くの<span>店舗を探す</span></h2>
-    <p class="shop-intro">現在地、または郵便番号(上3桁)で<br class="only-mobile">お近くの店舗を探せます</p>
-    <p class="shop-intro-note"><span class="nw">※WEB予約は、本日から3日後以降の日程で</span><span class="nw">お取りいただけます。</span><span class="nw">お急ぎの場合は</span><span class="nw">お電話にてお問い合わせください。</span></p>
+    <!-- 11/27 縦に長いので説明文は削除（ボタンを見ればわかる）：現在地、または郵便番号(上3桁)でお近くの店舗を探せます -->
+    <p class="shop-intro-note shop-note2"><span class="nw">※WEB予約は3日後以降の日程から。</span><span class="nw">お急ぎの方はお電話でどうぞ</span></p>
 
     <div class="shop-search-box">
       <div class="shop-geo-wrap">
