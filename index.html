@@ -3429,6 +3429,9 @@
     .shop-zip-input-lg { flex: 4 1 0 !important; }
     .shop-search-btn { flex: 0 0 auto !important; width: auto !important; padding: 13px 16px !important; margin: 0 !important; white-space: nowrap; }
   }
+
+  /* 11/27 都道府県タブ：横スクロールをやめて折り返し・全部見えるように */
+  .shop-pref-tabs { flex-wrap: wrap !important; justify-content: center !important; overflow-x: visible !important; row-gap: 8px; }
 </style>
 <style>
   .preview-gate { position: fixed; inset: 0; z-index: 9999; background: #B81B22; display: flex; align-items: center; justify-content: center; padding: 20px; }
@@ -3571,8 +3574,8 @@
   <!-- 11/23 PCは白い半透明バー＋真ん中に赤い角丸ボタン（.floating-bar）。スマホは今までどおり赤いバー -->
   <div class="floating-bar">
   <a href="#shop-search" class="floating-cta" data-cta-location="floating">
-    <img src="イメージ画像/calendar-icon.svg" alt="" class="floating-cta-icon">
-    <span class="floating-cta-text">来店予約はこちら</span>
+    <img src="イメージ画像/map-marker-icon.svg" alt="" class="floating-cta-icon">
+    <span class="floating-cta-text">お近くの店舗を探す</span><!-- 11/27 ページ内のボタンと言葉をそろえる（前：来店予約はこちら・カレンダー） -->
   </a>
   </div>
 
