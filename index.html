@@ -3432,6 +3432,17 @@
 
   /* 11/27 都道府県タブ：横スクロールをやめて折り返し・全部見えるように */
   .shop-pref-tabs { flex-wrap: wrap !important; justify-content: center !important; overflow-x: visible !important; row-gap: 8px; }
+
+  /* 11/27 店舗カードに「地図・営業時間を見る」（BF LPと同じ形） */
+  .shop-card-addr, .shop-hero-addr { margin-bottom: 4px !important; }
+  .shop-map { display: inline-flex; align-items: center; gap: 4px; font-size: 13px; color: #333; text-decoration: underline; text-underline-offset: 3px; margin: 0 0 14px; padding: 4px 0; }
+  .shop-map::before { content: ""; width: 10px; height: 13px; background: currentColor; -webkit-mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 10 13'%3E%3Cpath d='M5 0a5 5 0 0 0-5 5c0 3.8 5 8 5 8s5-4.2 5-8a5 5 0 0 0-5-5zm0 7a2 2 0 1 1 0-4 2 2 0 0 1 0 4z'/%3E%3C/svg%3E") center/contain no-repeat; mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 10 13'%3E%3Cpath d='M5 0a5 5 0 0 0-5 5c0 3.8 5 8 5 8s5-4.2 5-8a5 5 0 0 0-5-5zm0 7a2 2 0 1 1 0-4 2 2 0 0 1 0 4z'/%3E%3C/svg%3E") center/contain no-repeat; }
+  .shop-map::after { content: "↗"; font-size: 11px; }
+  .shop-map:hover { color: #C8102E; }
+  /* 11/27 補聴器の相談リンクを細い枠のボタンに（赤ボタンにはしない） */
+  .hc2-link { display: inline-flex !important; align-items: center; justify-content: center; margin-top: 12px !important; padding: 10px 22px !important; border: 1.5px solid #0B7A3E; border-radius: 999px; background: #fff; color: #0B7A3E !important; text-decoration: none !important; font-size: 15px !important; transition: background .2s; }
+  .hc2-link:hover { background: #EAF6EE; }
+  .hc2-link::after { content: '›' !important; margin-left: 8px; font-size: 1.2em; line-height: 1; }
 </style>
 <style>
   .preview-gate { position: fixed; inset: 0; z-index: 9999; background: #B81B22; display: flex; align-items: center; justify-content: center; padding: 20px; }
@@ -4563,11 +4574,13 @@ function haversineKm(lat1,lng1,lat2,lng2){
   const a=Math.sin(dLat/2)**2+Math.cos(toRad(lat1))*Math.cos(toRad(lat2))*Math.sin(dLng/2)**2;
   return 2*R*Math.asin(Math.sqrt(a));
 }
+function mapLink(s){ const q=encodeURIComponent(s.name+' '+s.addr.replace(/〒\d{3}-\d{4}\s*/,'')); return `<a href="https://www.google.com/maps/search/?api=1&query=${q}" target="_blank" rel="noopener" class="shop-map" data-cta-location="store_map">地図・営業時間を見る</a>`; } /* 11/27 BF LPと同じ */
 function renderShops(list){
   return list.map(s=>`
     <div class="shop-card">
       <p class="shop-card-name">${s.name}</p>
       <p class="shop-card-addr">${s.addr}</p>
+      ${mapLink(s)}
       ${s.distanceKm!=null?`<p class="shop-card-distance">お住まいから約 <strong>${s.distanceKm.toFixed(1)} km</strong></p>`:''}
       <div class="shop-card-btns">
         <a href="${s.web}" target="_blank" rel="noopener" class="shop-btn-web" data-cta-location="store_web">WEB予約</a>
@@ -4584,6 +4597,7 @@ function renderHeroShop(s){
         <p class="shop-hero-badge">お客様に最も近い店舗</p>
         <h3 class="shop-hero-name">${s.name}</h3>
         <p class="shop-hero-addr">${s.addr}</p>
+        ${mapLink(s)}
         ${s.distanceKm!=null?`<p class="shop-hero-distance">お住まいから約 <strong>${s.distanceKm.toFixed(1)} km</strong></p>`:''}
         <div class="shop-hero-btns">
           <a href="${s.web}" target="_blank" rel="noopener" class="shop-hero-btn shop-hero-btn-web" data-cta-location="store_web">WEB予約</a>
