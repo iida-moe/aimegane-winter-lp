@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 220">
+  <!-- スキーで右へ滑るメガネの雪だるま（線は紺・既存の雪だるまと同じタッチ） -->
+  <!-- スピード線 -->
+  <g stroke="#1F2440" stroke-width="3" stroke-linecap="round" opacity=".35">
+    <path d="M8 150 H40 M2 170 H30 M14 130 H38"/>
+  </g>
+  <g stroke="#1F2440" stroke-width="4" stroke-linecap="round" stroke-linejoin="round">
+    <!-- ストック（後ろへ） -->
+    <path d="M96 140 L52 204" fill="none"/>
+    <path d="M150 138 L118 206" fill="none"/>
+    <path d="M47 200 L58 207 M113 202 L124 209" fill="none" stroke-width="3"/>
+    <!-- 腕 -->
+    <path d="M78 132 L98 142" fill="none"/>
+    <path d="M150 124 L156 136 L150 140" fill="none"/>
+    <!-- 体 -->
+    <ellipse cx="112" cy="156" rx="46" ry="42" fill="#fff"/>
+    <!-- 頭 -->
+    <circle cx="138" cy="84" r="34" fill="#fff"/>
+    <!-- マフラー（うしろになびく） -->
+    <path d="M106 108 Q138 124 168 106 L170 118 Q138 138 104 120 Z" fill="#009944"/>
+    <path d="M110 112 Q86 106 66 116 L70 126 Q90 118 108 124 Z" fill="#009944"/>
+    <!-- 帽子（ぼんぼんはうしろへ） -->
+    <path d="M106 64 Q138 46 170 62 L167 71 Q138 58 109 73 Z" fill="#C8102E"/>
+    <path d="M112 64 Q108 30 140 30 Q154 32 162 58" fill="#C8102E"/>
+    <path d="M124 34 Q106 26 92 34" fill="none"/>
+    <circle cx="88" cy="36" r="8" fill="#fff"/>
+    <!-- メガネ（右向き） -->
+    <circle cx="140" cy="86" r="10" fill="#fff"/>
+    <circle cx="164" cy="86" r="9" fill="#fff"/>
+    <path d="M150 86 Q152 83 155 86" fill="none" stroke-width="3"/>
+    <path d="M130 84 L116 80" fill="none" stroke-width="3"/>
+    <!-- スキー板（先が上に反る） -->
+    <path d="M60 202 H198 Q214 202 220 190" fill="none" stroke-width="5"/>
+    <path d="M70 194 H190 Q204 194 210 184" fill="none" stroke-width="4" opacity=".55"/>
+  </g>
+  <!-- 目・鼻・口 -->
+  <circle cx="141" cy="87" r="2.8" fill="#1F2440"/>
+  <circle cx="165" cy="87" r="2.6" fill="#1F2440"/>
+  <path d="M168 94 L188 98 L168 101 Z" fill="#F08A24" stroke="#1F2440" stroke-width="2.5" stroke-linejoin="round"/>
+  <path d="M146 104 Q156 110 164 103" fill="none" stroke="#1F2440" stroke-width="3" stroke-linecap="round"/>
+  <!-- ボタン -->
+  <circle cx="124" cy="146" r="3.8" fill="#1F2440"/>
+  <circle cx="126" cy="168" r="3.8" fill="#1F2440"/>
+</svg>

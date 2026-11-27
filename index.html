@@ -3443,6 +3443,33 @@
   .hc2-link { display: inline-flex !important; align-items: center; justify-content: center; margin-top: 12px !important; padding: 10px 22px !important; border: 1.5px solid #0B7A3E; border-radius: 999px; background: #fff; color: #0B7A3E !important; text-decoration: none !important; font-size: 15px !important; transition: background .2s; }
   .hc2-link:hover { background: #EAF6EE; }
   .hc2-link::after { content: '›' !important; margin-left: 8px; font-size: 1.2em; line-height: 1; }
+
+  /* 11/27 横はみ出し対策（iPhoneで横にずれないように） */
+  html, body { overflow-x: clip !important; }
+  /* 11/27 スキーの雪だるま：見えたら丘のカーブにそって右へ1回だけ滑る */
+  .closing .cl-ski { position: absolute !important; z-index: 3 !important; width: 120px; height: auto; margin: 0 !important; left: 66.5%; bottom: 98px; transform: translateX(-50%) rotate(2.5deg); transform-origin: 50% 92%; }
+  .closing .cl-ski.go { animation: cl-ski-pc 2.6s cubic-bezier(.45,.05,.55,1) .3s both; }
+  @keyframes cl-ski-pc {
+    0%   { left: 66.5%; bottom: 98px; transform: translateX(-50%) rotate(2.5deg); }
+    35%  { left: 74.75%; bottom: 91px; transform: translateX(-50%) rotate(4deg); }
+    70%  { left: 83%;   bottom: 81px; transform: translateX(-50%) rotate(6deg); }
+    100% { left: 89.6%; bottom: 69px; transform: translateX(-50%) rotate(8deg); }
+  }
+  @media (max-width: 640px) {
+    .closing { padding-bottom: 140px !important; }
+    .closing .cl-ski { width: 80px; left: 72%; bottom: 58px; transform: translateX(-50%) rotate(8deg); }
+    .closing .cf4 { display: none !important; } /* 雪だるまの通り道にかぶるので消す */
+    .closing .cl-ski.go { animation-name: cl-ski-sp; }
+    @keyframes cl-ski-sp {
+      0%   { left: 72%;   bottom: 58px; transform: translateX(-50%) rotate(8deg); }
+      40%  { left: 77.5%; bottom: 55px; transform: translateX(-50%) rotate(11deg); }
+      75%  { left: 82.5%; bottom: 50px; transform: translateX(-50%) rotate(13deg); }
+      100% { left: 86.5%; bottom: 46px; transform: translateX(-50%) rotate(15deg); }
+    }
+  }
+  .closing .cl-ski.done { animation: none; }
+  @media (min-width: 641px) { .closing .cl-ski.done { left: 89.6%; bottom: 69px; transform: translateX(-50%) rotate(8deg); } }
+  @media (max-width: 640px) { .closing .cl-ski.done { left: 86.5%; bottom: 46px; transform: translateX(-50%) rotate(15deg); } }
 </style>
 <style>
   .preview-gate { position: fixed; inset: 0; z-index: 9999; background: #B81B22; display: flex; align-items: center; justify-content: center; padding: 20px; }
@@ -4361,11 +4388,11 @@
     <span class="cl-bokeh cb1"></span><span class="cl-bokeh cb2"></span><span class="cl-bokeh cb3"></span>
     <img class="cl-flake cf1" src="イメージ画像/snow.svg" alt=""><img class="cl-flake cf2" src="イメージ画像/snow-gold.svg" alt=""><img class="cl-flake cf3" src="イメージ画像/snow.svg" alt=""><img class="cl-flake cf4" src="イメージ画像/snow-gold.svg" alt=""><img class="cl-flake cf5" src="イメージ画像/snow.svg" alt="">
     <p class="cl-en">Merry Christmas &amp; Happy New Year</p>
-    <p class="closing-copy"><span class="closing-copy-sub">新しいメガネで、</span><span class="closing-copy-main">新しい年を。</span></p>
+    <p class="closing-copy"><span class="closing-copy-sub">新しいメガネで</span><span class="closing-copy-main">新しい年を</span></p>
     <p class="closing-period">12.4<span class="closing-period-dow cl-jp">(金)</span> &rarr; 12.27<span class="closing-period-dow cl-jp">(日)</span></p>
     <a href="#shop-search" class="fv-cta" data-cta-location="fv">お近くの店舗を探す</a>
     <span class="cl-snow"></span>
-    <img class="cl-snowman" src="イメージ画像/winter_snowman_200_240.svg" alt="" width="200" height="240"><!-- 11/26 メガネをかけた雪だるま -->
+    <img class="cl-ski" src="イメージ画像/winter_snowman-ski_240_220.svg" alt="" width="240" height="220"><!-- 11/27 スキーで丘を右へ滑る雪だるま（前：winter_snowman_200_240.svg 立ち姿） -->
   </section>
 
   <!-- ⑦ フッター -->
@@ -4817,6 +4844,17 @@ setupShopFilterBarVisibility();
   }
   tabs.forEach(function(b){ b.addEventListener('click', function(){ show(b.dataset.lens); }); });
   show('enkin');
+})();
+</script>
+
+<script>
+/* 11/27 スキーの雪だるま：締めのCTAが見えたら1回だけ滑る（動きを減らす設定の人は最初からゴール位置） */
+(function(){
+  var el=document.querySelector('.closing .cl-ski'); if(!el) return;
+  if(window.matchMedia && matchMedia('(prefers-reduced-motion: reduce)').matches){ el.classList.add('done'); return; }
+  if(!('IntersectionObserver' in window)){ el.classList.add('done'); return; }
+  var io=new IntersectionObserver(function(es){ es.forEach(function(e){ if(e.isIntersecting){ el.classList.add('go'); io.disconnect(); } }); },{threshold:.6});
+  io.observe(el);
 })();
 </script>
 </body>
