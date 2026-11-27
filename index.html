@@ -3412,6 +3412,12 @@
   /* 11/27 見出し下は「説明」に戻す（コピーが2つに見えないよう小さく・グレー・細め） */
   .fit-sec .vz-sub { margin-top: 12px !important; font-size: 15px !important; font-weight: 500 !important; color: #555 !important; }
   @media (min-width: 801px) { .fit-sec .vz-sub { font-size: 17px !important; } }
+
+  /* 11/27 見出しを「ぴったりの一本選びを／「視える化」でサポートします」に */
+  .fit-sec .vz-title2 .vz-t2 { font-size: min(24px, 6.2vw) !important; }
+  .fit-sec .vz-title2 .vz-k { margin: 0; color: #111; }
+  .fit-sec .vz-title2 .vz-k:first-child { margin-left: -.4em; }
+  @media (min-width: 801px) { .fit-sec .vz-title2 .vz-t2 { font-size: 40px !important; } }
 </style>
 <style>
   .preview-gate { position: fixed; inset: 0; z-index: 9999; background: #B81B22; display: flex; align-items: center; justify-content: center; padding: 20px; }
@@ -4040,8 +4046,9 @@
     <!-- 11/26 上の「わからなくても大丈夫」から見出しへ直接つなぐため bridge は削除（前：お得なときこそ、ぴったりの一本を。） -->
     <!-- 11/26 軽い版：説明セクションをやめて「セールでも、いつもどおり」を数字と資格で短く。写真3ブロック版は _保存\index.before-1126-vzlight.html -->
     <!-- 11/26 カード3つ並び（Iさんの見本：見出し→写真→説明。番号・STEP札・詳しく見るボタンはなし）。スマホは横スワイプ -->
-    <h2 class="section-title vz-title"><span class="vz-t1">メガネ選びの</span><span class="vz-t2"><span class="vz-q">「わからない」</span><span class="vz-wo">を</span><span class="vz-em">視える化</span></span></h2>
-    <p class="vz-lead vz-sub">ぴったりの一本選びを、<span class="nw">「視える化」でサポートします</span></p>
+    <h2 class="section-title vz-title vz-title2"><span class="vz-t1">ぴったりの一本選びを</span><span class="vz-t2"><span class="vz-k">「</span><span class="vz-em">視える化</span><span class="vz-k">」</span>でサポートします</span></h2>
+    <p class="vz-lead vz-sub">目のことも、似合うことも、もっと知る</p>
+    <!-- 11/27 前の見出し：メガネ選びの「わからない」を視える化 -->
     <!-- 11/26 Iさん見本：緑の背景・上に2枚（機械で視える化）→つなぎの一文→下に横長1枚（人と一緒に選ぶ）。赤いラベル。前の3つ並びは _保存\index.before-1126-vzgreen.html -->
     <div class="vzg">
       <div class="vzg-top">
