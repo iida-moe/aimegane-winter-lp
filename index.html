@@ -3402,6 +3402,13 @@
   .shop-intro-note .nw { display: inline-block; }
   .closing-period .cl-jp { font-family: 'Noto Sans JP', sans-serif !important; font-weight: 900; font-size: .42em; margin: 0 .2em 0 .05em; }
   .closing .fv-cta { background: #fff !important; color: #C8102E !important; border-color: #fff !important; }
+  /* 11/27 見出し下の一文をタイトルらしく・▼で「視える化」と「サポート」を区切る */
+  .fit-sec .vz-sub { margin-top: 14px !important; font-size: 19px !important; font-weight: 900 !important; color: #111 !important; }
+  .fit-sec .vz-sub .nw { display: inline-block; }
+  @media (min-width: 801px) { .fit-sec .vz-sub { font-size: 24px !important; } }
+  .vzg-down { width: 0; height: 0; margin: 28px auto; border-left: 26px solid transparent; border-right: 26px solid transparent; border-top: 22px solid #C8102E; }
+  @media (max-width: 640px) { .vzg-down { margin: 22px auto; border-left-width: 22px; border-right-width: 22px; border-top-width: 18px; } }
+  .vzg-wide .vzg-h { line-height: 1.45 !important; }
 </style>
 <style>
   .preview-gate { position: fixed; inset: 0; z-index: 9999; background: #B81B22; display: flex; align-items: center; justify-content: center; padding: 20px; }
@@ -4031,12 +4038,12 @@
     <!-- 11/26 軽い版：説明セクションをやめて「セールでも、いつもどおり」を数字と資格で短く。写真3ブロック版は _保存\index.before-1126-vzlight.html -->
     <!-- 11/26 カード3つ並び（Iさんの見本：見出し→写真→説明。番号・STEP札・詳しく見るボタンはなし）。スマホは横スワイプ -->
     <h2 class="section-title vz-title"><span class="vz-t1">メガネ選びの</span><span class="vz-t2"><span class="vz-q">「わからない」</span><span class="vz-wo">を</span><span class="vz-em">視える化</span></span></h2>
-    <p class="vz-lead">目のことも、似合うことも、もっと知る</p>
+    <p class="vz-lead vz-sub">「視える化」で、<span class="nw">あなたにぴったりのメガネ選びを</span></p>
     <!-- 11/26 Iさん見本：緑の背景・上に2枚（機械で視える化）→つなぎの一文→下に横長1枚（人と一緒に選ぶ）。赤いラベル。前の3つ並びは _保存\index.before-1126-vzgreen.html -->
     <div class="vzg">
       <div class="vzg-top">
         <div class="vzg-card"><p class="vzg-tab">目の疲れ</p>
-          <div class="vzg-img vzg-img-ill vzg-scene"><img src="イメージ画像/winter_sokutei2_1039_749.webp" alt="メガネを外してアコモレフで目を測定しているお客様とスタッフのイラスト" width="1039" height="749" loading="lazy"><div class="vzg-zoom" role="img" aria-label="目のストレス度を緑（低）・黄（中）・赤（高）で表すグラフ"><svg viewBox="0 -34 228 184" aria-hidden="true">
+          <div class="vzg-img vzg-img-ill vzg-scene"><img src="イメージ画像/winter_sokutei3_1039_749.webp" alt="メガネを外してアコモレフで目を測定しているお客様とスタッフのイラスト" width="1039" height="749" loading="lazy"><div class="vzg-zoom" role="img" aria-label="目のストレス度を緑（低）・黄（中）・赤（高）で表すグラフ"><svg viewBox="0 -34 228 184" aria-hidden="true">
   <text x="14" y="-8" font-family="'Noto Sans JP',sans-serif" font-weight="900" font-size="26" fill="#111">ストレス度</text>
   <path d="M14 14 V128 H168" fill="none" stroke="#111" stroke-width="2.5" stroke-linecap="round"/>
   <rect x="22" y="58" width="14" height="70" fill="#2DB35A"/><rect x="40" y="70" width="14" height="58" fill="#2DB35A"/><rect x="58" y="44" width="14" height="84" fill="#F2C230"/><rect x="76" y="78" width="14" height="50" fill="#2DB35A"/><rect x="94" y="28" width="14" height="100" fill="#E84A3C"/><rect x="112" y="66" width="14" height="62" fill="#2DB35A"/><rect x="130" y="50" width="14" height="78" fill="#F2C230"/><rect x="148" y="74" width="14" height="54" fill="#2DB35A"/>
@@ -4045,22 +4052,22 @@
   <text x="196" y="83" font-family="'Noto Sans JP',sans-serif" font-weight="900" font-size="20" fill="#D9A400">中</text>
   <text x="196" y="126" font-family="'Noto Sans JP',sans-serif" font-weight="900" font-size="20" fill="#2DB35A">低</text>
 </svg></div><!-- NHKバッジは本文へ移動 --></div><!-- 11/26 ChatGPTの測定イラスト＋グラフ（SVG）を右上に重ねる -->
-          <p class="vzg-ask">最近、目が疲れやすい…</p><h3 class="vzg-h">目の疲れを<em>グラフ</em>で視える化</h3>
+          <p class="vzg-ask">最近、目が疲れやすい…</p><h3 class="vzg-h">目の疲れを<em>グラフ</em>で「視える化」</h3>
           <p class="vzg-txt">疲れ目や肩こりは、合わないメガネが原因かも。NHKの番組でも紹介された測定機で、目の疲れ具合をチェックできます。</p>
         </div>
         <div class="vzg-card"><p class="vzg-tab">似合い度</p>
           <div class="vzg-img vzg-img-ill vzg-scene"><img src="イメージ画像/winter_mirror_1090_886.webp?v=2" alt="AIミラーの前でメガネを試着し、鏡に似合い度の点数が出ているイラスト" width="1090" height="886" loading="lazy"><!-- 11/26 似合い度の拡大丸は外す（鏡の中の点数で十分） --></div><!-- 11/26 ChatGPTのイラストの鏡の中を左右反転して手の向きを直し、92点を入れた -->
-          <p class="vzg-ask">どれが似合うか迷う…</p><h3 class="vzg-h">似合い度を<em>点数</em>で視える化</h3>
+          <p class="vzg-ask">どれが似合うか分からない…</p><h3 class="vzg-h">似合い度を<em>点数</em>で「視える化」</h3>
           <p class="vzg-txt">鏡の前でかけるだけで、AIが似合い度を点数に。ゲーム感覚で、自分に似合う一本が見つかります。</p>
         </div>
       </div>
-      <p class="vzg-mid">視えた結果をもとに、<span class="nw">スタッフと一緒に選びます</span></p>
+      <div class="vzg-down" aria-hidden="true"></div><!-- 11/27 視える化（上2枚）と技能士のサポートは別物：▼で区切る -->
       <div class="vzg-card vzg-wide"><p class="vzg-tab">見え方</p>
         <div class="vzg-wide-in">
-          <div class="vzg-img vzg-img-ill"><img src="イメージ画像/winter_sekkyaku_1039_749.webp" alt="スタッフがお客様の話を聞きながら書きこんでいる様子" width="1039" height="749" loading="lazy"></div>
+          <div class="vzg-img vzg-img-ill"><img src="イメージ画像/winter_sekkyaku2_1039_749.webp" alt="スタッフがお客様の話を聞きながら書きこんでいる様子" width="1039" height="749" loading="lazy"></div>
           <div>
-            <p class="vzg-ask">自分に合う度数がわからない…</p><h3 class="vzg-h">眼鏡作製技能士が<em>ご提案</em></h3>
-            <p class="vzg-txt">15項目の細かな測定で目の状態を確かめ、普段の過ごし方に合うメガネをご提案します。</p>
+            <p class="vzg-ask">自分に合う度数がわからない…</p><h3 class="vzg-h">「視える化」した結果を基に、<br>メガネ選びを<em>サポート</em></h3>
+            <p class="vzg-txt">眼鏡作製技能士が、15項目の細かな測定で目の状態を確かめ、普段の過ごし方に合うメガネをご提案いたします。</p>
             <p class="vzg-more"><a href="https://www.aimegane.com/aboutus/gijutsu/#measurement-15" target="_blank" rel="noopener">15項目の測定とは</a></p>
           </div>
         </div>
@@ -4191,6 +4198,24 @@
     <div class="vz-cta"><a href="#shop-search" class="xp-cta" data-cta-location="mieruka">お近くの店舗を探す</a></div><!-- 11/26 読んだ流れのまま予約へ -->
   </section>
 
+  <!-- 11/26 補聴器はメガネの流れの途中だと話が切れる→店舗検索の前に（最後に「ついでに」の位置） -->
+  <section class="section section-white hear-mini-sec">
+      <!-- 補聴器（11/25 載せる・技能者/2週間無料貸出も今回OK）11/25 BF LPと同じ形に：左＝ロゴ・写真・名前・価格｜右＝アイメガネの補聴器サポート。変更前 _保存\index.before-1125-hear.html -->
+      <div class="wh">
+        <!-- 11/26 補聴器は「少し触れる」程度に（主役はメガネのセール）：横長の小さいカード1枚。前の大きいカード(.hc)は _保存\index.before-1126-hearmini.html -->
+        <h3 class="hc2-head">聴こえの<em>相談</em>も、お気軽に</h3><!-- 11/26 値引きは上司確認中→相談の内容をメインに（前：補聴器もおトク） -->
+        <div class="hc2">
+          <img class="hc2-logo" src="イメージ画像/winter_starkey-logo_830_476.webp" alt="Starkey（スターキー）" width="830" height="476" loading="lazy"><!-- 11/26 右上にロゴ（メーカー画像なので加工しない） -->
+          <img class="hc2-photo" src="イメージ画像/price-hochouki.png" alt="スターキー Gシリーズ 補聴器" loading="lazy">
+          <div class="hc2-body">
+            <ul class="hc2-pts"><li><b>2</b>週間の無料貸出</li><li>認定補聴器技能者が在籍<small>※不在の日もあります</small></li></ul>
+            <p class="hc2-p"><span class="hc2-name">スターキー Gシリーズ RICクラス10（充電式）</span><span class="hc2-price"><span>片耳 &yen;78,500</span><span>両耳 &yen;149,500</span></span><span class="hc2-pn">（充電器つき）</span></p>
+            <a class="hc2-link" href="https://www.aimegane.com/hochouki/soudankai/" target="_blank" rel="noopener" data-cta-location="hearing">補聴器の無料相談はこちら</a>
+          </div>
+        </div>
+      </div>
+  </section>
+
   <!-- ④ よくある質問 -->
   <section class="section section-white" id="faq-section">
     <p class="bridge">はじめての方も、ご安心ください。</p>
@@ -4216,24 +4241,6 @@
         <div class="faq-a"><span>A</span>はい。視力測定は無料です。現在の見え方のチェックやメガネに関するご相談だけでもお気軽にご来店ください。</div>
       </details>
     </div>
-  </section>
-
-  <!-- 11/26 補聴器はメガネの流れの途中だと話が切れる→店舗検索の前に（最後に「ついでに」の位置） -->
-  <section class="section section-white hear-mini-sec">
-      <!-- 補聴器（11/25 載せる・技能者/2週間無料貸出も今回OK）11/25 BF LPと同じ形に：左＝ロゴ・写真・名前・価格｜右＝アイメガネの補聴器サポート。変更前 _保存\index.before-1125-hear.html -->
-      <div class="wh">
-        <!-- 11/26 補聴器は「少し触れる」程度に（主役はメガネのセール）：横長の小さいカード1枚。前の大きいカード(.hc)は _保存\index.before-1126-hearmini.html -->
-        <h3 class="hc2-head">聴こえの<em>相談</em>も、お気軽に</h3><!-- 11/26 値引きは上司確認中→相談の内容をメインに（前：補聴器もおトク） -->
-        <div class="hc2">
-          <img class="hc2-logo" src="イメージ画像/winter_starkey-logo_830_476.webp" alt="Starkey（スターキー）" width="830" height="476" loading="lazy"><!-- 11/26 右上にロゴ（メーカー画像なので加工しない） -->
-          <img class="hc2-photo" src="イメージ画像/price-hochouki.png" alt="スターキー Gシリーズ 補聴器" loading="lazy">
-          <div class="hc2-body">
-            <ul class="hc2-pts"><li><b>2</b>週間の無料貸出</li><li>認定補聴器技能者が在籍<small>※不在の日もあります</small></li></ul>
-            <p class="hc2-p"><span class="hc2-name">スターキー Gシリーズ RICクラス10（充電式）</span><span class="hc2-price"><span>片耳 &yen;78,500</span><span>両耳 &yen;149,500</span></span><span class="hc2-pn">（充電器つき）</span></p>
-            <a class="hc2-link" href="https://www.aimegane.com/hochouki/soudankai/" target="_blank" rel="noopener" data-cta-location="hearing">補聴器の無料相談はこちら</a>
-          </div>
-        </div>
-      </div>
   </section>
 
   <!-- ⑤ 店舗情報(店舗検索) -->
