@@ -3382,6 +3382,22 @@
     .vzg-wide-in { grid-template-columns: 38% 1fr !important; gap: 40px !important; }
     .vzg-wide { padding: 24px 40px !important; }
   }
+  /* 11/26 概要：PCも縦積み（目に入りやすい）・ラベルは緑の長方形に白文字 */
+  .ov-h { background: #009944 !important; color: #fff !important; border: 0 !important; border-radius: 2px !important; padding: 4px 28px !important; }
+  @media (min-width: 801px) {
+    .ov { padding: 28px 40px 26px !important; }
+    .ov-row { display: block !important; margin: 0 !important; }
+    .ov-col { display: block !important; padding: 0 !important; border: 0 !important; text-align: center; }
+    .ov-col + .ov-col { margin-top: 18px !important; padding-left: 0 !important; border-left: 0 !important; }
+    .ov-col .ov-h { display: inline-block !important; margin: 0 0 8px !important; }
+    .ov-col .ov-date { justify-content: center !important; }
+    .ov-shopw { text-align: center !important; }
+    .ov-date-jp b { font-size: 44px !important; }
+    .ov-date-jp small { font-size: 18px !important; }
+    .ov-date-jp .ov-y { font-size: 26px !important; }
+    .ov-shop { font-size: 32px !important; }
+    .ov-shop-n { font-size: 14px; }
+  }
 </style>
 <style>
   .preview-gate { position: fixed; inset: 0; z-index: 9999; background: #B81B22; display: flex; align-items: center; justify-content: center; padding: 20px; }
